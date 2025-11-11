@@ -1,6 +1,13 @@
+// <Trauma>
+using Content.Shared._Shitmed.Body;
+using Content.Shared._Shitmed.Body.Part;
+using Content.Shared._Shitmed.Damage;
+using Content.Shared._Shitmed.Targeting;
+using Content.Shared.Body.Part;
+// </Trauma>
 using Content.Shared.Damage.Components;
 using Content.Shared.Damage.Prototypes;
-using Content.Shared.FixedPoint;
+using Content.Goobstation.Maths.FixedPoint;
 using Robust.Shared.Prototypes;
 
 namespace Content.Shared.Damage.Systems;
@@ -43,6 +50,7 @@ public sealed partial class DamageableSystem
         EntityUid? origin = null,
         bool ignoreGlobalModifiers = false,
         // <Shitmed>
+        bool canBeCancelled = false,
         float partMultiplier = 1.00f,
         TargetBodyPart? targetPart = null,
         bool ignoreBlockers = false,
@@ -54,7 +62,7 @@ public sealed partial class DamageableSystem
         //! Empty just checks if the DamageSpecifier is _literally_ empty, as in, is internal dictionary of damage types is empty.
         // If you deal 0.0 of some damage type, Empty will be false!
         return !TryChangeDamage(ent, damage, out _, ignoreResistances, interruptsDoAfters, origin, ignoreGlobalModifiers,
-            partMultiplier, targetPart, ignoreBlockers, splitDamage, canMiss); // Shitmed
+            canBeCancelled, partMultiplier, targetPart, ignoreBlockers, splitDamage, canMiss); // Shitmed
     }
 
     /// <summary>
@@ -77,6 +85,7 @@ public sealed partial class DamageableSystem
         EntityUid? origin = null,
         bool ignoreGlobalModifiers = false,
         // <Shitmed>
+        bool canBeCancelled = false,
         float partMultiplier = 1.00f,
         TargetBodyPart? targetPart = null,
         bool ignoreBlockers = false,
@@ -88,7 +97,7 @@ public sealed partial class DamageableSystem
         //! Empty just checks if the DamageSpecifier is _literally_ empty, as in, is internal dictionary of damage types is empty.
         // If you deal 0.0 of some damage type, Empty will be false!
         newDamage = ChangeDamage(ent, damage, ignoreResistances, interruptsDoAfters, origin, ignoreGlobalModifiers,
-            partMultiplier, targetPart, ignoreBlockers, splitDamage, canMiss); // Shitmed
+            canBeCancelled, partMultiplier, targetPart, ignoreBlockers, splitDamage, canMiss); // Shitmed
         return !damage.Empty;
     }
 
@@ -111,6 +120,7 @@ public sealed partial class DamageableSystem
         EntityUid? origin = null,
         bool ignoreGlobalModifiers = false,
         // <Shitmed>
+        bool canBeCancelled = false,
         float partMultiplier = 1.00f,
         TargetBodyPart? targetPart = null,
         bool ignoreBlockers = false,
@@ -128,11 +138,20 @@ public sealed partial class DamageableSystem
             return damageDone;
 
         var before = new BeforeDamageChangedEvent(damage, origin,
-            canBeCancelled, targetPart); // Shitmed
+            false, canBeCancelled, targetPart); // Shitmed
         RaiseLocalEvent(ent, ref before);
 
         if (before.Cancelled)
             return damageDone;
+
+        // <Shitmed> - For entities with a body, route damage through body parts and then sum it up
+        if (_bodyQuery.TryComp(ent, out var body) && body.BodyType == BodyType.Complex)
+        {
+            return ApplyDamageToBodyParts(ent, damage, origin, ignoreResistances,
+                interruptsDoAfters, targetPart, partMultiplier, ignoreBlockers, splitDamage, canMiss);
+        }
+
+        // </Shitmed>
 
         // Apply resistances
         if (!ignoreResistances)
@@ -141,7 +160,7 @@ public sealed partial class DamageableSystem
                 ent.Comp.DamageModifierSetId != null &&
                 _prototypeManager.Resolve(ent.Comp.DamageModifierSetId, out var modifierSet)
             )
-                damage = DamageSpecifier.ApplyModifierSet(damage, modifierSet,
+                damage = DamageSpecifier.ApplyModifierSet(damage,
                     DamageSpecifier.PenetrateArmor(modifierSet, damage.ArmorPenetration)); // Goob edit
 
             // <Shitmed>
@@ -157,14 +176,14 @@ public sealed partial class DamageableSystem
                 }
 
                 // Then raise on the part itself for any part-specific modifiers
-                var ev = new DamageModifyEvent(damage, origin, target);
+                var ev = new DamageModifyEvent(ent, damage, origin, target);
                 RaiseLocalEvent(ent, ev);
                 damage = ev.Damage;
             }
             else
             {
                 // Not a body part, just apply modifiers normally
-                var ev = new DamageModifyEvent(damage, origin);
+                var ev = new DamageModifyEvent(ent, damage, origin);
                 RaiseLocalEvent(ent, ev);
                 damage = ev.Damage;
             }
@@ -199,16 +218,12 @@ public sealed partial class DamageableSystem
             if (!dict.TryGetValue(type, out var oldValue))
                 continue;
 
-            var newValue = FixedPoint2.Max(FixedPoint2.Zero, oldValue + value);
-            if (newValue == oldValue)
-                continue;
-
             // <Shitmed> - damage cap
             // For positive damage, we need to check if we've hit the cap
             if (value > 0)
             {
                 // Delta ignores this stuff since we need it for effects.
-                delta.DamageDict[type] = value;
+                damageDone.DamageDict[type] = value;
 
                 // If we're not a woundable or we don't have a cap, apply the damage normally
                 if (!isWoundable
@@ -240,7 +255,7 @@ public sealed partial class DamageableSystem
                 if (newValue != oldValue)
                 {
                     dict[type] = newValue;
-                    delta.DamageDict[type] = newValue - oldValue;
+                    damageDone.DamageDict[type] = newValue - oldValue;
                 }
             }
             // </Shitmed>
@@ -248,15 +263,15 @@ public sealed partial class DamageableSystem
 
         // <Shitmed> - add ignoreGlobalModifiers, check woundable
         if (damageDone.Empty)
-            return;
+            return damageDone;
 
         OnEntityDamageChanged((ent, ent.Comp), damageDone, interruptsDoAfters, origin, ignoreGlobalModifiers);
         if (isWoundable)
         {
             // This means that the damaged part was a woundable
             // which also means we send that shit to refresh the body.
-            UpdateParentDamageFromBodyParts(ent,
-                delta,
+            UpdateParentDamageFromBodyParts(ent.Owner,
+                damageDone,
                 interruptsDoAfters,
                 origin,
                 ignoreBlockers: ignoreBlockers);
@@ -345,7 +360,7 @@ public sealed partial class DamageableSystem
         // <Shitmed>
         if (_woundableQuery.TryComp(ent, out var woundable))
         {
-            if (!woundable.AllowWounds) continue;
+            if (!woundable.AllowWounds) return;
 
             _wounds.UpdateWoundableIntegrity(ent, woundable);
 

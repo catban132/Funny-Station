@@ -3,7 +3,6 @@ using Content.Shared._Goobstation.Wizard.BindSoul;
 using Content.Shared.Actions.Components;
 using Content.Shared.Buckle.Components;
 using Content.Shared._Shitmed.Targeting;
-using Content.Shared._Shitmed.Body;
 using Content.Shared._Shitmed.Medical.Surgery.Wounds.Systems;
 using Content.Shared.Body.Components;
 using Content.Shared.Body.Systems;
@@ -289,7 +288,7 @@ public sealed partial class PolymorphSystem : EntitySystem
         {
             // <Shitmed>
             if (TryComp<BodyComponent>(child, out var childBody)
-                && childBody.BodyType == BodyType.Complex // Too lazy to come up with a new name lmfao
+                && childBody.BodyType == Content.Shared._Shitmed.Body.BodyType.Complex // Too lazy to come up with a new name lmfao
                 && _body.TryGetRootPart(child, out var rootPart, childBody))
             {
                 var woundables = _wound.GetAllWoundableChildrenWithComp<DamageableComponent>(rootPart.Value);
@@ -301,11 +300,11 @@ public sealed partial class PolymorphSystem : EntitySystem
                     if (woundableDamage is not null)
                     {
                         if (woundableDamage.TryGetValue(target, out var wounds))
-                            _damageable.SetDamage(woundable, woundable.Comp2, wounds);
+                            _damageable.SetDamage((woundable, woundable.Comp2), wounds);
                     }
                     else
                     {
-                        _damageable.SetDamage(woundable, woundable.Comp2, damage / count);
+                        _damageable.SetDamage((woundable, woundable.Comp2), damage / count);
                     }
                 }
 
@@ -482,7 +481,7 @@ public sealed partial class PolymorphSystem : EntitySystem
         {
             // <Shitmed>
             if (TryComp<BodyComponent>(parent, out var parentBody)
-                && parentBody.BodyType == BodyType.Complex // Too lazy to come up with a new name lmfao
+                && parentBody.BodyType == Content.Shared._Shitmed.Body.BodyType.Complex // Too lazy to come up with a new name lmfao
                 && _body.TryGetRootPart(parent, out var rootPart, parentBody))
             {
                 var woundables = _wound.GetAllWoundableChildrenWithComp<DamageableComponent>(rootPart.Value);
@@ -494,11 +493,11 @@ public sealed partial class PolymorphSystem : EntitySystem
                     if (woundableDamage is not null)
                     {
                         if (woundableDamage.TryGetValue(target, out var wounds))
-                            _damageable.SetDamage(woundable, woundable.Comp2, wounds);
+                            _damageable.SetDamage((woundable, woundable.Comp2), wounds);
                     }
                     else
                     {
-                        _damageable.SetDamage(woundable, woundable.Comp2, damage / count);
+                        _damageable.SetDamage((woundable, woundable.Comp2), damage / count);
                     }
                 }
 

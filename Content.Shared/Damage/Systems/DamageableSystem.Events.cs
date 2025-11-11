@@ -1,7 +1,13 @@
+// <Trauma>
+using Content.Shared._Shitmed.Medical.Surgery.Consciousness.Components;
+using Content.Shared._Shitmed.Medical.Surgery.Wounds.Components;
+using Content.Shared._Shitmed.Targeting;
+using Content.Shared.Body.Components;
+// </Trauma>
 using Content.Shared.CCVar;
 using Content.Shared.Damage.Components;
 using Content.Shared.Damage.Prototypes;
-using Content.Shared.FixedPoint;
+using Content.Goobstation.Maths.FixedPoint;
 using Content.Shared.Inventory;
 using Content.Shared.Radiation.Events;
 using Content.Shared.Rejuvenate;
@@ -231,6 +237,7 @@ public sealed class DamageModifyEvent(EntityUid target, DamageSpecifier damage, 
 
     // <Goob>
     public readonly EntityUid Target = target;
+    public readonly EntityUid? Origin = origin; // Why was this not a field already?
     public readonly TargetBodyPart? TargetPart = targetPart;
     // </Goob>
     public readonly DamageSpecifier OriginalDamage = damage;

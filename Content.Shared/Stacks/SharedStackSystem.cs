@@ -115,7 +115,7 @@ public abstract partial class SharedStackSystem : EntitySystem
     /// Goobstation - virtual method to allow calling from shared.
     /// Does nothing on the client.
     /// </summary>
-    public virtual EntityUid? Split(EntityUid uid, int amount, EntityCoordinates spawnPosition, StackComponent? stack = null)
+    public virtual EntityUid? Split(Entity<StackComponent?> ent, int amount, EntityCoordinates spawnPosition)
     {
         return null;
     }
@@ -239,7 +239,7 @@ public abstract partial class SharedStackSystem : EntitySystem
             Category = VerbCategory.Split,
             Act = () =>
             {
-                _ui.OpenUi(uid, StackCustomSplitUiKey.Key, args.User);
+                _ui.TryOpenUi(ent.Owner, StackCustomSplitUiKey.Key, user, predicted: true);
             },
             Priority = priority - 1
         };

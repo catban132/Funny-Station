@@ -607,12 +607,12 @@ namespace Content.Server.Ghost
                         if (TryComp<BodyComponent>(playerEntity, out var body)
                             && body.BodyType == BodyType.Complex
                             && body.RootContainer.ContainedEntities.FirstOrNull() is { } root)
-                            _damageable.TryChangeDamage(playerEntity,
+                            _damageable.ChangeDamage(playerEntity.Value,
                                 damage,
                                 true,
                                 targetPart: _bodySystem.GetTargetBodyPart(root));
                         else
-                            _damageable.ChangeDamage(playerEntity, damage, true);
+                            _damageable.ChangeDamage(playerEntity.Value, damage, true);
                         // Shitmed Change End
                     }
                     // </Goob>

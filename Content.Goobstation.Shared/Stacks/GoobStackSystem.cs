@@ -12,8 +12,9 @@ namespace Content.Goobstation.Shared.Stacks;
 /// <summary>
 /// Gives every <see cref="StackComponent"/> a split dialog UI.
 /// </summary>
-public abstract class GoobSharedStackSystem : EntitySystem
+public sealed class GoobStackSystem : EntitySystem
 {
+    [Dependency] private readonly SharedStackSystem _stack = default!;
     [Dependency] private readonly SharedUserInterfaceSystem _ui = default!;
 
     /// <inheritdoc/>
@@ -32,6 +33,10 @@ public abstract class GoobSharedStackSystem : EntitySystem
     }
 
     // Custom stack splitting dialog
-    // client shouldn't try to split stacks so do nothing on client
-    protected virtual void OnCustomSplitMessage(Entity<StackComponent> ent, ref StackCustomSplitAmountMessage message) {}
+    private void OnCustomSplitMessage(Entity<StackComponent> ent, ref StackCustomSplitAmountMessage message)
+    {
+        var user = message.Actor;
+        var amount = message.Amount;
+        _stack.UserSplit(ent, user, amount);
+    }
 }

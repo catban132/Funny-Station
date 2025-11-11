@@ -45,7 +45,7 @@ public sealed class PassiveDamageSystem : EntitySystem
             // Goobstation
             if (comp.AllowedStates == null || !TryComp<MobStateComponent>(uid, out var mobState))
             {
-                _damageable.TryChangeDamage(uid, comp.Damage, true, false, damage);
+                _damageable.ChangeDamage((uid, damage), comp.Damage, true, false);
                 return;
             }
 

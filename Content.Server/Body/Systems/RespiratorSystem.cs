@@ -495,7 +495,7 @@ public sealed class RespiratorSystem : EntitySystem
             }
         }
 
-        _damageableSys.TryChangeDamage(ent, respirator.DamageRecovery, targetPart: TargetBodyPart.All, ignoreBlockers: true);
+        _damageableSys.ChangeDamage(ent.Owner, respirator.DamageRecovery, targetPart: TargetBodyPart.All, ignoreBlockers: true);
         // Shitmed Change End
     }
 

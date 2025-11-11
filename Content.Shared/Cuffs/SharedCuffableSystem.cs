@@ -665,7 +665,7 @@ namespace Content.Shared.Cuffs
                 if (TryComp(user, out HulkComponent? hulk)) // Goobstation
                 {
                     _hulk.Roar((user, hulk));
-                    Uncuff(user, user, cuffsToRemove.Value, cuffable);
+                    Uncuff(target, user, cuff); // user is checked to be target earlier
                     return;
                 }
             }

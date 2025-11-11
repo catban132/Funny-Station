@@ -61,6 +61,9 @@
   id: AtmosBackTank # Assmos - Extinguisher Nozzle
 
 - type: Tag
+  id: ATVKeys
+
+- type: Tag
   id: AntagGateway
 
 - type: Tag
@@ -536,6 +539,9 @@
   id: SecurityBreathMask
 
 - type: Tag
+  id: SecwayKeys
+
+- type: Tag
   id: ShadowCloakAction
 
 - type: Tag
@@ -585,6 +591,9 @@
 
 - type: Tag
   id: SyndicateBreathMask
+
+- type: Tag
+  id: SyndicateSegwayKeys
 
 - type: Tag
   id: ShellShotgunHeavier
@@ -687,6 +696,9 @@
 
 - type: Tag
   id: WizardHat
+
+- type: Tag
+  id: WizardStaff
 
 - type: Tag # These tags are NOT alphabetical!!
   id: Xenomorph

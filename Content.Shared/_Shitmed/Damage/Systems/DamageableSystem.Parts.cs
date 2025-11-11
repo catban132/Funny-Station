@@ -1,3 +1,4 @@
+using Content.Goobstation.Maths.FixedPoint;
 using Content.Shared._Shitmed.Body;
 using Content.Shared._Shitmed.Body.Part;
 using Content.Shared._Shitmed.Damage;
@@ -8,8 +9,12 @@ using Content.Shared._Shitmed.Targeting;
 using Content.Shared.Body.Systems;
 using Content.Shared.Body.Components;
 using Content.Shared.Body.Part;
+using Content.Shared.Damage.Components;
+using Content.Shared.Random.Helpers;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
+using System.Linq;
 
 namespace Content.Shared.Damage.Systems;
 
@@ -18,7 +23,6 @@ public sealed partial class DamageableSystem
     [Dependency] private readonly SharedBodySystem _body = default!;
     [Dependency] private readonly WoundSystem _wounds = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly IRobustRandom _random = default!;
 
     private EntityQuery<BodyComponent> _bodyQuery;
     private EntityQuery<ConsciousnessComponent> _consciousnessQuery;
@@ -27,7 +31,7 @@ public sealed partial class DamageableSystem
     /// <summary>
     /// Applies damage to an entity with body parts, targeting specific parts as needed.
     /// </summary>
-    private DamageSpecifier? ApplyDamageToBodyParts(
+    private DamageSpecifier ApplyDamageToBodyParts(
         EntityUid uid,
         DamageSpecifier damage,
         EntityUid? origin,
@@ -39,7 +43,6 @@ public sealed partial class DamageableSystem
         SplitDamageBehavior splitDamageBehavior = SplitDamageBehavior.Split,
         bool canMiss = true)
     {
-        DamageSpecifier? totalAppliedDamage = null;
         var adjustedDamage = damage * partMultiplier;
         // This cursed shitcode lets us know if the target part is a power of 2
         // therefore having multiple parts targeted.
@@ -74,10 +77,10 @@ public sealed partial class DamageableSystem
             if (targetedBodyParts.Count == 0)
             {
                 var query = _body.GetBodyChildrenWithComponent<DamageableComponent>(uid).ToList();
-                if (query.Count > 0)
-                    targetedBodyParts = query;
-                else
-                    return null;
+                if (query.Count == 0)
+                    return new DamageSpecifier();
+
+                targetedBodyParts = query;
             }
 
             var damagePerPart = ApplySplitDamageBehaviors(splitDamageBehavior, adjustedDamage, targetedBodyParts);
@@ -88,10 +91,10 @@ public sealed partial class DamageableSystem
                 var modifiedDamage = damagePerPart + surplusHealing;
 
                 // Apply damage to this part
-                var partDamageResult = TryChangeDamage(partId, modifiedDamage, ignoreResistances,
-                    interruptsDoAfters, partDamageable, origin, ignoreBlockers: ignoreBlockers);
+                var partDamageResult = ChangeDamage((partId, partDamageable), modifiedDamage, ignoreResistances,
+                    interruptsDoAfters, origin, ignoreBlockers: ignoreBlockers);
 
-                if (partDamageResult != null && !partDamageResult.Empty)
+                if (!partDamageResult.Empty)
                 {
                     appliedDamage += partDamageResult;
 
@@ -126,44 +129,39 @@ public sealed partial class DamageableSystem
                 }
             }
 
-            totalAppliedDamage = appliedDamage;
+            return appliedDamage;
         }
+
+        // Target a specific body part
+        TargetBodyPart? target;
+        var totalDamage = damage.GetTotal();
+
+        if (totalDamage <= 0 || !canMiss) // Whoops i think i fucked up damage here.
+            target = _body.GetTargetBodyPart(uid, origin, targetPart);
         else
+            target = _body.GetRandomBodyPart(uid, origin, targetPart);
+
+        var (partType, symmetry) = _body.ConvertTargetBodyPart(target);
+        var possibleTargets = _body.GetBodyChildrenOfType(uid, partType, symmetry: symmetry).ToList();
+
+        if (possibleTargets.Count == 0)
         {
-            // Target a specific body part
-            TargetBodyPart? target;
-            var totalDamage = damage.GetTotal();
+            if (totalDamage <= 0)
+                return new DamageSpecifier();
 
-            if (totalDamage <= 0 || !canMiss) // Whoops i think i fucked up damage here.
-                target = _body.GetTargetBodyPart(uid, origin, targetPart);
-            else
-                target = _body.GetRandomBodyPart(uid, origin, targetPart);
-
-            var (partType, symmetry) = _body.ConvertTargetBodyPart(target);
-            var possibleTargets = _body.GetBodyChildrenOfType(uid, partType, symmetry: symmetry).ToList();
-
-            if (possibleTargets.Count == 0)
-            {
-                if (totalDamage <= 0)
-                    return null;
-
-                possibleTargets = _body.GetBodyChildren(uid).ToList();
-            }
-
-            // No body parts at all?
-            if (possibleTargets.Count == 0)
-                return null;
-
-            var chosenTarget = _random.PickAndTake(possibleTargets);
-
-            if (!_damageableQuery.TryComp(chosenTarget.Id, out var partDamageable))
-                return null;
-
-            totalAppliedDamage = TryChangeDamage(chosenTarget.Id, adjustedDamage, ignoreResistances,
-                interruptsDoAfters, partDamageable, origin, ignoreBlockers: ignoreBlockers);
+            possibleTargets = _body.GetBodyChildren(uid).ToList();
         }
 
-        return totalAppliedDamage;
+        // No body parts at all?
+        if (possibleTargets.Count == 0)
+            return new DamageSpecifier();
+
+        // TODO: PredictedRandom when it's real
+        var seed = SharedRandomExtensions.HashCodeCombine((int) _timing.CurTick.Value, GetNetEntity(uid).Id);
+        var rand = new System.Random(seed);
+        var chosenTarget = rand.PickAndTake(possibleTargets);
+        return ChangeDamage(chosenTarget.Id, adjustedDamage, ignoreResistances,
+            interruptsDoAfters, origin, ignoreBlockers: ignoreBlockers);
     }
 
     /// <summary>
@@ -177,22 +175,21 @@ public sealed partial class DamageableSystem
     /// <param name="ignoreBlockers">Whether to ignore damage blockers</param>
     /// <returns>True if parent damage was updated, false otherwise</returns>
     private bool UpdateParentDamageFromBodyParts(
-        EntityUid bodyPartUid,
+        Entity<BodyPartComponent?> bodyPart,
         DamageSpecifier? appliedDamage,
         bool interruptsDoAfters,
         EntityUid? origin,
-        BodyPartComponent? bodyPart = null,
         bool ignoreBlockers = false)
     {
         // Check if this is a body part and get the parent body
-        if (!Resolve(bodyPartUid, ref bodyPart, logMissing: false)
-            || bodyPart.Body is not { } body
-            || !_damageableQuery.TryComp(body, out var partDamageable))
+        if (!Resolve(bodyPart, ref bodyPart.Comp, false) ||
+            bodyPart.Comp.Body is not { } body ||
+            !_damageableQuery.TryComp(body, out var bodyDamage))
             return false;
 
         // Reset the parent's damage values
-        foreach (var type in parentDamageable.Damage.DamageDict.Keys.ToList())
-            parentDamageable.Damage.DamageDict[type] = FixedPoint2.Zero;
+        foreach (var type in bodyDamage.Damage.DamageDict.Keys.ToList())
+            bodyDamage.Damage.DamageDict[type] = FixedPoint2.Zero;
 
         // Sum up damage from all body parts
         foreach (var (partId, _) in _body.GetBodyChildren(body))
@@ -205,14 +202,13 @@ public sealed partial class DamageableSystem
                 if (value == 0)
                     continue;
 
-                if (parentDamageable.Damage.DamageDict.TryGetValue(type, out var existing))
-                    parentDamageable.Damage.DamageDict[type] = existing + value;
+                if (bodyDamage.Damage.DamageDict.TryGetValue(type, out var existing))
+                    bodyDamage.Damage.DamageDict[type] = existing + value;
             }
         }
 
         // Raise the damage changed event on the parent
-        DamageChanged(body,
-            parentDamageable,
+        OnEntityDamageChanged((body, bodyDamage),
             appliedDamage,
             interruptsDoAfters,
             origin,
@@ -288,35 +284,6 @@ public sealed partial class DamageableSystem
                 return damage;
         }
     }
-    /// <summary>
-    ///     Applies the two univeral "All" modifiers, if set.
-    /// </summary>
-    /// <param name="damage">The damage to be changed.</param>
-    public DamageSpecifier ApplyUniversalAllModifiers(DamageSpecifier damage)
-    {
-        // Checks for changes first since they're unlikely in normal play.
-        if (UniversalAllDamageModifier == 1f && UniversalAllHealModifier == 1f)
-            return damage;
-
-        foreach (var (key, value) in damage.DamageDict)
-        {
-            if (value == 0)
-                continue;
-
-            if (value > 0)
-            {
-                damage.DamageDict[key] *= UniversalAllDamageModifier;
-                continue;
-            }
-
-            if (value < 0)
-            {
-                damage.DamageDict[key] *= UniversalAllHealModifier;
-            }
-        }
-
-        return damage;
-    }
 
     public Dictionary<string, FixedPoint2> DamageSpecifierToWoundList(
         Entity<DamageableComponent> ent,
@@ -333,7 +300,7 @@ public sealed partial class DamageableSystem
         // some wounds like Asphyxiation and Bloodloss aren't supposed to be created.
         if (!ignoreResistances)
         {
-            if (damageable.DamageModifierSetId != null &&
+            if (ent.Comp.DamageModifierSetId != null &&
                 _prototypeManager.TryIndex(ent.Comp.DamageModifierSetId, out var modifierSet))
             {
                 // lol bozo
@@ -345,8 +312,8 @@ public sealed partial class DamageableSystem
                 damageSpecifier = DamageSpecifier.ApplyModifierSet(spec, modifierSet);
             }
 
-            var ev = new DamageModifyEvent(damageSpecifier, origin, targetPart);
-            RaiseLocalEvent(uid, ev);
+            var ev = new DamageModifyEvent(ent, damageSpecifier, origin, targetPart);
+            RaiseLocalEvent(ent, ev);
             damageSpecifier = ev.Damage;
 
             if (damageSpecifier.Empty)

@@ -169,7 +169,6 @@ public sealed class DamageOnInteractSystem : EntitySystem
             };
         }
 
-        totalDamage = _damageableSystem.TryChangeDamage(args.User, totalDamage, origin: args.Target, targetPart: targetPart, canMiss: false);
         // Shitmed Change End
         totalDamage = _damageableSystem.ChangeDamage(args.User, totalDamage, origin: args.Target,
             targetPart: targetPart, canMiss: false); // Shitmed

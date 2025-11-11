@@ -404,18 +404,16 @@ public sealed class HealingSystem : EntitySystem
                 return;
             }
 
-            var damageChanged = _damageable.TryChangeDamage(targetedWoundable, healing.Damage * _damageable.UniversalTopicalsHealModifier, true, origin: args.User, ignoreBlockers: healedBleed || healing.BloodlossModifier == 0); // GOOBEDIT
-
-            if (damageChanged is not null)
-                healedTotal += -damageChanged.GetTotal();
+            var damageChanged = _damageable.ChangeDamage(targetedWoundable, healing.Damage * _damageable.UniversalTopicalsHealModifier, true, origin: args.User, ignoreBlockers: healedBleed || healing.BloodlossModifier == 0); // GOOBEDIT
+            healedTotal -= damageChanged.GetTotal();
         }
 
         // Re-verify that we can heal the damage.
         if (TryComp<StackComponent>(args.Used.Value, out var stackComp))
         {
-            _stacks.Use(args.Used.Value, 1, stackComp);
+            _stacks.TryUse((args.Used.Value, stackComp), 1);
 
-            if (_stacks.GetCount(args.Used.Value, stackComp) <= 0)
+            if (_stacks.GetCount((args.Used.Value, stackComp)) <= 0)
                 dontRepeat = true;
         }
         else
