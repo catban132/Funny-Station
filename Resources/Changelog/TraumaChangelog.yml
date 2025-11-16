@@ -668,3 +668,9 @@ Entries:
       message: Updated Metal Textures.
   id: 75
   time: '2025-11-16T01:47:53.0000000+00:00'
+- author: deltanedas
+  changes:
+    - type: Remove
+      message: Removed AI vision from pAIs.
+  id: 76
+  time: '2025-11-16T15:48:30.0000000+00:00'
