@@ -16,7 +16,7 @@ using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Popups;
 using Content.Shared.Projectiles;
-using Content.Shared.Stunnable;
+using Content.Shared.StatusEffectNew;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Prototypes;
@@ -33,6 +33,7 @@ public abstract class SharedShadowlingSystem : EntitySystem
     [Dependency] private readonly IPrototypeManager _protoMan = default!;
     [Dependency] private readonly SharedActionsSystem _actions = default!;
     [Dependency] private readonly DamageableSystem _damageable = default!;
+    [Dependency] private readonly StatusEffectsSystem _status = default!;
 
     public override void Initialize()
     {
@@ -144,7 +145,7 @@ public abstract class SharedShadowlingSystem : EntitySystem
                 EntityManager.RemoveComponents(uid, _protoMan.Index(component.ObtainableComponents));
 
                 // this is such a big L that even the code is losing and all variables are hardcoded.
-                EnsureComp<SlowedDownComponent>(uid);
+                _status.TryAddStatusEffect(uid, "ShadowlingAbominationStatusEffect", out _);
                 _appearance.AddMarking(uid, "AbominationTorso");
                 _appearance.AddMarking(uid, "AbominationHorns");
 
