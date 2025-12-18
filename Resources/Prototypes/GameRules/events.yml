@@ -49,9 +49,6 @@
     - id: ParadoxCloneSpawn
     #- id: RevenantSpawn  # GoobStation - removed till rework
     - id: SleeperAgents
-    - id: ChangelingMidround # Goob
-    - id: HereticMidround # Goob
-    - id: Devilmidround # Goob
     - id: ZombieOutbreak
     - id: LoneOpsSpawn
     #- id: WizardSpawn # Trauma - chud wizard removed pending rework

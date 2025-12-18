@@ -18,5 +18,8 @@
     - id: BingleSpawn
     - id: SlaughterDemonMidround
     - id: XenomorphsInfestation
-    - id: WraithMidround
-    # TODO: When Slasher is Ready - id: SlasherSpawn
+    #- id: WraithMidround # if someone makes it less chuddy
+    - id: ChangelingMidround
+    - id: HereticMidround
+    - id: Devilmidround
+    #- id: SlasherSpawn # TODO: when slasher is ready
