@@ -888,3 +888,9 @@ Entries:
       message: All borgs still have their tool modules.
   id: 100
   time: '2025-12-29T01:11:44.0000000+00:00'
+- author: deltanedas
+  changes:
+    - type: Add
+      message: Added streamer mode for muting copyrighted audio.
+  id: 101
+  time: '2025-12-29T15:52:06.0000000+00:00'
