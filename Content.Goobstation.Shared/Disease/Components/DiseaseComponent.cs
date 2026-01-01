@@ -11,6 +11,8 @@ namespace Content.Goobstation.Shared.Disease.Components;
 [EntityCategory("Diseases")]
 public sealed partial class DiseaseComponent : Component
 {
+    public const string EffectContainerId = "diseaseEffectContainer";
+
     /// <summary>
     /// Name of the container that stores effect entities.
     /// </summary>
@@ -18,10 +20,7 @@ public sealed partial class DiseaseComponent : Component
     public string EffectsContainerId = "disease_effects";
 
     [ViewVariables]
-    public Container EffectsContainer = default!;
-
-    [ViewVariables]
-    public IReadOnlyList<EntityUid> Effects => EffectsContainer.ContainedEntities;
+    public Container Effects = default!;
 
     /// <summary>
     /// Current strength of the organism's immunity against this disease
