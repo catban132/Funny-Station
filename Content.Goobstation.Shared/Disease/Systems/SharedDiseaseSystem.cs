@@ -341,9 +341,9 @@ public abstract partial class SharedDiseaseSystem : EntitySystem
         if (!Resolve(ent, ref ent.Comp, false))
             return false;
 
-        while (ent.Comp.Diseases.Count != 0)
+        foreach (var disease in ent.Comp.Diseases.ContainedEntities.ToList())
         {
-            if (!TryCure(ent, ent.Comp.Diseases.ContainedEntities[0]))
+            if (!TryCure(ent, disease))
                 return false;
         }
 
