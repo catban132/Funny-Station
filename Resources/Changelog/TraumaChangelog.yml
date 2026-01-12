@@ -1246,3 +1246,11 @@ Entries:
         items.
   id: 147
   time: '2026-01-12T09:26:18.0000000+00:00'
+- author: deltanedas
+  changes:
+    - type: Tweak
+      message: >-
+        Chefs can only use CQC inside the kitchen areas now, not just around
+        their spawnpoints.
+  id: 148
+  time: '2026-01-12T09:59:41.0000000+00:00'
