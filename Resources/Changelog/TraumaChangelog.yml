@@ -1224,3 +1224,9 @@ Entries:
       message: Roaches go around and eat other food, clearing up more entities.
   id: 144
   time: '2026-01-12T04:56:55.0000000+00:00'
+- author: deltanedas
+  changes:
+    - type: Fix
+      message: Fixed bodypart health examine.
+  id: 145
+  time: '2026-01-12T05:56:06.0000000+00:00'
