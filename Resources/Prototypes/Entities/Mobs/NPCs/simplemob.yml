@@ -76,6 +76,8 @@
   suffix: AI
   abstract: true
   components:
+  - type: CombatPower # Goobstation
+    factor: 0.5 # As dangerous as half a crew-member
   - type: Hunger
     thresholds: # only animals and rats are derived from this prototype so let's override it here and in rats' proto
       Overfed: 100
@@ -108,5 +110,5 @@
   - type: MobPrice
     price: 150
   - type: FloatingVisuals
-  - type: CombatPower # Goobstation
-    factor: 0.5 # As dangerous as half a crew-member
+  - type: GhostOnMove
+    mustBeDead: true
