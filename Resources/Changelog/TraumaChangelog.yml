@@ -1542,3 +1542,9 @@ Entries:
       message: There is a heightened chance of (mapped) banana peels being explosive.
   id: 185
   time: '2026-01-18T08:45:12.0000000+00:00'
+- author: deltanedas
+  changes:
+    - type: Tweak
+      message: Renamed Ammonia gas to Miasma.
+  id: 186
+  time: '2026-01-18T08:53:47.0000000+00:00'
