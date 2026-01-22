@@ -1735,3 +1735,9 @@ Entries:
       message: facehuggers speak xeno and have hivemind
   id: 210
   time: '2026-01-21T23:20:28.0000000+00:00'
+- author: deltanedas
+  changes:
+    - type: Fix
+      message: Fixed vox raider stealth suit
+  id: 211
+  time: '2026-01-22T10:51:16.0000000+00:00'
