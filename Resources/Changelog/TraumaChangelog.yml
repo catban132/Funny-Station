@@ -1793,3 +1793,10 @@ Entries:
   id: 219
   time: '2026-01-23T16:05:24.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/468
+- author: TurboTrackerss14
+  changes:
+  - type: Remove
+    message: Durathread crafts through lathe and construction menu.
+  id: 220
+  time: '2026-01-23T22:27:43.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/471
