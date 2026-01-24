@@ -1821,3 +1821,10 @@ Entries:
   id: 223
   time: '2026-01-24T19:27:58.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/470
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed slime wizards not being able to use the teleport spell.
+  id: 224
+  time: '2026-01-24T19:30:33.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/478
