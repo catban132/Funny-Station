@@ -342,7 +342,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Action
-    useDelay: 10
+    useDelay: 15 #Do not make spammable
     itemIconStyle: NoItem
     checkCanInteract: false
     icon:
@@ -571,7 +571,11 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Action
+<<<<<<< HEAD
     useDelay: 20
+=======
+    useDelay: 5
+>>>>>>> 1f2f712b629 (Ling nerfs (#5799))
     checkCanInteract: false
     checkConsciousness: false
     itemIconStyle: NoItem
@@ -692,7 +696,11 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Action
+<<<<<<< HEAD
     useDelay: 10
+=======
+    useDelay: 15 #it lasts 10 seconds
+>>>>>>> 1f2f712b629 (Ling nerfs (#5799))
     checkCanInteract: false
     checkConsciousness: false
     itemIconStyle: NoItem
