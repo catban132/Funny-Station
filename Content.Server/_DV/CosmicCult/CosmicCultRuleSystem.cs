@@ -806,7 +806,7 @@ public sealed class CosmicCultRuleSystem : GameRuleSystem<CosmicCultRuleComponen
             || !TryComp<MindComponent>(mindId, out var mindComp))
             return;
 
-        _mind.ClearObjectives(mindId, mindComp);
+        _mind.ClearObjectives((mindId, mindComp));
         _role.MindRemoveRole<CosmicCultRoleComponent>(mindId);
         _role.MindRemoveRole<RoleBriefingComponent>(mindId);
 
