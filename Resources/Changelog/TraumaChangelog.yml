@@ -1871,3 +1871,12 @@ Entries:
   id: 229
   time: '2026-01-24T23:59:26.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/482
+- author: deltanedas
+  changes:
+  - type: Add
+    message: Re-enabled limb targeting random miss chances.
+  - type: Remove
+    message: The Phantom Pain
+  id: 230
+  time: '2026-01-25T09:30:33.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/490
