@@ -1979,3 +1979,10 @@ Entries:
   id: 242
   time: '2026-01-26T12:01:21.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/529
+- author: JohnJJohn
+  changes:
+  - type: Fix
+    message: Fixed ripleyMK2 being unbuildable
+  id: 243
+  time: '2026-01-26T12:25:22.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/530
