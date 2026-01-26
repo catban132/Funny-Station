@@ -1995,3 +1995,12 @@ Entries:
   id: 244
   time: '2026-01-26T13:11:35.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/531
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: >-
+      Massively nerfed firelock health, it now takes 100 damage (before
+      modifiers) to break instead of 500.
+  id: 245
+  time: '2026-01-26T15:23:40.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/532
