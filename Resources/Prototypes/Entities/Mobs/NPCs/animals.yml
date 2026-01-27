@@ -2072,6 +2072,14 @@
       - !type:GibBehavior
         deleteGibs: true # Trauma
         recursive: false
+  - type: ActionGrant
+    actions:
+    - ActionMouseCall
+  - type: MobCallSource
+    whitelist:
+      tags:
+      - Mouse
+  - type: MobCallable
   # </Goobstation>
 
 - type: entity
