@@ -2054,3 +2054,10 @@ Entries:
   id: 251
   time: '2026-01-27T20:06:21.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/547
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed batong having half as many uses as advertised when left clicking.
+  id: 252
+  time: '2026-01-27T20:12:57.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/549
