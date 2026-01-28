@@ -2072,3 +2072,10 @@ Entries:
   id: 253
   time: '2026-01-28T14:22:28.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/552
+- author: JohnJJohn
+  changes:
+  - type: Fix
+    message: Fixed station radio, radio's spamming ghost chat
+  id: 254
+  time: '2026-01-28T15:45:04.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/551
