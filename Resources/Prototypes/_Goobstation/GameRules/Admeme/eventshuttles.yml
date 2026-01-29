@@ -125,7 +125,6 @@
     gridPath: /Maps/_Goobstation/Shuttles/ShuttleEvent/Legionnaire.yml
   - type: AntagLoadProfileRule
     speciesOverrideBlacklist:
-    - Yowie
     - IPC
     - Diona
     - Harpy

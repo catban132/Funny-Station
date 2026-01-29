@@ -709,7 +709,6 @@
     eventType: HostilesSpawn
   - type: AntagLoadProfileRule
     speciesOverrideBlacklist:
-    - Yowie
     - IPC
     - Diona
     - Harpy

@@ -96,11 +96,9 @@
   - id: PKAUpgradeDamage
     cost: 1200
   # TODO: lazarus injector for 1k
-  - id: LavalandWeaponKineticHammer
+  - id: WeaponCrusherHammer
     cost: 1250
   - id: LavalandWeaponKineticMachete
-    cost: 1250
-  - id: LavalandWeaponKineticSpear
     cost: 1250
   - id: LavalandWeaponKineticClaws
     cost: 1250

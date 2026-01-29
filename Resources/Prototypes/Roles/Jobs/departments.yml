@@ -7,7 +7,6 @@
   - CargoTechnician
   - Quartermaster
   - SalvageSpecialist
-  - ShaftMiner # Lavaland Change
 
 - type: department
   id: Civilian
