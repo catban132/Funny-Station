@@ -2100,3 +2100,16 @@ Entries:
   id: 257
   time: '2026-01-29T19:21:54.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/561
+- author: deltanedas
+  changes:
+  - type: Tweak
+    message: 'Lavaland 2: No job split between salvage specialists.'
+  - type: Tweak
+    message: 'Lavaland 2: Points vendor is mostly untouched.'
+  - type: Remove
+    message: Reverted passive regen and other slop.
+  - type: Tweak
+    message: Increased default wideswing stamina cost to 10, up from 5.
+  id: 258
+  time: '2026-01-30T08:01:24.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/557
