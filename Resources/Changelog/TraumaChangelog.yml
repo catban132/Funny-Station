@@ -2165,3 +2165,10 @@ Entries:
   id: 263
   time: '2026-01-31T13:48:34.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/583
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed not being able to move after using a lavaland jaunter.
+  id: 264
+  time: '2026-01-31T14:25:21.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/585
