@@ -2260,3 +2260,12 @@ Entries:
   id: 276
   time: '2026-02-02T07:07:12.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/473
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: >-
+      Fixed smart equip trying to take mags out of guns instead of equipping
+      them.
+  id: 277
+  time: '2026-02-02T08:11:02.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/612
