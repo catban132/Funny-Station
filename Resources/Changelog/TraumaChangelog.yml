@@ -2319,3 +2319,10 @@ Entries:
   id: 283
   time: '2026-02-03T08:12:12.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/629
+- author: JohnJJohn
+  changes:
+  - type: Add
+    message: Added Deep fryer, you can deep fry ANYTHING
+  id: 284
+  time: '2026-02-04T21:02:14.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/637
