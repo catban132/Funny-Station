@@ -16,9 +16,8 @@
   - type: Clothing
     sprite: Clothing/OuterClothing/Armor/security.rsi
   - type: Armor
-    coverage:
-    - Chest
-    - Groin
+    coverage: # Shitmed
+    - Torso
     traumaDeductions:
       Dismemberment: 0.2
       OrganDamage: 0.2
@@ -73,9 +72,8 @@
   - type: Clothing
     sprite: Clothing/OuterClothing/Armor/bulletproof.rsi
   - type: Armor
-    coverage:
-    - Chest
-    - Groin
+    coverage: # Shitmed
+    - Torso
     - Tail
     traumaDeductions:
       Dismemberment: 0.1
@@ -106,7 +104,7 @@
     sprite: Clothing/OuterClothing/Armor/armor_reflec.rsi
   - type: Armor
     coverage:
-    - Chest
+    - Torso
     # Does not give dismemberment deduction because of reflection. yeah do with it somehow
     modifiers:
       coefficients:
@@ -145,9 +143,8 @@
   - type: Clothing
     sprite: Clothing/OuterClothing/Armor/captain_carapace.rsi
   - type: Armor
-    coverage:
-    - Chest
-    - Groin
+    coverage: # Shitmed
+    - Torso
     traumaDeductions:
       Dismemberment: 0.2
       OrganDamage: 0.2
@@ -212,9 +209,8 @@
       BoneDamage: 0.3
       VeinsDamage: 0
       NerveDamage: 0
-    coverage:
-    - Chest
-    - Groin
+    coverage: # Shitmed
+    - Torso
     modifiers:
       coefficients:
         Blunt: 0.7
@@ -251,9 +247,8 @@
       BoneDamage: 0.25
       VeinsDamage: 0
       NerveDamage: 0
-    coverage:
-    - Chest
-    - Groin
+    coverage: # Shitmed
+    - Torso
     modifiers:
       coefficients:
         Blunt: 0.7
@@ -286,15 +281,14 @@
   - type: Clothing
     sprite: Clothing/OuterClothing/Vests/mercwebvest.rsi
   - type: Armor
-    traumaDeductions:
+    traumaDeductions: # Shitmed
       Dismemberment: 0.2
       OrganDamage: 0.2
       BoneDamage: 0.2
       VeinsDamage: 0
       NerveDamage: 0
-    coverage:
-    - Chest
-    - Groin
+    coverage: # Shitmed
+    - Torso
     modifiers:
       coefficients:
         Blunt: 0.5
@@ -319,9 +313,8 @@
   - type: Clothing
     sprite: Clothing/OuterClothing/Armor/syndie-raid.rsi
   - type: Armor
-    coverage:
-    - Chest
-    - Groin
+    coverage: # Shitmed
+    - Torso
     - Arm
     - Hand
     - Leg
@@ -410,9 +403,8 @@
   - type: Clothing
     sprite: Clothing/OuterClothing/Armor/riot.rsi
   - type: Armor
-    coverage:
-    - Chest
-    - Groin
+    coverage: # Shitmed
+    - Shitmed
     - Arm
     - Leg
     - Tail
@@ -448,9 +440,8 @@
   - type: Clothing
     sprite: Clothing/OuterClothing/Armor/cult_armour.rsi
   - type: Armor
-    coverage:
-    - Chest
-    - Groin
+    coverage: # Shitmed
+    - Shitmed
     - Tail
     - Arm
     - Leg
@@ -486,9 +477,8 @@
   - type: Clothing
     sprite: Clothing/OuterClothing/Armor/heavy.rsi
   - type: Armor
-    coverage:
-    - Chest
-    - Groin
+    coverage: # Shitmed
+    - Torso
     - Arm
     - Hand
     - Leg
@@ -594,9 +584,8 @@
   - type: Clothing
     sprite: Clothing/OuterClothing/Armor/lingarmor.rsi
   - type: Armor
-    coverage:
-    - Chest
-    - Groin
+    coverage: # Shitmed
+    - Torso
     - Arm
     - Hand
     - Leg
@@ -644,9 +633,8 @@
   - type: Clothing
     sprite: Clothing/OuterClothing/Armor/bone_armor.rsi
   - type: Armor
-    coverage:
-    - Chest
-    - Groin
+    coverage: # Shitmed
+    - Torso
     - Arm
     - Leg
     - Tail
@@ -693,9 +681,8 @@
   - type: Clothing
     sprite: Clothing/OuterClothing/Armor/podwars_armor.rsi
   - type: Armor
-    coverage:
-    - Chest
-    - Groin
+    coverage: # Shitmed
+    - Torso
     - Arm
     - Leg
     - Tail

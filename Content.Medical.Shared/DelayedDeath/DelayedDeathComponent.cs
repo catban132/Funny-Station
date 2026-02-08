@@ -22,7 +22,6 @@ public sealed partial class DelayedDeathComponent : Component
     [DataField]
     public bool PreventAllRevives;
 
-    // TODO SHITMED: kys
     /// <summary>
     /// How long it has been since the delayed death timer started.
     /// </summary>

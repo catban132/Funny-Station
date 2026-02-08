@@ -1,4 +1,9 @@
-# Xenos
+# Parts
+
+- type: organCategory
+  id: Butt
+
+# Xeno Organs
 
 - type: organCategory
   id: AcidGland

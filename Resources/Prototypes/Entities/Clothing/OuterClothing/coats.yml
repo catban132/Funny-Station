@@ -27,8 +27,7 @@
         - id: FlippoEngravedLighter
   - type: Armor # Woundmed
     coverage:
-    - Chest
-    - Groin
+    - Torso
     - Tail
     - Arm
     - Leg
@@ -79,8 +78,7 @@
   components:
   - type: Armor
     coverage:
-    - Chest
-    - Groin
+    - Torso
     - Tail
     - Arm
     - Leg
@@ -110,9 +108,8 @@
     damageCoefficient: 0.5
   # </Trauma>
   - type: Armor
-    coverage:
-    - Chest
-    - Groin
+    coverage: # Shitmed
+    - Torso
     - Tail
     - Arm
     - Leg
@@ -173,9 +170,8 @@
     heatingCoefficient: 0.1
     coolingCoefficient: 0.1
   - type: Armor
-    coverage:
-    - Chest
-    - Groin
+    coverage: # Shitmed
+    - Torso
     - Tail
     - Arm
     - Leg
@@ -203,9 +199,8 @@
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/labcoat.rsi
   - type: Armor
-    coverage:
-    - Chest
-    - Groin
+    coverage: # Shitmed
+    - Torso
     - Tail
     - Arm
     - Leg
@@ -229,9 +224,8 @@
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/labcoat_chem.rsi
   - type: Armor
-    coverage:
-    - Chest
-    - Groin
+    coverage: # Shitmed
+    - Torso
     - Tail
     - Arm
     - Leg
@@ -255,9 +249,8 @@
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/labcoat_viro.rsi
   - type: Armor
-    coverage:
-    - Chest
-    - Groin
+    coverage: # Shitmed
+    - Torso
     - Tail
     - Arm
     - Leg
@@ -281,9 +274,8 @@
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/labcoat_gene.rsi
   - type: Armor
-    coverage:
-    - Chest
-    - Groin
+    coverage: # Shitmed
+    - Torso
     - Tail
     - Arm
     - Leg
@@ -307,9 +299,8 @@
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/labcoat_cmo.rsi
   - type: Armor
-    coverage:
-    - Chest
-    - Groin
+    coverage: # Shitmed
+    - Torso
     - Tail
     - Arm
     - Leg
@@ -335,9 +326,8 @@
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/labcoat_sci.rsi
   - type: Armor
-    coverage:
-    - Chest
-    - Groin
+    coverage: # Shitmed
+    - Torso
     - Tail
     - Arm
     - Leg
@@ -361,9 +351,8 @@
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/labcoat_robo.rsi
   - type: Armor
-    coverage:
-    - Chest
-    - Groin
+    coverage: # Shitmed
+    - Torso
     - Tail
     - Arm
     - Leg
@@ -387,9 +376,8 @@
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/labcoat_rd.rsi
   - type: Armor
-    coverage:
-    - Chest
-    - Groin
+    coverage: # Shitmed
+    - Torso
     - Tail
     - Arm
     - Leg
@@ -458,9 +446,8 @@
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/dogi.rsi
   - type: Armor
-    coverage:
-    - Chest
-    - Groin
+    coverage: # Shitmed
+    - Torso
     - Tail
     - Arm
     - Leg
@@ -519,9 +506,8 @@
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/brigmedic.rsi
   - type: Armor
-    coverage:
-    - Chest
-    - Groin
+    coverage: # Shitmed
+    - Torso
     - Tail
     modifiers:
       coefficients:
@@ -547,9 +533,8 @@
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/labcoat_senior_researcher.rsi
   - type: Armor
-    coverage:
-    - Chest
-    - Groin
+    coverage: # Shitmed
+    - Torso
     - Tail
     - Arm
     - Leg
@@ -573,9 +558,8 @@
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/labcoat_senior_physician.rsi
   - type: Armor
-    coverage:
-    - Chest
-    - Groin
+    coverage: # Shitmed
+    - Torso
     - Tail
     - Arm
     - Leg

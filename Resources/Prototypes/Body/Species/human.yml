@@ -91,7 +91,7 @@
       amount: 3
 
 - type: entity
-  parent: OrganBase
+  parent: OrganBaseFleshy # Shitmed - Fleshy
   id: OrganHuman
   abstract: true
   suffix: human
@@ -120,7 +120,6 @@
   id: OrganHumanExternal
   abstract: true
   components:
-  - type: BodyPart # Shitmed
   - type: Sprite
     sprite: Mobs/Species/Human/parts.rsi
   - type: VisualOrgan

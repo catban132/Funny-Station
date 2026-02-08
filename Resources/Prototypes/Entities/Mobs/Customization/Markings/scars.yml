@@ -80,15 +80,6 @@
   - sprite: Mobs/Customization/scars.rsi
     state: scar_face_2
 
-- type: marking # TODO get this slop out of upstream files
-  id: BodyScarr
-  bodyPart: Chest
-  groupWhitelist: [Human]
-  followSkinColor: true
-  sprites:
-  - sprite: _Goobstation/Mobs/Customization/scars.rsi
-    state: bodyscar_r
-
 - type: marking
   id: ScarEyeRightSmall
   bodyPart: Head

@@ -78,10 +78,15 @@
     proto: gingerbread
 
 - type: entity
-  parent: OrganBase
+  parent: OrganBaseSugary # Shitmed - Sugary!
   id: OrganGingerbread
   abstract: true
   suffix: gingerbread
+  # <Shitmed>
+  components:
+  - type: Damageable
+    damageModifierSet: Gingerbread
+  # </Shitmed>
 
 - type: entity
   parent: OrganGingerbread

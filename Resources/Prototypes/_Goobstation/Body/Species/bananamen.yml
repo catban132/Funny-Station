@@ -1,0 +1,132 @@
+## Mob
+
+- type: entity
+  parent: BaseSpeciesAppearance
+  id: AppearanceBananaMen
+  name: bananamen appearance
+  components:
+  - type: InitialBody
+    organs:
+      Torso: OrganHumanTorso
+      Head: OrganHumanHead
+      ArmLeft: OrganHumanArmLeft
+      ArmRight: OrganHumanArmRight
+      HandRight: OrganHumanHandRight
+      HandLeft: OrganHumanHandLeft
+      LegLeft: OrganHumanLegLeft
+      LegRight: OrganHumanLegRight
+      FootLeft: OrganHumanFootLeft
+      FootRight: OrganHumanFootRight
+      Brain: OrganBananaMenBrain
+      Eyes: OrganBananaMenEyes
+      Tongue: OrganBananaMenTongue
+      Appendix: OrganBananaMenAppendix
+      Ears: OrganBananaMenEars
+      Lungs: OrganBananaMenLungs
+      Heart: OrganBananaMenHeart
+      Stomach: OrganBananaMenStomach
+      Liver: OrganBananaMenLiver
+      Kidneys: OrganBananaMenKidneys
+  - type: HumanoidProfile
+    species: BananaMen
+
+- type: entity
+  parent:
+  - AppearanceBananaMen
+  - BaseSpeciesMobOrganic
+  id: MobBananaMen # banana women when???
+  name: Urist McBanana
+  components:
+  - type: SlipperyOnLayingDown
+  - type: Bloodstream
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Potassium
+        Quantity: 300
+  - type: Butcherable
+    spawned:
+    - id: FoodBanana
+      amount: 5
+    - id: MaterialBones1 # Trauma - Bones on butchering humanoids
+      amount: 3
+
+## Base
+
+- type: entity
+  abstract: true
+  parent: OrganBase
+  id: OrganBananaMen
+  suffix: bananamen
+
+- type: entity
+  abstract: true
+  parent: [ OrganBananaMen, FoodBanana ]
+  # TODO SHITMED: prevent rotting inside a mob...
+  id: OrganBananaMenInternal
+  name: banana
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Mobs/Species/BananaMen/organs.rsi
+    state: organ
+
+## Organs
+
+- type: entity
+  parent: [ OrganHumanBrain, OrganBananaMenInternal ]
+  id: OrganBananaMenBrain
+  suffix: brain
+  description: "A very odd-looking banana, HONK!"
+
+- type: entity
+  parent: [ OrganHumanEyes, OrganBananaMenInternal ]
+  id: OrganBananaMenEyes
+  suffix: eyes
+  description: "A very odd-looking banana, it seems to be looking back at you..."
+
+- type: entity
+  parent: [ OrganHumanTongue, OrganBananaMenInternal ]
+  id: OrganBananaMenTongue
+  suffix: tongue
+  description: "A very odd-looking banana, it looks very tasty!"
+
+- type: entity
+  parent: [ OrganHumanAppendix, OrganBananaMenInternal ]
+  id: OrganBananaMenAppendix
+  suffix: appendix
+  description: "A very odd-looking banana, it looks like it serves no purpose."
+
+- type: entity
+  parent: [ OrganHumanEars, OrganBananaMenInternal ]
+  id: OrganBananaMenEars
+  suffix: ears
+  description: "A very odd-looking banana, it's bent in a very concave way."
+
+- type: entity
+  parent: [ OrganHumanLungs, OrganBananaMenInternal ]
+  id: OrganBananaMenLungs
+  suffix: lungs
+  description: "A very odd-looking banana, it looks flabby enough to store air or something."
+
+- type: entity
+  parent: [ OrganHumanHeart, OrganBananaMenInternal ]
+  id: OrganBananaMenHeart
+  suffix: heart
+  description: "A very odd-looking banana, it looks like its almost beating."
+
+- type: entity
+  parent: [ OrganHumanStomach, OrganBananaMenInternal ]
+  id: OrganBananaMenStomach
+  suffix: stomach
+  description: "A very odd-looking banana, it looks like it's got room inside to store food."
+
+- type: entity
+  parent: [ OrganHumanLiver, OrganBananaMenInternal ]
+  id: OrganBananaMenLiver
+  suffix: liver
+  description: "A very odd-looking banana, it looks like if it has room inside to break down chemicals"
+
+- type: entity
+  parent: [ OrganHumanKidneys, OrganBananaMenInternal ]
+  id: OrganBananaMenKidneys
+  suffix: kidneys
+  description:  "A very odd-looking banana, it looks like it could be used to filter contaminants."

@@ -22,12 +22,14 @@
   id: BaseMobBloodsucker
   abstract: true
   components:
+  - type: BodyCache # Shitmed
   - type: Body
   - type: EntityTableContainerFill
     containers:
       body_organs: !type:AllSelector
         children:
-        - id: OrganAnimalLungs
+        - id: OrganAnimalTorso # Shitmed
+        - id: OrganCarpLungs # Shitmed - Animal -> Carp
         - id: OrganBloodsuckerHeart
         - id: OrganBloodsuckerStomach
         - id: OrganBloodsuckerLiver

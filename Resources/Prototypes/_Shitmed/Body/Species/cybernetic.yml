@@ -1,3 +1,5 @@
+## Base
+
 - type: entity
   abstract: true
   parent: OrganBase
@@ -15,20 +17,21 @@
   components:
   - type: Sprite
     sprite: _EinsteinEngines/Mobs/Species/Cybernetics/bishop/bishop_main.rsi
-  - type: Icon
-    sprite: _EinsteinEngines/Mobs/Species/Cybernetics/bishop/bishop_main.rsi
+  - type: VisualOrgan
+    data:
+      sprite: _EinsteinEngines/Mobs/Species/Cybernetics/bishop/bishop_main.rsi
   - type: Nerve
     painMultiplier: 1.5
   - type: Woundable
     canBleed: false
   - type: WoundableVisuals
-    damageOverlaySprites:
+    damageOverlayColors:
       Brute: "#DD8822"
     bleedingOverlay: null
 
 - type: entity
   abstract: true
-  parent: OrganCyberetic
+  parent: OrganCybernetic
   id: OrganCyberneticInternal
   components:
   - type: InternalOrgan
@@ -133,7 +136,7 @@
 
 - type: entity
   parent: [ OrganCyberneticLegRight, OrganCyberneticSpeed ]
-  id: OrganSpeedArmRight
+  id: OrganSpeedLegRight
   name: S.P.E.E.D right leg
 
 # D.E.X
@@ -166,6 +169,9 @@
   name: cybernetic eyes
   description: A pair of cybernetic eyes that enhance your vision, and protect you from eye damage.
   components:
+  - type: Sprite
+    layers:
+    - state: eyes # combined
   - type: InternalOrgan
     intCap: 21
     integrity: 21
@@ -186,7 +192,8 @@
   description: A pair of cybernetic eyes that enhance your vision, featuring an integrated SecHUD.
   components:
   - type: Sprite
-    state: eyes-sechud
+    layers:
+    - state: eyes-sechud
   - type: OrganComponents
     onAdd:
     # TODO SHITMED: this should add ShowSecurityIcons's components
@@ -203,7 +210,8 @@
   description: A pair of cybernetic eyes that enhance your vision, featuring an integrated MedHUD.
   components:
   - type: Sprite
-    state: eyes-medhud
+    layers:
+    - state: eyes-medhud
   - type: Organ
     onAdd:
     - type: ShowHealthBars
@@ -225,7 +233,8 @@
   description: A pair of cybernetic eyes that enhance your vision, featuring an integrated diagnostic HUD.
   components:
   - type: Sprite
-    state: eyes-medhud
+    layers:
+    - state: eyes-medhud
   - type: Organ
     onAdd:
     - type: ShowHealthBars
@@ -274,7 +283,8 @@
   description: A next-gen circulatory core that slowly delivers medicine throughout the body providing much better healing while heavily accelerating and weakening toxins and narcotics.
   components:
   - type: Sprite
-    state: heart-u-on
+    layers:
+    - state: heart-u-on
   - type: InternalOrgan
     intCap: 32
     integrity: 32
@@ -333,10 +343,11 @@
   id: OrganCyberneticLungsUpgraded
   name: upgraded cybernetic lungs
   description: A self-contained respiratory system that eliminates the need to breathe entirely and grants increased stamina recovery.
+  components:
   - type: Sprite
     layers:
-      - state: lung-u-l
-      - state: lung-u-r
+    - state: lung-u-l
+    - state: lung-u-r
   - type: InternalOrgan
     intCap: 32
     integrity: 32

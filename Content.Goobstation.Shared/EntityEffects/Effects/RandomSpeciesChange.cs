@@ -22,7 +22,6 @@ public sealed class RandomSpeciesChangeEffectSystem : EntityEffectSystem<Humanoi
 
     public static readonly HashSet<ProtoId<SpeciesPrototype>> SpeciesBlacklist = new()
     {
-        "Cyborg", // shityml
         "IPC",
         "Shadowling", // no ontag
         "Skeleton"

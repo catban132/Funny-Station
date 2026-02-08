@@ -10,7 +10,7 @@
     - SurgeryStepClampInternalBleeders
     - SurgeryStepRemoveOrgan
   - type: SurgeryPartCondition
-    parts: [ Chest ]
+    parts: [ Torso ]
   - type: SurgeryOrganCondition
     organ: XenomorphLarva
 
@@ -45,6 +45,6 @@
     - SurgeryStepClampInternalBleeders
     - SurgeryStepRemoveOrgan
   - type: SurgeryPartCondition
-    parts: [ Chest ]
+    parts: [ Torso ]
   - type: SurgeryOrganCondition
     organ: XenomorphLarva

@@ -141,7 +141,7 @@
     proto: spider
 
 - type: entity
-  parent: OrganBase
+  parent: OrganBaseFleshy # Shitmed - Fleshy
   id: OrganArachnid
   abstract: true
   suffix: Arachnid
@@ -158,7 +158,6 @@
   id: OrganArachnidInternal
   abstract: true
   components:
-  - type: InternalOrgan # Shitmed
   - type: Sprite
     sprite: Mobs/Species/Arachnid/organs.rsi
 
@@ -178,7 +177,6 @@
   id: OrganArachnidExternal
   abstract: true
   components:
-  - type: BodyPart # Shitmed
   - type: Sprite
     sprite: Mobs/Species/Arachnid/parts.rsi
 

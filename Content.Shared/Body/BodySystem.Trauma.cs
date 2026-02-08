@@ -19,14 +19,14 @@ public sealed partial class BodySystem
     [
         "Head",
         "Torso",
-        "LeftArm",
-        "LeftLeg",
-        "LeftHand",
-        "LeftFoot",
-        "RightArm",
-        "RightLeg",
-        "RightHand",
-        "RightFoot"
+        "ArmLeft",
+        "LegLeft",
+        "HandLeft",
+        "FootLeft",
+        "ArmRight",
+        "LegRight",
+        "HandRight",
+        "FootRight"
     ];
 
     /// <summary>

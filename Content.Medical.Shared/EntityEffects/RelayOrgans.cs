@@ -13,7 +13,6 @@ namespace Content.Medical.Shared.EntityEffects;
 /// </summary>
 public sealed partial class RelayOrgans : EntityEffectBase<RelayOrgans>
 {
-    // TODO NUBODY: change to OrganCategory???
     [DataField]
     public EntityWhitelist? Whitelist;
 

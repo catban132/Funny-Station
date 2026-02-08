@@ -2,8 +2,8 @@
 - type: entityEffect
   id: InstallHypoport
   effects:
-  - !type:RelayOrgans
-    categories: [ Head ]
+  - !type:RelayOrgan
+    categories: Head
     guidebookText: entity-effect-guidebook-install-hypoport
     effects:
     - !type:AddOrganSlot
@@ -15,8 +15,8 @@
 - type: entityEffect
   id: InstallHypoportNukie
   effects:
-  - !type:RelayOrgans
-    categories: [ Head ]
+  - !type:RelayOrgan
+    category: Head
     guidebookText: entity-effect-guidebook-install-hypoport
     effects:
     - !type:AddOrganSlot

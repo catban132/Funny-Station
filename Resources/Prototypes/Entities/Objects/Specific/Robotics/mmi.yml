@@ -108,7 +108,7 @@
       stopSearchVerbPopup: positronic-brain-stopped-searching
       job: Borg
     - type: Organ # Shitmed
-      slotId: IPCBrain
+      category: IPCBrain
     - type: BlockMovement
     - type: Examiner
     - type: BorgBrain

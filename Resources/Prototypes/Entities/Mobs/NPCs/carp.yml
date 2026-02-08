@@ -1,7 +1,7 @@
 - type: entity
   name: space carp
   id: BaseMobCarp
-  parent: [ SimpleSpaceMobBase, FlyingMobBase, MobCombat ]
+  parent: [ SimpleSpaceMobBase, FlyingMobBase, MobCombat, AppearanceCarp ] # Shitmed - AppearanceCarp
   description: It's a space carp.
   abstract: true
   components:
@@ -93,8 +93,6 @@
       interactFailureString: petting-failure-carp
       interactFailureSound:
         path: /Audio/Effects/bite.ogg
-    - type: Body # Shitmed: Special carp organs
-      prototype: Carp
     - type: NightVision # Goobstation - Nigthvision
       color: "#808080"
       activateSound: null

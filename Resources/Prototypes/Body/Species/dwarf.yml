@@ -68,7 +68,7 @@
     speechSounds: Bass
 
 - type: entity
-  parent: OrganBase
+  parent: OrganBaseFleshy # Shitmed - Fleshy
   id: OrganDwarf
   abstract: true
   suffix: Dwarf

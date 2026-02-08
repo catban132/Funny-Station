@@ -23,7 +23,6 @@
     understands:
     - TauCetiBasic
   - type: BloodSplatterer
-  - type: Targeting
   - type: CanEscapeInventory
   - type: Consciousness
     cap: 190
@@ -270,7 +269,7 @@
     shiveringHeatRegulation: 2000
     normalBodyTemperature: 310.15
     thermalRegulationTemperatureThreshold: 2
-  #- type: Perishable # Trauma - moved to BaseMobSpeciesOrganic
+  #- type: Perishable # Trauma - moved to BaseSpeciesMobOrganic
   - type: Butcherable
     butcheringType: Spike
     spawned:

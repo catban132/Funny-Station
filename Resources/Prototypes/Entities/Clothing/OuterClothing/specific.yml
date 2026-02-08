@@ -18,9 +18,8 @@
       heatingCoefficient: 1.1
       coolingCoefficient: 0.1
     - type: Armor
-      coverage:
-      - Chest
-      - Groin
+      coverage: # Shitmed
+      - Torso
       - Tail
       - Arm
       modifiers:

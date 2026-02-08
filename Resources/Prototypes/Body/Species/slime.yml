@@ -175,10 +175,15 @@
     maxSaturation: 15
 
 - type: entity
-  parent: OrganBase
+  parent: OrganBaseFleshy # Shitmed - Fleshy???
   id: OrganSlimePerson
   abstract: true
   suffix: slime person
+  # <Shitmed>
+  components:
+  - type: Damageable
+    damageModifierSet: Slime
+  # </Shitmed>
 
 - type: entity
   id: OrganSlimePersonMetabolizer
@@ -192,7 +197,6 @@
   id: OrganSlimePersonInternal
   abstract: true
   components:
-  - type: InternalOrgan # Shitmed
   - type: Sprite
     sprite: Mobs/Species/Slime/organs.rsi
 
@@ -201,7 +205,6 @@
   id: OrganSlimePersonExternal
   abstract: true
   components:
-  - type: BodyPart # Shitmed
   - type: Sprite
     sprite: Mobs/Species/Slime/parts.rsi
   - type: VisualOrgan

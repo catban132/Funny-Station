@@ -10,11 +10,13 @@
   id: BaseMobRat
   abstract: true
   components:
+  - type: BodyCache # Shitmed
   - type: Body
   - type: EntityTableContainerFill
     containers:
       body_organs: !type:AllSelector
         children:
+        - id: OrganAnimalTorso # Shitmed
         - id: OrganRatLungs
         - id: OrganAnimalHeart
         - id: OrganAnimalStomach

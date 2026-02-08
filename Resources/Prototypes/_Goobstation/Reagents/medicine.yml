@@ -490,18 +490,12 @@
   metabolisms:
     Medicine:
       effects:
-      - !type:AdjustReagentsByGroup
-        group: Medicine
+      - !type:CleanBloodstream
+        excluded: Multiver
         amount: -3
         conditions:
         - !type:BloodstreamCountCondition
           max: 3 # the gist is, 2 and below this sucks, 3 and above it's great; mix with water etc for good results
-      - !type:AdjustReagentsByGroup
-        group: Poison
-        amount: -3
-      - !type:AdjustReagentsByGroup
-        group: Narcotic
-        amount: -3
       - !type:HealthChange
         damage:
           types:
@@ -621,9 +615,9 @@
     Medicine:
       metabolismRate: 0.15
       effects:
-      - !type:AdjustReagentsByGroup
-        group: Poison
-        amount: -6
+      - !type:CleanBloodstream
+        excluded: AmmoniatedMercury
+        cleanseRate: 6
       - !type:HealthChange
         damage:
           types:

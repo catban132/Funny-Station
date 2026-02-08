@@ -194,10 +194,15 @@
         variation: 0.05
 
 - type: entity
-  parent: OrganBase
+  parent: OrganBaseFleshy # Shitmed - Fleshy
   id: OrganVulpkanin
   abstract: true
   suffix: vulpkanin
+  # <Shitmed>
+  components:
+  - type: Damageable
+    damageContainer: Vulpkanin
+  # </Shitmed>
 
 - type: entity
   id: OrganVulpkaninMetabolizer
@@ -211,7 +216,6 @@
   id: OrganVulpkaninInternal
   abstract: true
   components:
-  - type: InternalOrgan # Shitmed
   - type: Sprite
     sprite: Mobs/Species/Human/organs.rsi
 
@@ -231,7 +235,6 @@
   id: OrganVulpkaninExternal
   abstract: true
   components:
-  - type: BodyPart # Shitmed
   - type: Sprite
     sprite: Mobs/Species/Vulpkanin/parts.rsi
 

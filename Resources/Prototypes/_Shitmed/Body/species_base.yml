@@ -1,0 +1,7 @@
+- type: entity
+  abstract: true
+  id: BaseMobBody
+  components:
+  - type: Body
+  - type: BodyCache
+  - type: InitialBody

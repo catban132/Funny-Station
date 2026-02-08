@@ -50,21 +50,6 @@
     state: core
 
 - type: marking
-  id: SlimeCoreGlowing
-  bodyPart: Chest
-  groupWhitelist: [ SlimePerson ]
-  followSkinColor: false
-  coloring:
-    default:
-      type:
-        !type:EyeColoring
-  sprites:
-  - sprite: _Impstation/Mobs/Customization/SlimePerson/chest.rsi
-    state: core
-  shader: unshaded
-
-
-- type: marking
   id: SlimeLungs
   bodyPart: Chest
   groupWhitelist: [ SlimePerson ]
@@ -74,20 +59,6 @@
     state: lungs
 
 # Head
-
-- type: marking
-  id: FadingStars
-  bodyPart: LLeg
-  groupWhitelist: [ SlimePerson ]
-  sprites:
-  - sprite: _Impstation/Mobs/Customization/SlimePerson/head.rsi
-    state: fadingstars1
-  - sprite: _Impstation/Mobs/Customization/SlimePerson/head.rsi
-    state: fadingstars2
-  - sprite: _Impstation/Mobs/Customization/SlimePerson/head.rsi
-    state: fadingstars3
-  shader: unshaded
-
 
 - type: marking
   id: fizz
@@ -143,20 +114,6 @@
 # Eyes
 
 - type: marking
-  id: SlimeEyeglow
-  bodyPart: Eyes
-  groupWhitelist: [ SlimePerson ]
-  coloring:
-    default:
-      type:
-        !type:EyeColoring
-        negative: false
-  sprites:
-  - sprite: _Impstation/Mobs/Customization/SlimePerson/eyes.rsi
-    state: glow
-  shader: unshaded
-
-- type: marking
   id: SlimeEyesDroopy
   bodyPart: Eyes
   groupWhitelist: [ SlimePerson ]
@@ -170,21 +127,6 @@
     state: droopy
 
 - type: marking
-  id: SlimeEyesDroopyGlowing
-  bodyPart: Eyes
-  groupWhitelist: [ SlimePerson ]
-  coloring:
-    default:
-      type:
-        !type:EyeColoring
-        negative: false
-  sprites:
-  - sprite: _Impstation/Mobs/Customization/SlimePerson/eyes.rsi
-    state: droopyglow
-  shader: unshaded
-
-
-- type: marking
   id: SlimeEyesCyclops
   bodyPart: Eyes
   groupWhitelist: [ SlimePerson ]
@@ -196,21 +138,6 @@
   sprites:
   - sprite: _Impstation/Mobs/Customization/SlimePerson/eyes.rsi
     state: cyclops
-
-- type: marking
-  id: SlimeEyesCyclopsGlowing
-  bodyPart: Eyes
-  groupWhitelist: [ SlimePerson ]
-  coloring:
-    default:
-      type:
-        !type:EyeColoring
-        negative: false
-  sprites:
-  - sprite: _Impstation/Mobs/Customization/SlimePerson/eyes.rsi
-    state: cyclopsglow
-  shader: unshaded
-
 
 # RArm
 

@@ -35,7 +35,7 @@
 
 - type: latheRecipe
   id: MedicalCyberneticEyes
-  result: MedicalCyberneticEyes
+  result: OrganCyberneticEyesMedical
   categories:
   - Robotics
   completetime: 10
@@ -105,7 +105,7 @@
 
 - type: latheRecipe
   id: BasicCyberneticHeart
-  result: BasicCyberneticHeart
+  result: OrganCyberneticHeart
   categories:
   - Robotics
   completetime: 10
@@ -118,7 +118,7 @@
 
 - type: latheRecipe
   id: UpgradedCyberneticHeart
-  result: UpgradedCyberneticHeart
+  result: OrganCyberneticHeartUpgraded
   categories:
   - Robotics
   completetime: 10
@@ -131,7 +131,7 @@
 
 - type: latheRecipe
   id: BasicCyberneticLiver
-  result: BasicCyberneticLiver
+  result: OrganCyberneticLiver
   categories:
   - Robotics
   completetime: 5
@@ -144,7 +144,7 @@
 
 - type: latheRecipe
   id: BasicCyberneticLungs
-  result: BasicCyberneticLungs
+  result: OrganCyberneticLungs
   categories:
   - Robotics
   completetime: 10
@@ -157,7 +157,7 @@
 
 - type: latheRecipe
   id: UpgradedCyberneticLungs
-  result: UpgradedCyberneticLungs
+  result: OrganCyberneticLungsUpgraded
   categories:
   - Robotics
   completetime: 10

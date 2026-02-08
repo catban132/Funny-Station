@@ -5,31 +5,29 @@
   id: AppearanceAbductor
   name: abductor appearance
   components:
-  - type: EntityTableContainerFill
-    containers:
-      body_organs: !type:AllSelector
-        children:
-        - id: OrganAbductorTorso
-        - id: OrganAbductorHead
-        - id: OrganAbductorArmLeft
-        - id: OrganAbductorArmRight
-        - id: OrganAbductorHandRight
-        - id: OrganAbductorHandLeft
-        - id: OrganAbductorLegLeft
-        - id: OrganAbductorLegRight
-        - id: OrganAbductorFootLeft
-        - id: OrganAbductorFootRight
-        - id: OrganAbductorBrain
-        - id: OrganAbductorEyes
-        - id: OrganAbductorTongue
-        - id: OrganAbductorAppendix
-        - id: OrganAbductorEars
-        - id: OrganAbductorLungs
-        - id: OrganAbductorHeart
-        - id: OrganAbductorStomach
-        - id: OrganAbductorLiver
-        - id: OrganAbductorKidneys
-  - type: HumanoidAppearance
+  - type: InitialBody
+    organs:
+      Torso: OrganAbductorTorso
+      Head: OrganAbductorHead
+      ArmLeft: OrganAbductorArmLeft
+      ArmRight: OrganAbductorArmRight
+      HandRight: OrganAbductorHandRight
+      HandLeft: OrganAbductorHandLeft
+      LegLeft: OrganAbductorLegLeft
+      LegRight: OrganAbductorLegRight
+      FootLeft: OrganAbductorFootLeft
+      FootRight: OrganAbductorFootRight
+      Brain: OrganAbductorBrain
+      Eyes: OrganAbductorEyes
+      Tongue: OrganAbductorTongue
+      Appendix: OrganAbductorAppendix
+      Ears: OrganAbductorEars
+      Lungs: OrganAbductorLungs
+      Heart: OrganAbductorHeart
+      Stomach: OrganAbductorStomach
+      Liver: OrganAbductorLiver
+      Kidneys: OrganAbductorKidneys
+  - type: HumanoidProfile
     species: Abductor
 
 - type: entity
@@ -76,7 +74,7 @@
 
 - type: entity
   abstract: true
-  parent: OrganBase
+  parent: OrganBaseFleshy
   id: OrganAbductor
   suffix: abductor
 
@@ -95,6 +93,9 @@
   components:
   - type: Sprite
     sprite: _Shitmed/Mobs/Species/Abductor/parts.rsi
+  - type: VisualOrgan
+    data:
+      sprite: _Shitmed/Mobs/Species/Abductor/parts.rsi
   - type: WoundableVisuals
     damageOverlayColors:
       Brute: "#878787"
@@ -150,17 +151,22 @@
 - type: entity
   parent: [ OrganBaseEyes, OrganAbductorInternal ]
   id: OrganAbductorEyes
+  components:
+  - type: Sprite
+    layers:
+    - state: eyeballs # combined sprite
 
+# missing some abductor sprites, TODO SHITMED: get tg sprites for them
 - type: entity
-  parent: [ OrganBaseTongue, OrganAbductorInternal ]
+  parent: [ OrganBaseTongue, OrganSpriteHumanInternal, OrganAbductorInternal ]
   id: OrganAbductorTongue
 
 - type: entity
-  parent: [ OrganBaseAppendix, OrganAbductorInternal ]
+  parent: [ OrganBaseAppendix, OrganSpriteHumanInternal, OrganAbductorInternal ]
   id: OrganAbductorAppendix
 
 - type: entity
-  parent: [ OrganBaseEars, OrganAbductorInternal ]
+  parent: [ OrganBaseEars, OrganSpriteHumanInternal, OrganAbductorInternal ]
   id: OrganAbductorEars
 
 - type: entity

@@ -219,6 +219,8 @@
   # <Shitmed>
   components:
   - type: Inorganic
+  - type: Damageable
+    damageModifierSet: Skeleton
   # </Shitmed>
 
 - type: entity

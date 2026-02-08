@@ -2,10 +2,12 @@
   id: BaseMobSlimes
   abstract: true
   components:
+  - type: BodyCache # Shitmed
   - type: Body
   - type: EntityTableContainerFill
     containers:
       body_organs: !type:AllSelector
         children:
+        - id: OrganSlimesTorso # Shitmed
         - id: OrganSlimePersonCore
         - id: OrganSlimePersonLungs

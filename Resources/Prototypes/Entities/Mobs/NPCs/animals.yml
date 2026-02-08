@@ -377,9 +377,6 @@
     understands:
     - Hissing
     - TauCetiBasic
-  - type: Body
-    prototype: Rat
-    requiredLegs: 0
   - type: ThermalRegulator
     metabolismHeat: 300
   - type: StaticPrice
@@ -1538,7 +1535,7 @@
 - type: entity
   name: monkey
   id: MobMonkey
-  parent: MobBaseAncestor
+  parent: [ MobBaseAncestor, AppearanceMonkey] # Shitmed
   description: New church of neo-darwinists actually believe that EVERY animal evolved from a monkey. Tastes like pork, and killing them is both fun and relaxing.
   components:
   # <Trauma>
@@ -1550,6 +1547,8 @@
     - Kobold
     - TauCetiBasic
   - type: Skinnable # Fuck pun-pun
+    skinnedSprite: _Trauma/Mobs/Animals/skinnedmonkey.rsi
+    unskinnedSprite: Mobs/Animals/monkey.rsi
   # </Trauma>
   - type: NameIdentifier
     group: Monkey
@@ -1583,7 +1582,7 @@
 - type: entity
   name: monkey
   id: MobBaseSyndicateMonkey
-  parent: MobBaseAncestor
+  parent: [ MobBaseAncestor, AppearanceMonkey ] # Shitmed
   description: New church of neo-darwinists actually believe that EVERY animal evolved from a monkey. Tastes like pork, and killing them is both fun and relaxing.
   suffix: syndicate base
   components:
@@ -1640,7 +1639,7 @@
 - type: entity
   name: kobold
   id: MobBaseKobold
-  parent: MobBaseAncestor
+  parent: [ MobBaseAncestor, AppearanceKobold ] # Shitmed
   description: Cousins to the sentient race of lizard people, kobolds blend in with their natural habitat and are as nasty as monkeys; ready to pull out your hair and stab you to death.
   abstract: true
   components:
@@ -1652,10 +1651,6 @@
     - Kobold
     - Monkey
     - TauCetiBasic
-  - type: HumanoidProfile
-    species: Kobold
-  - type: Body
-    prototype: Kobold
   # </Trauma>
   - type: NameIdentifier
     group: Kobold
@@ -1788,7 +1783,7 @@
   name: mouse
   parent:
   - SimpleMobBase
-  - BaseMobAnimal
+  - BaseMobMouse # Shitmed - unique mouse body
   id: MobMouse
   description: Squeak!
   components:

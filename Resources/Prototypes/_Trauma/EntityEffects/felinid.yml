@@ -5,7 +5,7 @@
   - !type:NestedCondition # for debug effect stick
     proto: IsHumanoid
   - !type:HasMarking
-    category: Special
+    organ: Head
     marking: CatEars
     inverted: true
   effects:
@@ -37,7 +37,7 @@
   - !type:NestedCondition # for debug effect stick
     proto: IsHumanoid
   - !type:HasMarking
-    category: Special
+    organ: Head
     marking: CatEars
   effects:
   - !type:RemoveMarking

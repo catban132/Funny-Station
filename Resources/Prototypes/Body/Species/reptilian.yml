@@ -170,7 +170,7 @@
   - type: Wagging
 
 - type: entity
-  parent: OrganBase
+  parent: OrganBaseFleshy # Shitmed - Fleshy
   id: OrganReptilian
   abstract: true
   suffix: Reptilian
@@ -187,7 +187,6 @@
   id: OrganReptilianInternal
   abstract: true
   components:
-  - type: InternalOrgan # Shitmed
   - type: Sprite
     sprite: Mobs/Species/Human/organs.rsi
 
@@ -196,7 +195,6 @@
   id: OrganReptilianExternal
   abstract: true
   components:
-  - type: BodyPart # Shitmed
   - type: Sprite
     sprite: Mobs/Species/Reptilian/parts.rsi
   - type: VisualOrgan
@@ -233,18 +231,58 @@
 - type: entity
   parent: [ OrganBaseLegLeft, OrganReptilianExternal ]
   id: OrganReptilianLegLeft
+  # <Trauma>
+  components:
+  - type: Sprite
+    sprite: _White/Mobs/Species/Reptilian/parts.rsi
+    state: l_leg_digi
+  - type: VisualOrgan
+    data:
+      sprite: _White/Mobs/Species/Reptilian/parts.rsi
+      state: l_leg_digi
+  # </Trauma>
 
 - type: entity
   parent: [ OrganBaseLegRight, OrganReptilianExternal ]
   id: OrganReptilianLegRight
+  # <Trauma>
+  components:
+  - type: Sprite
+    sprite: _White/Mobs/Species/Reptilian/parts.rsi
+    state: r_leg_digi
+  - type: VisualOrgan
+    data:
+      sprite: _White/Mobs/Species/Reptilian/parts.rsi
+      state: r_leg_digi
+  # </Trauma>
 
 - type: entity
   parent: [ OrganBaseFootLeft, OrganReptilianExternal ]
   id: OrganReptilianFootLeft
+  # <Trauma>
+  components:
+  - type: Sprite
+    sprite: _White/Mobs/Species/Reptilian/parts.rsi
+    state: l_foot_digi
+  - type: VisualOrgan
+    data:
+      sprite: _White/Mobs/Species/Reptilian/parts.rsi
+      state: l_foot_digi
+  # </Trauma>
 
 - type: entity
   parent: [ OrganBaseFootRight, OrganReptilianExternal ]
   id: OrganReptilianFootRight
+  # <Trauma>
+  components:
+  - type: Sprite
+    sprite: _White/Mobs/Species/Reptilian/parts.rsi
+    state: r_foot_digi
+  - type: VisualOrgan
+    data:
+      sprite: _White/Mobs/Species/Reptilian/parts.rsi
+      state: r_foot_digi
+  # </Trauma>
 
 - type: entity
   parent: [ OrganBaseBrain, OrganSpriteHumanInternal, OrganReptilianInternal ]

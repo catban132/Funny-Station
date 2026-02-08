@@ -1,59 +1,119 @@
-# not really a species
+# not really a species but whatever
+
+## Base
+
+# TODO: if anyone makes an organ rejection mechanic, make these immune to it
+- type: entity
+  abstract: true
+  parent: OrganBaseFleshy
+  id: OrganBioSynth
+  suffix: bio-synthetic
+  components:
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Microplastics
+        Quantity: 5
+      - ReagentId: Carbon
+        Quantity: 10
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents: # really bad stuff
+        - ReagentId: Microplastics
+          Quantity: 5
+        - ReagentId: LabGrownNutriment
+          Quantity: 10
+
+- type: entity
+  abstract: true
+  parent: [ OrganBioSynth, OrganHumanExternal ]
+  id: OrganBioSynthExternal
+  description: This synthetic part can be transplanted onto any living organism and it will adapt to its recipient.
+
+- type: entity
+  abstract: true
+  parent: [ OrganBioSynth, OrganSpriteHumanInternal ]
+  id: OrganBioSynthInternal
+  description: This synthetic organ can be transplanted into any living organism and it will adapt to its recipient.
+
 ## Parts
 
 - type: entity
-  parent: OrganHumanHead
+  parent: [ OrganBaseHead, OrganBioSynthExternal ]
   id: OrganBioSynthHead
-  name: bio-synthetic head
-  description: This synthetic head can be transplanted into any living organism and it will adapt to its recipient, does not contain a brain or eyes though.
 
 - type: entity
-  parent: OrganHumanArmLeft
+  parent: [ OrganBaseArmLeft, OrganBioSynthExternal ]
   id: OrganBioSynthArmLeft
-  name: bio-synthetic left arm
-  description: This left arm can be transplanted into any living organism and it will adapt to its recipient.
 
 - type: entity
-  parent: OrganHumanArmRight
-  id: OrganBioSynthRightArm
-  name: bio-synthetic right arm
-  description: This right arm can be transplanted into any living organism and it will adapt to its recipient.
+  parent: [ OrganBaseArmRight, OrganBioSynthExternal ]
+  id: OrganBioSynthArmRight
 
 - type: entity
-  parent: OrganHumanHandLeft
+  parent: [ OrganBaseHandLeft, OrganBioSynthExternal ]
   id: OrganBioSynthHandLeft
-  name: bio-synthetic left hand
-  description: This left hand can be transplanted into any living organism and it will adapt to its recipient.
 
 - type: entity
-  parent: OrganHumanHandRight
+  parent: [ OrganBaseHandRight, OrganBioSynthExternal ]
   id: OrganBioSynthHandRight
-  name: bio-synthetic right hand
-  description: This right hand can be transplanted into any living organism and it will adapt to its recipient.
 
 - type: entity
-  parent: OrganHumanLegLeft
+  parent: [ OrganBaseLegLeft, OrganBioSynthExternal ]
   id: OrganBioSynthLegLeft
-  name: bio-synthetic left leg
-  description: This left leg can be transplanted into any living organism and it will adapt to its recipient.
 
 - type: entity
-  parent: OrganHumanRightLeg
+  parent: [ OrganBaseLegRight, OrganBioSynthExternal ]
   id: OrganBioSynthLegRight
-  name: bio-synthetic right leg
-  description: This right leg can be transplanted into any living organism and it will adapt to its recipient.
 
 # the kojima special
 - type: entity
-  parent: OrganHumanFootLeft
+  parent: [ OrganBaseFootLeft, OrganBioSynthExternal ]
   id: OrganBioSynthLeftFoot
-  name: bio-synthetic left foot
-  description: This left foot can be transplanted into any living organism and it will adapt to its recipient.
 
 - type: entity
-  parent: OrganHumanFootRight
+  parent: [ OrganBaseFootRight, OrganBioSynthExternal ]
   id: OrganBioSynthFootRight
-  name: bio-synthetic right foot
-  description: This right foot can be transplanted into any living organism and it will adapt to its recipient.
 
 ## Organs
+
+# no brain because it's not terribly useful
+
+- type: entity
+  parent: [ OrganBaseEyes, OrganBioSynthInternal ]
+  id: OrganBioSynthEyes
+  components:
+  - type: VisualOrgan
+    data:
+      sprite: Mobs/Customization/eyes.rsi
+
+- type: entity
+  parent: [ OrganBaseTongue, OrganBioSynthInternal ]
+  id: OrganBioSynthTongue
+
+# no appendix because it's useless
+
+- type: entity
+  parent: [ OrganBaseEars, OrganBioSynthInternal ]
+  id: OrganBioSynthEars
+
+- type: entity
+  parent: [ OrganBaseLungs, OrganBioSynthInternal, OrganHumanMetabolizer ]
+  id: OrganBioSynthLungs
+
+- type: entity
+  parent: [ OrganBaseHeart, OrganBioSynthInternal, OrganHumanMetabolizer ]
+  id: OrganBioSynthHeart
+
+- type: entity
+  parent: [ OrganBaseStomach, OrganBioSynthInternal, OrganHumanMetabolizer ]
+  id: OrganBioSynthStomach
+
+- type: entity
+  parent: [ OrganBaseLiver, OrganBioSynthInternal, OrganHumanMetabolizer ]
+  id: OrganBioSynthLiver
+
+- type: entity
+  parent: [ OrganBaseKidneys, OrganBioSynthInternal, OrganHumanMetabolizer ]
+  id: OrganBioSynthKidneys

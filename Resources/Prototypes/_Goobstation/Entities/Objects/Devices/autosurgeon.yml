@@ -58,7 +58,7 @@
   - type: AutoSurgeon
     entries:
     - targetCategory: Torso
-      newOrganProto: SpeedRightLeg
+      newOrganProto: OrganSpeedLegRight
 
 - type: entity
   parent: BaseAutosurgeon
@@ -68,7 +68,7 @@
   - type: AutoSurgeon
     entries:
     - targetCategory: Torso
-      newOrganProto: SpeedLeftLeg
+      newOrganProto: OrganSpeedLegLeft
 
 # SYNDICATE
 
@@ -109,11 +109,11 @@
       newOrganProto: OrganHeartSandevistan
 
 - type: entity
-  parent: BaseAutosurgeonSyndicateMultiple
+  parent: BaseAutosurgeonSyndicate
   id: AutosurgeonSmartLink
   name: syndicate autosurgeon (smartlink arms)
   components:
-  - type: AutoSurgeonMultiple
+  - type: AutoSurgeon
     entries:
     - targetCategory: HandRight
       newOrganProto: SmartlinkRightHand
@@ -121,11 +121,11 @@
       newOrganProto: SmartlinkLeftHand
 
 - type: entity
-  parent: BaseAutosurgeonSyndicateMultiple
+  parent: BaseAutosurgeonSyndicate
   id: AutosurgeonRecoilAbsorber
   name: syndicate autosurgeon (recoil absorbing arms)
   components:
-  - type: AutoSurgeonMultiple
+  - type: AutoSurgeon
     entries:
     - targetCategory: ArmRight
       newOrganProto: RecoilAbsorberRightHand

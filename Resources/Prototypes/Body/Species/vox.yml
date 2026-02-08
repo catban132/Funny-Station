@@ -276,7 +276,7 @@
           state: hand_r
 
 - type: entity
-  parent: OrganBase
+  parent: OrganBaseFleshy # Shitmed - Fleshy
   id: OrganVox
   abstract: true
   suffix: Vox
@@ -293,7 +293,6 @@
   id: OrganVoxInternal
   abstract: true
   components:
-  - type: InternalOrgan # Shitmed
   - type: Sprite
     sprite: Mobs/Species/Vox/organs.rsi
 
@@ -313,29 +312,16 @@
   id: OrganVoxExternal
   abstract: true
   components:
-  - type: BodyPart # Shitmed
   - type: Sprite
     sprite: Mobs/Species/Vox/parts.rsi
 
 - type: entity
   parent: [ OrganBaseTorso, OrganVoxExternal ]
   id: OrganVoxTorso
-  components:
-  - type: Sprite
-    state: torso
-  - type: VisualOrgan
-    data:
-      state: torso
 
 - type: entity
   parent: [ OrganBaseHead, OrganVoxExternal ]
   id: OrganVoxHead
-  components:
-  - type: Sprite
-    state: head
-  - type: VisualOrgan
-    data:
-      state: head
 
 - type: entity
   parent: [ OrganBaseArmLeft, OrganVoxExternal ]
@@ -414,4 +400,3 @@
 - type: entity
   parent: [ OrganBaseKidneys, OrganSpriteHumanInternal, OrganVoxInternal, OrganVoxMetabolizer ]
   id: OrganVoxKidneys
->>>>>>> d0c2734dad (Nubody (#42419)):Resources/Prototypes/Body/Species/vox.yml

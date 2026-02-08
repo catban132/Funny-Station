@@ -15,7 +15,7 @@ public sealed partial class HasMarking : EntityConditionBase<HasMarking>
     /// The organ the marking must be in.
     /// </summary>
     [DataField(required: true)]
-    public ProtoId<OrganCategoryPrototype> Category;
+    public ProtoId<OrganCategoryPrototype> Organ;
 
     /// <summary>
     /// The marking to look for.
@@ -46,7 +46,7 @@ public sealed class HasMarkingConditionSystem : EntityConditionSystem<BodyCompon
     // closest thing to an api body visuals has lol
     public bool HasMarking(Entity<BodyComponent?> body, HasMarking cond)
     {
-        if (_body.GetOrgan(body, cond.Category) is not {} organ ||
+        if (_body.GetOrgan(body, cond.Organ) is not {} organ ||
             !TryComp<VisualOrganMarkingsComponent>(organ, out var comp))
             return false; // no part lol
 

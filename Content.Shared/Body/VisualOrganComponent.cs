@@ -5,7 +5,7 @@ using Robust.Shared.Serialization;
 namespace Content.Shared.Body;
 
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState(true)]
-[Access(typeof(SharedVisualBodySystem))]
+//[Access(typeof(SharedVisualBodySystem))] // Trauma - fuck you, write an API if you want access
 public sealed partial class VisualOrganComponent : Component
 {
     /// <summary>

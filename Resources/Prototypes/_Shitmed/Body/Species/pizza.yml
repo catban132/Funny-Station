@@ -1,3 +1,5 @@
+## Base
+
 # pizza lungs!?
 - type: entity
   abstract: true
@@ -12,9 +14,11 @@
   parent: OrganPizza
   id: OrganPizzaExternal
   components:
-  - type: BodyPart
   - type: Sprite
     sprite: _Shitmed/Mobs/Species/Misc/Pizza/parts.rsi
+  - type: VisualOrgan
+    data:
+      sprite: _Shitmed/Mobs/Species/Misc/Pizza/parts.rsi
 
 ## Parts
 
@@ -23,14 +27,8 @@
   parent: [ OrganBaseArmLeft, OrganPizzaExternal ]
   id: OrganPizzaArmLeft
   name: left pizza arm
-  components:
-  #- type: BodyPart # TODO NUBODY - reimplement pizza arms
-  #  baseLayerId: MobPizzaLArm
 
 - type: entity
   parent: [ OrganBaseArmRight, OrganPizzaExternal ]
   id: OrganPizzaArmRight
   name: right pizza arm
-  components:
-  #- type: BodyPart # TODO NUBODY - reimplement pizza arms
-  #  baseLayerId: MobPizzaLArm

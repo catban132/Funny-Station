@@ -24,19 +24,6 @@
   - sprite: Mobs/Customization/tattoos.rsi
     state: tattoo_nightling
 
-- type: marking # TODO: move this shit out of upstream files
-  id: TattooNanotrasenChest
-  bodyPart: Chest
-  groupWhitelist: [Human, SlimePerson]
-  coloring:
-    default:
-      type:
-        !type:TattooColoring
-      fallbackColor: "#666666"
-  sprites:
-  - sprite: Mobs/Customization/tattoos.rsi
-    state: tattoo_nanotrasen_chest
-
 - type: marking
   id: TattooSilverburghLeftLeg
   bodyPart: LLeg
@@ -142,41 +129,6 @@
     state: tattoo_eye_l
 
 - type: marking
-  id: TattooTribal1
-  bodyPart: Chest
-  groupWhitelist: [Human, SlimePerson, Reptilian, Harpy] # Trauma - Harpy
-  coloring:
-    default:
-      type:
-        !type:TattooColoring
-      fallbackColor: "#666666"
-  sprites:
-  - sprite: _Goobstation/Mobs/Customization/tattoos.rsi
-    state: tribal1
-
-- type: marking
-  id: TattooLoops
-  bodyPart: Chest
-  groupWhitelist: [Human, SlimePerson, Reptilian, Harpy] # Trauma - Harpy
-  coloring:
-    default:
-      type:
-        !type:TattooColoring
-      fallbackColor: "#666666"
-  sprites:
-  - sprite: _Goobstation/Mobs/Customization/tattoos.rsi
-    state: loops
-
-- type: marking
-  id: BuffChest
-  bodyPart: Chest
-  groupWhitelist: [ Human, Dwarf ]
-  followSkinColor: true
-  sprites:
-  - sprite: Mobs/Customization/scars.rsi
-    state: buff
-
-- type: marking
   id: TattooEyeMothRight
   bodyPart: Eyes
   groupWhitelist: [Moth]
@@ -226,8 +178,7 @@
           negative: true
   sprites:
   - sprite: Mobs/Customization/tattoos.rsi
-    state: tattoo_eye_r
-  shader: unshaded
+    state: tattoo_eye_vulpkanin_l
 
 - type: marking
   id: TattooEyeshadowUpper

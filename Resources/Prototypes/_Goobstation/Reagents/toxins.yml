@@ -34,13 +34,6 @@
         - !type:ReagentCondition
           reagent: Triclor
           max: 15 # Limit self-replication to prevent infinite accumulation
-      - !type:AdjustReagent
-        conditions: # Vomiting behaves weirdly and might leave unmetabolisable 0.1 at 40u (floating point errors?)
-        - !type:ReagentCondition
-          reagent: Triclor
-          max: 1
-        reagent: Triclor
-        amount: -0.5
       - !type:Vomit
       - !type:ModifyBloodLevel
         amount: -5
@@ -90,22 +83,9 @@
     Poison:
       metabolismRate: 0.05
       effects:
-      - !type:AdjustReagentsByGroup
-        group: Medicine
-        amount: -4.5
-        conditions: # higher quality anti-poisons, save for calomel which is low effort but high risk
-        - !type:ReagentCondition
-          reagent: PentenicAcid
-          max: 0.1
-        - !type:ReagentCondition
-          reagent: Calomel
-          max: 0.1
-        - !type:ReagentCondition
-          reagent: Diphenhydramine
-          max: 0.1
-      - !type:AdjustReagentsByGroup
-        group: Medicine
-        amount: -0.5
+      - !type:CleanBloodstream
+        excluded: Anacea # remove other medicines to make it harder to treat
+        cleanseRate: 0.5
       - !type:HealthChange
         damage:
           types:
@@ -122,9 +102,9 @@
   metabolisms:
     Poison:
       effects:
-      - !type:AdjustReagentsByGroup
-        group: Medicine
-        amount: -5
+      - !type:CleanBloodstream
+        excluded: Pendetide # remove other medicines to make it much harder to treat
+        cleanseRate: 5
       - !type:HealthChange
         damage:
           types:
