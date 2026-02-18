@@ -2655,3 +2655,10 @@ Entries:
   id: 319
   time: '2026-02-18T14:08:09.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/747
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed kobolds and monkeys not having tails...
+  id: 320
+  time: '2026-02-18T15:12:49.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/745
