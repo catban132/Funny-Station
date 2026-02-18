@@ -2662,3 +2662,10 @@ Entries:
   id: 320
   time: '2026-02-18T15:12:49.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/745
+- author: deltanedas
+  changes:
+  - type: Remove
+    message: Unbanned shadowkin players
+  id: 321
+  time: '2026-02-18T18:49:01.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/751
