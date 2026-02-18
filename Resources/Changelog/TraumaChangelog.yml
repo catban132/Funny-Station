@@ -2669,3 +2669,10 @@ Entries:
   id: 321
   time: '2026-02-18T18:49:01.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/751
+- author: deltanedas
+  changes:
+  - type: Remove
+    message: Removed ERP
+  id: 322
+  time: '2026-02-18T20:00:59.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/752
