@@ -2634,3 +2634,10 @@ Entries:
   id: 316
   time: '2026-02-18T08:15:17.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/737
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed Slasher meat spike ability spawning fake clientside meat spikes.
+  id: 317
+  time: '2026-02-18T11:45:27.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/738
