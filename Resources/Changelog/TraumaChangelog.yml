@@ -2736,3 +2736,12 @@ Entries:
   id: 330
   time: '2026-02-20T11:59:36.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/778
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed some changeling abilities wasting chemicals if they failed.
+  - type: Tweak
+    message: Changeling item spawning abilities (armblade etc) are now predicted.
+  id: 331
+  time: '2026-02-20T14:03:11.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/777
