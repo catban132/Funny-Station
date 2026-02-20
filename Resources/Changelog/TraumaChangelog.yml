@@ -2752,3 +2752,10 @@ Entries:
   id: 332
   time: '2026-02-20T14:07:18.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/780
+- author: deltanedas
+  changes:
+  - type: Tweak
+    message: 'Carp tails are now the same colour as they are. '
+  id: 333
+  time: '2026-02-20T15:40:54.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/781
