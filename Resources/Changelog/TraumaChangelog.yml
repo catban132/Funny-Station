@@ -2845,3 +2845,10 @@ Entries:
   id: 341
   time: '2026-02-21T17:40:50.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/805
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed armor examine string.
+  id: 342
+  time: '2026-02-21T17:45:32.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/806
