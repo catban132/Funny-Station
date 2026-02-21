@@ -2875,3 +2875,12 @@ Entries:
   id: 345
   time: '2026-02-21T21:22:35.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/807
+- author: TurboTrackerss14
+  changes:
+  - type: Fix
+    message: Slaughter Demons can bloodjaunt again.
+  - type: Fix
+    message: Slaughter Demons have hands again.
+  id: 346
+  time: '2026-02-21T22:54:15.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/815
