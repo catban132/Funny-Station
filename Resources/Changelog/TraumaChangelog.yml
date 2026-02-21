@@ -2813,3 +2813,12 @@ Entries:
   id: 337
   time: '2026-02-21T11:59:30.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/792
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed not being able to cut off Vox tails.
+  - type: Fix
+    message: Fixed Arachnids not having their appendages.
+  id: 338
+  time: '2026-02-21T12:37:15.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/796
