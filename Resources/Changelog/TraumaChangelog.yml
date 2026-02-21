@@ -2783,3 +2783,10 @@ Entries:
   id: 335
   time: '2026-02-21T10:43:31.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/793
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed lizards showing an error on health analyzers.
+  id: 336
+  time: '2026-02-21T11:32:49.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/794
