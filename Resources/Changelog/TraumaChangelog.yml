@@ -2859,3 +2859,12 @@ Entries:
   id: 343
   time: '2026-02-21T20:12:54.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/810
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed broken bones making you faster at doing things.
+  - type: Fix
+    message: Fixed all bones affecting doafters, now it's only for hands.
+  id: 344
+  time: '2026-02-21T20:32:39.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/812
