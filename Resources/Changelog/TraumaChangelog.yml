@@ -2852,3 +2852,10 @@ Entries:
   id: 342
   time: '2026-02-21T17:45:32.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/806
+- author: TurboTrackerss14
+  changes:
+  - type: Fix
+    message: Brullbars no longer scream and howl when dead.
+  id: 343
+  time: '2026-02-21T20:12:54.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/810
