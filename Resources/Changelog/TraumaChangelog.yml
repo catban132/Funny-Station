@@ -2838,3 +2838,10 @@ Entries:
   id: 340
   time: '2026-02-21T16:22:24.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/799
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed IPCs always sounding damaged when speaking.
+  id: 341
+  time: '2026-02-21T17:40:50.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/805
