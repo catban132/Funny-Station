@@ -2884,3 +2884,10 @@ Entries:
   id: 346
   time: '2026-02-21T22:54:15.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/815
+- author: TurboTrackerss14
+  changes:
+  - type: Fix
+    message: Security reinforcements can no longer roll antagonist.
+  id: 347
+  time: '2026-02-22T21:19:08.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/814
