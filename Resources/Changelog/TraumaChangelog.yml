@@ -2927,3 +2927,12 @@ Entries:
   id: 351
   time: '2026-02-23T13:18:42.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/838
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: >-
+      Fixed office chairs and other vehicles being able to fly in space.
+      Research hoverchairs instead!
+  id: 352
+  time: '2026-02-23T13:32:44.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/840
