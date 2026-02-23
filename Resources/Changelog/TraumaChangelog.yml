@@ -2945,3 +2945,10 @@ Entries:
   id: 353
   time: '2026-02-23T15:31:57.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/842
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed being able to delete felinids by pulling their tails.
+  id: 354
+  time: '2026-02-23T17:40:58.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/843
