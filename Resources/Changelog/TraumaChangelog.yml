@@ -2936,3 +2936,12 @@ Entries:
   id: 352
   time: '2026-02-23T13:32:44.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/840
+- author: deltanedas
+  changes:
+  - type: Add
+    message: You can now cut off moth wings or arachnid appendages :)
+  - type: Remove
+    message: Removed IPC wing markings. Go play ultrakill.
+  id: 353
+  time: '2026-02-23T15:31:57.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/842
