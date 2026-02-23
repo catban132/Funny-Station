@@ -2907,3 +2907,16 @@ Entries:
   id: 349
   time: '2026-02-23T08:09:09.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/830
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: >-
+      Fixed changelings getting multiple fake mindshield implants when absorbing
+      people.
+  - type: Fix
+    message: >-
+      Fixed some changeling actions that needed you to absorb bodies being
+      weird.
+  id: 350
+  time: '2026-02-23T13:00:20.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/837
