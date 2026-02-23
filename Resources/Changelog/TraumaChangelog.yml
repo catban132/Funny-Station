@@ -2900,3 +2900,10 @@ Entries:
   id: 348
   time: '2026-02-22T21:19:57.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/813
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed mutations you added not being shown when scanning someone.
+  id: 349
+  time: '2026-02-23T08:09:09.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/830
