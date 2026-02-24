@@ -2989,3 +2989,10 @@ Entries:
   id: 359
   time: '2026-02-24T08:36:27.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/850
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed random humanoids always being default skin colour etc.
+  id: 360
+  time: '2026-02-24T09:20:02.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/851
