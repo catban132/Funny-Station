@@ -2982,3 +2982,10 @@ Entries:
   id: 358
   time: '2026-02-24T08:24:21.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/849
+- author: deltanedas
+  changes:
+  - type: Tweak
+    message: Changelings now copy mutations from people they steal DNA from.
+  id: 359
+  time: '2026-02-24T08:36:27.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/850
