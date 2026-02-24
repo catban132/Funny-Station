@@ -2966,3 +2966,12 @@ Entries:
   id: 356
   time: '2026-02-23T19:48:54.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/846
+- author: caoimhan2008
+  changes:
+  - type: Add
+    message: more helmets now block facehuggers
+  - type: Add
+    message: facehuggers should now be throwable again while non player controlled
+  id: 357
+  time: '2026-02-24T00:44:45.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/848
