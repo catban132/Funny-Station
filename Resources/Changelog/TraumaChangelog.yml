@@ -3026,3 +3026,10 @@ Entries:
   id: 364
   time: '2026-02-24T10:34:51.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/856
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed shitcode with changeling evolution menu.
+  id: 365
+  time: '2026-02-24T11:19:43.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/858
