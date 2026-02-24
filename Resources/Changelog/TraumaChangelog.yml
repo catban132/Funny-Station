@@ -3019,3 +3019,10 @@ Entries:
   id: 363
   time: '2026-02-24T10:11:49.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/855
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed gibbing bodyparts being inconsistent.
+  id: 364
+  time: '2026-02-24T10:34:51.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/856
