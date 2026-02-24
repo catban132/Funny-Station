@@ -3012,3 +3012,10 @@ Entries:
   id: 362
   time: '2026-02-24T09:55:19.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/853
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed changelings losing augmented eyesight after transforming.
+  id: 363
+  time: '2026-02-24T10:11:49.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/855
