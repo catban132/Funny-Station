@@ -3003,3 +3003,12 @@ Entries:
   id: 361
   time: '2026-02-24T09:36:33.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/852
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed paralyzed trait not letting you use a wheelchair.
+  - type: Tweak
+    message: You can now crawl very slowly if you have no legs.
+  id: 362
+  time: '2026-02-24T09:55:19.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/853
