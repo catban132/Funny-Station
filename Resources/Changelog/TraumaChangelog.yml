@@ -2996,3 +2996,10 @@ Entries:
   id: 360
   time: '2026-02-24T09:20:02.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/851
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fix forklift shitcode letting you use it telepathically anywhere.
+  id: 361
+  time: '2026-02-24T09:36:33.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/852
