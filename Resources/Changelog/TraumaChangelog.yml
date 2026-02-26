@@ -3077,3 +3077,10 @@ Entries:
   id: 371
   time: '2026-02-25T22:29:36.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/630
+- author: deltanedas
+  changes:
+  - type: Tweak
+    message: Gigantism mutation now makes you fat.
+  id: 372
+  time: '2026-02-26T08:58:34.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/876
