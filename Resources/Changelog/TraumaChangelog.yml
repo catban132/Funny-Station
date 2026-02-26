@@ -3100,3 +3100,10 @@ Entries:
   id: 374
   time: '2026-02-26T11:25:11.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/879
+- author: deltanedas
+  changes:
+  - type: Add
+    message: Implemented the Void Magnet mutation.
+  id: 375
+  time: '2026-02-26T15:41:43.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/882
