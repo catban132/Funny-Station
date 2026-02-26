@@ -3084,3 +3084,12 @@ Entries:
   id: 372
   time: '2026-02-26T08:58:34.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/876
+- author: deltanedas
+  changes:
+  - type: Add
+    message: >-
+      Added Cold/Heat weaknesses and their combined Homeostatic Shutdown
+      mutations.
+  id: 373
+  time: '2026-02-26T10:37:40.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/877
