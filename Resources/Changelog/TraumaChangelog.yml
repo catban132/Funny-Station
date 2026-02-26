@@ -3093,3 +3093,10 @@ Entries:
   id: 373
   time: '2026-02-26T10:37:40.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/877
+- author: deltanedas
+  changes:
+  - type: Tweak
+    message: Honk Ops are now actual clowns if they ever roll.
+  id: 374
+  time: '2026-02-26T11:25:11.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/879
