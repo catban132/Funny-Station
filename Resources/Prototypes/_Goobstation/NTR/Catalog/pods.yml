@@ -322,3 +322,12 @@
   components:
   - type: SpawnOnDespawn
     prototype: ExecutiveCassette
+
+- type: entity
+  id: SpawnPodDeathsquadcrate
+  categories: [ HideSpawnMenu ]
+  name: SpawnPodDeathsquadcrate
+  parent: SpawnSupplyEmpty
+  components:
+  - type: SpawnOnDespawn
+    prototype: CrateDeathsquad    #this is for the lucky cube

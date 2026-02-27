@@ -27,6 +27,7 @@
     - id: SpiderClownSpawn
     - id: SpiderSpawn
     - id: VentClog
+   
 
 - type: entityTable
   id: BasicAntagEventsTable
@@ -37,6 +38,7 @@
     #- id: RevenantSpawn  # GoobStation - removed till rework
     - !type:NestedSelector
       tableId: DerelictBorgEventTable
+
 
 - type: entityTable
   id: ModerateAntagEventsTable
@@ -60,17 +62,27 @@
   table: !type:GroupSelector
     children:
     - !type:GroupSelector # Standard NT Borgs
-      weight: 85
+      weight: 100 # Catban - was 85, but combining groups
       children:
         - id: DerelictEngineerCyborgSpawn
         - id: DerelictGenericCyborgSpawn
         - id: DerelictJanitorCyborgSpawn
         - id: DerelictMedicalCyborgSpawn
         - id: DerelictMiningCyborgSpawn
-    - !type:GroupSelector # Other Borgs
-      weight: 15
-      children:
+        #Catban Added
+        - id: DerelictCyborgSyndicateSpawn # Goobstation - usually calm
+        - id: DerelictXenoborgStealthSpawn # i'll reduce this into one gamerule eventually
+        - id: DerelictXenoborgEngiSpawn
+        - id: DerelictXenoborgScoutSpawn
+        - id: DerelictXenoborgHeavySpawn
+        - id: DerelictSyndicateMedicalCyborgSpawn
+        - id: DerelictSyndicateSaboteurCyborgSpawn
         - id: DerelictSyndicateAssaultCyborgSpawn
+# Putting Everything in one Category
+#    - !type:GroupSelector # Other Borgs
+#      weight: 15
+#      children:
+#        - id: DerelictSyndicateAssaultCyborgSpawn
 
 - type: entity
   id: BaseStationEvent
@@ -362,7 +374,8 @@
 
   - type: AntagObjectives
     objectives:
-    - ParadoxCloneKillObjective
+    #Catban Removed
+    #- ParadoxCloneKillObjective
     - ParadoxCloneLivingObjective
   - type: AntagRandomSpawn # TODO: improve spawning so they only start in maints
   - type: AntagSelection
@@ -716,9 +729,9 @@
   id: LoneOpsSpawn
   components:
   - type: StationEvent
-    earliestStart: 35
+    earliestStart: 60 #Catban Changed - Was 35
     weight: 2.5 # Goobstation - was 5.5
-    minimumPlayers: 50 # Goobstation - was 20
+    minimumPlayers: 30 # Catban - was 50; Goobstation - was 20
     duration: null # LoneOpsSpawn needs an infinite duration so that it inherits the NukeOpsRule things of an actually appropriate end screen (not always "Neutral outcome!") and... ending the game if the station is nuked.
     chaos: # Goobstation
       Hostile: 200
@@ -766,10 +779,10 @@
   id: SleeperAgents
   components:
   - type: StationEvent
-    earliestStart: 30
-    weight: 8
-    minimumPlayers: 15
-    maxOccurrences: 1 # can only happen once per round
+    earliestStart: 10 # Catban
+    weight: 10
+    minimumPlayers: 0 # Catban
+    maxOccurrences: 3 # can only happen once per round ; Catban - changed to 3
     startAnnouncement: station-event-communication-interception
     startAudio:
       path: /Audio/Announcements/intercept.ogg
@@ -783,8 +796,8 @@
     definitions:
     - prefRoles: [ TraitorSleeper ]
       fallbackRoles: [ Traitor ]
-      min: 1
-      max: 2
+      min: 2 # Catban - was 1
+      max: 4 # Catban - was 2
       playerRatio: 10
       chaosScore: 200 # Goobstation - same as roundstart traitor gamerule
       blacklist:
@@ -799,7 +812,7 @@
   parent: BaseGameRule
   components:
   - type: StationEvent
-    weight: 7
+    weight: 4 # Catban - was 7
     duration: 150
     maxDuration: 300
     reoccurrenceDelay: 30
@@ -840,7 +853,7 @@
   components:
   - type: StationEvent
     earliestStart: 0
-    minimumPlayers: 20
+    minimumPlayers: 0 # Catban - was 20
     maxOccurrences: 1 # this event has diminishing returns on interesting-ness, so we cap it
     weight: 5
     chaos: # Goobstation

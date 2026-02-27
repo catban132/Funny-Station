@@ -21,8 +21,8 @@
   components:
   - type: WizardRule
   - type: GameRule
-    minPlayers: 30
-    chaosScore: 900
+    minPlayers: 10 # Catban
+    chaosScore: 600
   - type: AntagObjectives
     objectives:
     - WizardSurviveObjective
@@ -79,9 +79,9 @@
   id: WizardMidround
   components:
   - type: StationEvent
-    earliestStart: 35
-    weight: 5.5
-    minimumPlayers: 20
+    earliestStart: 1
+    weight: 4
+    minimumPlayers: 0
     duration: 1
     chaos: # Goobstation
       Hostile: 200

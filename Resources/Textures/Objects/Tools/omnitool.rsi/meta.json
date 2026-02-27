@@ -21,6 +21,24 @@
     },
     {
       "name": "omnitool-wrenching"
+    },
+    {
+      "name": "SyndicateOmnitool_wrench"
+    },
+    {
+      "name": "SyndicateOmnitool_multitool"
+    },
+    {
+      "name": "SyndicateOmnitool_crowbar"
+    },
+    {
+      "name": "SyndicateOmnitool_screwdriver"
+    },
+    {
+      "name": "SyndicateOmnitool_wirecutter"
+    },
+    {
+      "name": "SyndicateOmnitool_knife"
     }
   ]
 }
