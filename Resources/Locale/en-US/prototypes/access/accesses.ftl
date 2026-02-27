@@ -72,3 +72,6 @@ id-card-access-level-borg = Cyborg
 id-card-access-level-basic-silicon = Robot
 
 id-card-access-level-basic-xenoborg = Xenoborg
+
+# Catban Added
+id-card-access-level-shopkeeper = Shopkeeper

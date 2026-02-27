@@ -48,4 +48,7 @@ public sealed partial class RandomGiftComponent : Component
     /// </summary>
     [DataField("selectedEntity"), ViewVariables(VVAccess.ReadWrite)]
     public string? SelectedEntity;
+
+    [DataField("blacklist", required: false)]
+    public List<string> Blacklist = new();
 }

@@ -45,3 +45,15 @@
   values:
     prefix: advertisement-sweettoof-
     count: 4
+
+- type: localizedDataset
+  id: SlotMachineAds
+  values:
+    prefix: advertisement-slotmachine-
+    count: 6
+
+- type: localizedDataset
+  id: GachaMachineAds
+  values:
+    prefix: advertisement-gachamachine-
+    count: 6

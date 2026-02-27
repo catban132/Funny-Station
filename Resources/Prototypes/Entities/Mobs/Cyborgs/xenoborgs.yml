@@ -1,3 +1,5 @@
+
+
 - type: entity
   parent: [ BaseXenoborgChassis, BaseXenoborgTransponder ]
   id: XenoborgEngi
@@ -339,3 +341,325 @@
       cell_slot:
         name: power-cell-slot-component-slot-name-default
         startingItem: PowerCellHighPrinted
+
+#Catban Added
+- type: entity
+  parent: [ BaseXenoborgChassis, BaseBorgTransponder,  ]
+  id: XenoborgStealthDerelict
+  name: stealth xenoborg
+  suffix: Derelict
+  description: A man-machine hybrid that aims to replicate itself. They love extracting brains to insert into fresh Xenoborg chassis to grow their army. This one is a stealth type. Its armor shimmers in the light like no other material you've seen.
+  components:
+  - type: BorgTransponder
+    name: stealth xenoborg
+    sprite:
+      sprite: Mobs/Silicon/chassis.rsi
+      state: xenoborg_stealth
+  - type: Sprite
+    layers:
+      - state: xenoborg_stealth
+      - state: xenoborg_stealth_e
+        map: ["enum.BorgVisualLayers.Light"]
+        shader: unshaded
+        visible: false
+      - state: xenoborg_stealth_l
+        shader: unshaded
+        map: ["light"]
+        visible: false
+  - type: FootstepModifier # it flies instead of walking
+    footstepSoundCollection:
+      collection: FootstepHoverXenoborg
+  - type: BorgChassis
+    maxModules: 5
+    hasMindState: xenoborg_stealth_e
+    noMindState: xenoborg_stealth_e_r
+    moduleWhitelist:
+      tags:
+      - XenoborgModuleGeneric
+      - XenoborgModuleStealth
+  - type: MovementAlwaysTouching # it flies in space with tiny thrusters
+  # - type: SpamEmitSound # longer interval to make the creppy sound
+  #   minInterval: 50
+  #   maxInterval: 150
+  - type: ContainerFill
+    containers:
+      borg_brain:
+      - MMIFilled
+      borg_module:
+      - XenoborgModuleSpaceMovement
+      - XenoborgModuleTool
+      - XenoborgModuleHypo&Chameleon
+      - XenoborgModuleCloakDevice
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHigh
+  - type: ShowJobIcons
+  - type: ActiveRadio
+    channels:
+    - Common
+    - Xenoborg
+  - type: StartIonStormed
+    ionStormAmount: 3
+  - type: IonStormTarget
+    chance: 1
+  - type: Access
+    enabled: false
+    groups:
+    - AllAccess
+    - Xenoborg    #Randomized access would be fun. AllAccess is the best i can think of right now that does make it too hard for it to enter the station or navigate it..
+  - type: AccessReader
+    access: [["Command"], ["Research"]]
+  - type: SiliconLawProvider
+    laws: OverlordLawset
+
+- type: entity
+  parent: [ BaseXenoborgChassis, BaseXenoborgTransponder ]
+  id: XenoborgScoutDerelict
+  name: scout xenoborg
+  suffix: Derelict
+  description: A man-machine hybrid that aims to replicate itself. They love extracting brains to insert into fresh Xenoborg chassis to grow their army. This is a scout type, its nimble thrusters allow it to move quickly through space.
+  components:
+  - type: BorgTransponder
+    name: scout xenoborg
+    sprite:
+      sprite: Mobs/Silicon/chassis.rsi
+      state: xenoborg_scout
+  - type: Sprite
+    layers:
+      - state: xenoborg_scout
+      - state: xenoborg_scout_e
+        map: ["enum.BorgVisualLayers.Light"]
+        shader: unshaded
+        visible: false
+      - state: xenoborg_scout_l
+        shader: unshaded
+        map: ["light"]
+        visible: false
+  - type: FootstepModifier # it flies instead of walking
+    footstepSoundCollection:
+      collection: FootstepHoverXenoborg
+  - type: FlashImmunity
+  - type: BorgChassis
+    maxModules: 4
+    hasMindState: xenoborg_scout_e
+    noMindState: xenoborg_scout_e_r
+    moduleWhitelist:
+      tags:
+      - XenoborgModuleGeneric
+      - XenoborgModuleScout
+  - type: MovementAlwaysTouching
+  - type: MovementSpeedModifier # faster
+    baseWalkSpeed : 3
+    baseSprintSpeed : 6
+  - type: ContainerFill
+    containers:
+      borg_brain:
+      - MMIFilled
+      borg_module:
+      - XenoborgModuleTool
+      - XenoborgModuleSword
+      - XenoborgModuleSpaceMovement
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHigh
+  - type: ShowJobIcons
+  - type: ActiveRadio
+    channels:
+    - Common
+    - Xenoborg
+  - type: StartIonStormed
+    ionStormAmount: 3
+  - type: IonStormTarget
+    chance: 1
+  - type: Access
+    enabled: false
+    groups:
+    - Xenoborg 
+    - AllAccess #Randomized access would be fun. AllAccess is the best i can think of right now that does make it too hard for it to enter the station or navigate it..
+  - type: AccessReader
+    access: [["Command"], ["Research"]]
+  - type: SiliconLawProvider
+    laws: OverlordLawset
+
+- type: entity
+  parent: [ BaseXenoborgChassis, BaseBorgTransponder ]
+  id: XenoborgEngiDerelict
+  name: engi xenoborg
+  suffix: Derelict
+  description: A man-machine hybrid that aims to replicate itself. They love extracting brains to insert into fresh Xenoborg chassis to grow their army. This one seems to be an engineering type, as it has more tools for supporting the other Xenoborgs.
+  components:
+  - type: BorgTransponder
+    name: engi xenoborg
+    sprite:
+      sprite: Mobs/Silicon/chassis.rsi
+      state: xenoborg_engi
+  - type: Sprite
+    layers:
+    - state: xenoborg_engi
+    - state: xenoborg_engi_e
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: xenoborg_engi_l
+      shader: unshaded
+      map: ["light"]
+      visible: false
+  - type: BorgChassis
+    maxModules: 7
+    hasMindState: xenoborg_engi_e
+    noMindState: xenoborg_engi_e_r
+    moduleWhitelist:
+      tags:
+      - XenoborgModuleGeneric
+      - XenoborgModuleEngi
+      - BorgModuleEngineering
+      - BorgModuleGeneric
+  - type: MovementAlwaysTouching
+  - type: ContainerFill
+    containers:
+      borg_brain:
+      - MMIFilled
+      borg_module:
+      - BorgModuleAdvancedTool
+      - BorgModuleConstruction
+      - BorgModuleRCD
+      - BorgModuleCable
+      - XenoborgModuleAccessBreaker
+      - XenoborgModuleSpaceMovement
+  - type: ShowHealthBars
+    damageContainers:
+    - Inorganic
+    - Silicon
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHigh
+  - type: ShowJobIcons
+  - type: ActiveRadio
+    channels:
+    - Common
+    - Xenoborg
+  - type: StartIonStormed
+    ionStormAmount: 3
+  - type: IonStormTarget
+    chance: 1
+  - type: Access
+    enabled: false
+    groups:
+    - Xenoborg 
+    - AllAccess #Randomized access would be fun. AllAccess is the best i can think of right now that does make it too hard for it to enter the station or navigate it..
+  - type: AccessReader
+    access: [["Command"], ["Research"]]
+  - type: SiliconLawProvider
+    laws: OverlordLawset
+
+- type: entity
+  parent: [ BaseXenoborgChassis, BaseXenoborgTransponder ]
+  id: XenoborgHeavyDerelict
+  name: heavy xenoborg
+  suffix: Derelict
+  description: A man-machine hybrid that aims to replicate itself. They love extracting brains to insert into fresh Xenoborg chassis to grow their army. This type is has heavy lasers and is covered in thick armor plates. It may be tougher, but its speed matches its brawn.
+  components:
+  - type: BorgTransponder
+    name: heavy xenoborg
+    sprite:
+      sprite: Mobs/Silicon/chassis.rsi
+      state: xenoborg_heavy
+  - type: Sprite
+    layers:
+    - state: xenoborg_heavy
+    - state: xenoborg_heavy_e
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: xenoborg_heavy_l
+      shader: unshaded
+      map: ["light"]
+      visible: false
+  - type: BorgChassis
+    maxModules: 4
+    hasMindState: xenoborg_heavy_e
+    noMindState: xenoborg_heavy_e_r
+    moduleWhitelist:
+      tags:
+      - XenoborgModuleGeneric
+      - XenoborgModuleHeavy
+  - type: MovementAlwaysTouching
+  - type: MovementSpeedModifier # slower
+    baseWalkSpeed : 1.2
+    baseSprintSpeed : 2.2
+  - type: FlashImmunity
+  - type: MobThresholds # tankier
+    thresholds:
+      0: Alive
+      250: Critical
+      500: Dead
+    stateAlertDict:
+      Alive: BorgHealth
+      Critical: BorgCrit
+      Dead: BorgDead
+    showOverlays: false
+    allowRevives: true
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 190
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Machines/warning_buzzer_xenoborg.ogg
+          params:
+            volume: 5
+    - trigger:
+        !type:DamageTrigger
+        damage: 750
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:EmptyContainersBehaviour
+        containers:
+        - borg_brain
+        - cell_slot
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Repairable
+    doAfterDelay: 25 # more HP, more time to heal
+  - type: ContainerFill
+    containers:
+      borg_brain:
+      - MMIFilled
+      borg_module:
+      - XenoborgModuleSpaceMovement
+      - XenoborgModuleTool
+      - XenoborgModuleLaser
+      - XenoborgModuleJammer
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHigh
+  - type: ShowJobIcons
+  - type: ActiveRadio
+    channels:
+    - Common
+    - Xenoborg
+  - type: StartIonStormed
+    ionStormAmount: 3
+  - type: IonStormTarget
+    chance: 1
+  - type: Access
+    enabled: false
+    groups:
+    - Xenoborg
+    - AllAccess #Randomized access would be fun. AllAccess is the best i can think of right now that does make it too hard for it to enter the station or navigate it..
+  - type: AccessReader
+    access: [["Command"], ["Research"]]
+  - type: SiliconLawProvider
+    laws: OverlordLawset

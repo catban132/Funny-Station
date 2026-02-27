@@ -1,0 +1,71 @@
+
+
+
+
+
+- type: entity
+  name: Mouldable honey tool
+  parent: BaseItem
+  id: beeomnitool
+  description: A tool use by beelians, is able to be moulded into different tools
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/omnitool.rsi
+    state: omnitool-screwing
+  - type: Item
+    sprite: Objects/Tools/omnitool.rsi
+    size: Normal
+  - type: Tag
+    tags:
+    - Multitool
+  - type: Prying
+    enabled: false
+  - type: UseDelay # Goobstation - For insta prying
+    delay: 0.8 # Goobstation - no switch CD
+  - type: Tool
+    qualities:
+      - Screwing
+    speedModifier: 1.2 # Kept for future adjustments. Currently 1.2x for balance
+    useSound: /Audio/Items/drill_use.ogg
+  - type: ToolTileCompatible
+  - type: MultipleTool
+    statusShowBehavior: true
+    entries:
+      - behavior: Screwing
+        sprite:
+          sprite: Objects/Tools/screwdriver.rsi
+          state: honeyscrewdriver
+        useSound:
+          path: /Audio/Items/drill_use.ogg
+        changeSound:
+          path: /Audio/Items/change_drill.ogg
+      - behavior: Prying
+        sprite:
+          sprite: Objects/Tools/crowbar.rsi
+          state: honeycrowbar
+        useSound:
+          path: /Audio/Items/jaws_pry.ogg
+        changeSound:
+          path: /Audio/Items/change_drill.ogg
+      - behavior: Anchoring
+        sprite:
+          sprite: Objects/Tools/wrench.rsi
+          state: Honeywrench
+        useSound:
+          path: /Audio/Items/ratchet.ogg
+        changeSound:
+          path: /Audio/Items/change_drill.ogg
+      - behavior: Cutting
+        sprite:
+          sprite: Objects/Tools/wirecutters.rsi
+          state: honeywirecutters
+        useSound:
+          path: /Audio/Items/jaws_cut.ogg
+        changeSound:
+          path: /Audio/Items/change_drill.ogg
+      - behavior: Pulsing
+        sprite:
+          sprite: Objects/Tools/multitool.rsi
+          state: honeymultitool
+        changeSound:
+          path: /Audio/Items/change_drill.ogg

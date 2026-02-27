@@ -2,3 +2,9 @@
   id: Xenoborg
   name: id-card-access-level-basic-xenoborg
   canAddToIdCard: false
+
+#Catban Added
+- type: accessLevel
+  id: Shopkeeper
+  name: id-card-access-level-shopkeeper
+  canAddToIdCard: false

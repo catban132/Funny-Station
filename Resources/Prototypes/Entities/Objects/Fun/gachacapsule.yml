@@ -1,0 +1,869 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  id: gachacapsuleBase
+  name: gachacapsule
+  description: A little box with incredible surprises inside.
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Objects/Decoration/gachacapsule.rsi
+    layers:
+      - state: gacha_capsule_legendary_unsafe
+
+- type: entity
+  id: gachacapsuleUnsafe
+  parent: [gachacapsuleBase, BaseItem]
+  name: gacha Capsule
+  description: I wonder whats inside! the top of it is cyan, maybe it has something good inside.
+  suffix: Filled, any item
+  components:
+  - type: RandomGift
+    wrapper: gachacapsuleTrash
+    sound:
+      path: /Audio/Effects/pop.ogg
+    insaneMode: false
+    contentsViewers:
+      components:
+      - Ghost
+      - Santa
+  - type: Sprite
+    sprite: Objects/Decoration/gachacapsule.rsi
+    layers:
+      - state: gacha_capsule_legendary_unsafe
+
+- type: entity
+  id: gachacapsuleInsane
+  parent: [gachacapsuleBase, BaseItem]
+  name: Gacha capsule
+  description: I wonder whats inside! the top of it is red... oh no.
+  suffix: Filled, any entity
+  components:
+  - type: RandomGift
+    blacklist: 
+     - PonderingOrbRadioactive
+     - PonderingOrbRadioactiveM
+     - PonderingOrbRadioactiveS
+     - WeaponPistolDebug
+     - RMC
+     - Airlock
+     - Supron
+     - WeaponLauncherAdmemeImmovableRodSlow
+    wrapper: gachacapsuleTrash
+    sound:
+      path: /Audio/Effects/pop.ogg
+    insaneMode: true
+    contentsViewers:
+      components:
+      - Ghost
+      - Santa
+  - type: Sprite
+    sprite: Objects/Decoration/gachacapsule.rsi
+    layers:
+      - state: gacha_capsule_legendary_insane
+
+- type: entity
+  id: gachacapsuleSafe
+  parent: [gachacapsuleBase, BaseItem]
+  name: Gacha Capsule
+  description: I wonder whats inside! the top of it is grey, its got BORING stuff.
+  suffix: Filled Safe
+  components:
+  - type: SpawnItemsOnUse
+    items:
+      - id: gachacapsuleTrash
+      - id: Bucket
+        orGroup: GiftPool
+      - id: JetpackMiniFilled
+        orGroup: GiftPool
+      - id: PlushieGhost
+        orGroup: GiftPool
+      - id: PlushieBee
+        orGroup: GiftPool
+      - id: PlushieRGBee
+        orGroup: GiftPool
+      - id: PlushieNuke
+        orGroup: GiftPool
+      - id: PlushieRouny
+        orGroup: GiftPool
+      - id: PlushieLizard #Weh!
+        orGroup: GiftPool
+      - id: PlushieRainbowLizard
+        orGroup: GiftPool
+      - id: PlushieNar
+        orGroup: GiftPool
+      - id: PlushieCarp
+        orGroup: GiftPool
+      - id: PlushieMagicarp
+        orGroup: GiftPool
+      - id: PlushieHolocarp
+        orGroup: GiftPool
+      - id: PlushieRainbowCarp
+        orGroup: GiftPool
+      - id: PlushieSlime
+        orGroup: GiftPool
+      - id: PlushieSnake
+        orGroup: GiftPool
+      - id: PlushieVox
+        orGroup: GiftPool
+      - id: PlushieRatvar
+        orGroup: GiftPool
+      - id: PlushieSpaceLizard
+        orGroup: GiftPool
+      - id: PlushieSharkBlue
+        orGroup: GiftPool
+      - id: PlushieSharkPink
+        orGroup: GiftPool
+      - id: PlushieSharkGrey
+        orGroup: GiftPool
+      - id: ToyAmongPequeno
+        orGroup: GiftPool
+      - id: PlushieDiona
+        orGroup: GiftPool
+      - id: PlushieArachind
+        orGroup: GiftPool
+      - id: ClothingNeckCloakMoth
+        orGroup: GiftPool
+      - id: ToyMouse
+        orGroup: GiftPool
+      - id: ToyAi
+        orGroup: GiftPool
+      - id: ToyNuke
+        orGroup: GiftPool
+      - id: ToyFigurinePassenger
+        orGroup: GiftPool
+      - id: ToyGriffin
+        orGroup: GiftPool
+      - id: ToyHonk
+        orGroup: GiftPool
+      - id: ToyIan
+        orGroup: GiftPool
+      - id: ToyMarauder
+        orGroup: GiftPool
+      - id: ToyMauler
+        orGroup: GiftPool
+      - id: ToyGygax
+        orGroup: GiftPool
+      - id: ToyOdysseus
+        orGroup: GiftPool
+      - id: ToyOwlman
+        orGroup: GiftPool
+      - id: ToyDeathRipley
+        orGroup: GiftPool
+      - id: ToyPhazon
+        orGroup: GiftPool
+      - id: ToyFireRipley
+        orGroup: GiftPool
+      - id: ToyReticence
+        orGroup: GiftPool
+      - id: ToyRipley
+        orGroup: GiftPool
+      - id: ToySeraph
+        orGroup: GiftPool
+      - id: ToyDurand
+        orGroup: GiftPool
+      - id: ToySkeleton
+        orGroup: GiftPool
+      - id: FoamBlade
+        orGroup: GiftPool
+      - id: AcousticGuitarInstrument
+        orGroup: GiftPool
+      - id: ViolinInstrument
+        orGroup: GiftPool
+      - id: TrumpetInstrument
+        orGroup: GiftPool
+      - id: ElectricGuitarInstrument
+        orGroup: GiftPool
+      - id: AccordionInstrument
+        orGroup: GiftPool
+      - id: HarmonicaInstrument
+        orGroup: GiftPool
+      - id: TromboneInstrument
+        orGroup: GiftPool
+      - id: FrenchHornInstrument
+        orGroup: GiftPool
+      - id: BanjoInstrument
+        orGroup: GiftPool
+      - id: SaxophoneInstrument
+        orGroup: GiftPool
+      - id: GlockenspielInstrument
+        orGroup: GiftPool
+      - id: RecorderInstrument
+        orGroup: GiftPool
+      - id: FluteInstrument
+        orGroup: GiftPool
+      - id: ClarinetInstrument
+        orGroup: GiftPool
+      - id: CelloInstrument
+        orGroup: GiftPool
+      - id: KalimbaInstrument
+        orGroup: GiftPool
+      - id: MicrophoneInstrument
+        orGroup: GiftPool
+      - id: BassGuitarInstrument
+        orGroup: GiftPool
+      - id: OcarinaInstrument
+        orGroup: GiftPool
+      - id: PanFluteInstrument
+        orGroup: GiftPool
+      - id: SynthesizerInstrument
+        orGroup: GiftPool
+      - id: BagpipeInstrument
+        orGroup: GiftPool
+      - id: GunpetInstrument
+        orGroup: GiftPool
+      - id: RockGuitarInstrument
+        orGroup: GiftPool
+      - id: MusicBoxInstrument
+        orGroup: GiftPool
+      - id: ViolaInstrument
+        orGroup: GiftPool
+      - id: ClothingNeckCloakTrans
+        orGroup: GiftPool
+      - id: ClothingNeckCloakAdmin
+        orGroup: GiftPool
+      - id: ToySkeleton
+        orGroup: GiftPool
+      - id: Basketball
+        orGroup: GiftPool
+      - id: Football
+        orGroup: GiftPool
+      - id: BalloonCorgi
+        orGroup: GiftPool
+      - id: PonderingOrb
+        orGroup: GiftPool
+      - id: Skub
+        orGroup: GiftPool
+      - id: ClothingEyesGlassesGarGiga
+        orGroup: GiftPool
+      - id: ClothingEyesGlassesGarOrange
+        orGroup: GiftPool
+      - id: ClothingEyesGlassesGar
+        orGroup: GiftPool
+      - id: ClothingNeckBling
+        orGroup: GiftPool
+      - id: ClothingHeadHelmetCosmonaut
+        orGroup: GiftPool
+      - id: ClothingShoeSlippersDuck
+        orGroup: GiftPool
+      - id: ClothingUnderSocksBee
+        orGroup: GiftPool
+      - id: ClothingUnderSocksCoder
+        orGroup: GiftPool
+      - id: ClothingBeltUtilityFilled
+        orGroup: GiftPool
+      - id: WeaponFlareGun
+        orGroup: GiftPool
+      - id: ResearchDisk
+        orGroup: GiftPool
+      - id: Machete
+        orGroup: GiftPool
+      - id: BaseBallBat
+        orGroup: GiftPool
+      - id: CombatKnife
+        orGroup: GiftPool
+      - id: FlashlightLantern
+        orGroup: GiftPool
+      - id: Spear
+        orGroup: GiftPool
+      - id: LidSalami
+        orGroup: GiftPool
+      - id: Soap
+        orGroup: GiftPool
+      - id: SoapHomemade
+        orGroup: GiftPool
+      - id: SoapNT
+        orGroup: GiftPool
+      - id: SoapDeluxe
+        orGroup: GiftPool
+      - id: SoapSyndie
+        orGroup: GiftPool
+      - id: SoapOmega
+        orGroup: GiftPool
+      - id: BedsheetCosmos
+        orGroup: GiftPool
+      - id: BedsheetIan
+        orGroup: GiftPool
+      - id: FoodBoxDonkpocket
+        orGroup: GiftPool
+      - id: FoodBoxDonkpocketSpicy
+        orGroup: GiftPool
+      - id: FoodBoxDonkpocketTeriyaki
+        orGroup: GiftPool
+      - id: FoodBoxDonkpocketPizza
+        orGroup: GiftPool
+      - id: FoodBoxDonkpocketStonk
+        orGroup: GiftPool
+      - id: FoodBoxDonkpocketCarp
+        orGroup: GiftPool
+      - id: FoodBoxDonkpocketBerry
+        orGroup: GiftPool
+      - id: FoodBoxDonkpocketHonk
+        orGroup: GiftPool
+      - id: FoodBoxDonkpocketMoth
+        orGroup: GiftPool
+      - id: ClothingHandsGlovesColorPurple
+        orGroup: GiftPool
+      - id: ClothingHandsGlovesColorYellow
+        orGroup: GiftPool
+      - id: ClothingHandsGlovesColorYellowBudget
+        orGroup: GiftPool
+      - id: ClothingEyesGlassesSunglasses
+        orGroup: GiftPool
+      - id: ClothingHeadHatOutlawHat
+        orGroup: GiftPool
+      - id: ClothingHeadHatSantahat
+        orGroup: GiftPool
+      - id: ClothingHeadHatUshanka
+        orGroup: GiftPool
+      - id: ClothingHeadHatXmasCrown
+        orGroup: GiftPool
+      - id: ClothingHeadHatBunny
+        orGroup: GiftPool
+      - id: ClothingHeadHatFlowerWreath
+        orGroup: GiftPool
+      - id: FoodPoppy
+        orGroup: GiftPool
+      - id: ClothingMaskClown
+        orGroup: GiftPool
+      - id: ClothingOuterCoatGentle
+        orGroup: GiftPool
+      - id: ClothingOuterCoatJensen
+        orGroup: GiftPool
+      - id: ClothingOuterHoodieBlack
+        orGroup: GiftPool
+      - id: ClothingOuterHoodieGrey
+        orGroup: GiftPool
+      - id: ClothingOuterVestWebMerc
+        orGroup: GiftPool
+      - id: ClothingShoesFlippers
+        orGroup: GiftPool
+      - id: ClothingUniformJumpsuitAncient
+        orGroup: GiftPool
+      - id: ClothingUniformJumpsuitDetectiveGrey
+        orGroup: GiftPool
+      - id: ClothingUniformJumpsuitColorMaroon
+        orGroup: GiftPool
+      - id: ClothingUniformColorRainbow
+        orGroup: GiftPool
+      - id: ClothingUniformJumpskirtColorRainbow
+        orGroup: GiftPool
+      - id: ClothingUniformOveralls
+        orGroup: GiftPool
+      - id: ClothingUniformJumpskirtDetectiveGrey
+        orGroup: GiftPool
+      - id: ClothingUniformJumpskirtColorMaroon
+        orGroup: GiftPool
+      - id: ClothingUniformJumpskirtJanimaid
+        orGroup: GiftPool
+      - id: PersonalAI
+        orGroup: GiftPool
+      - id: DiceBag
+        orGroup: GiftPool
+      - id: CrayonBox
+        orGroup: GiftPool
+      - id: ClothingHeadHatCatEars
+        orGroup: GiftPool
+      - id: ClothingHeadHatDogEars
+        orGroup: GiftPool
+      - id: ToySword
+        orGroup: GiftPool
+      - id: FoamWonderprod #Goob
+        orGroup: GiftPool
+      - id: RevolverCapGun
+        orGroup: GiftPool
+      - id: Ash
+        orGroup: GiftPool
+      - id: Coal1
+        orGroup: GiftPool
+      - id: MiningDrill
+        orGroup: GiftPool
+      - id: CowToolboxFilled
+        orGroup: GiftPool
+      - id: ClothingUniformJumpsuitEngineeringHazard
+        orGroup: GiftPool
+      - id: Bola
+        orGroup: GiftPool
+      - id: GlowstickBase
+        orGroup: GiftPool
+      - id: GlowstickBlue
+        orGroup: GiftPool
+      - id: GlowstickPurple
+        orGroup: GiftPool
+      - id: GlowstickRed
+        orGroup: GiftPool
+      - id: GlowstickYellow
+        orGroup: GiftPool
+      - id: ToyRubberDuck
+        orGroup: GiftPool
+      - id: BalloonSyn
+        orGroup: GiftPool
+      - id: RGBStaff
+        orGroup: GiftPool
+      # WD EDIT START
+      - id: FaceHuggerToys
+        orGroup: GiftPool
+      # WD EDIT END
+    sound:
+      path: /Audio/Effects/pop.ogg
+  - type: Sprite
+    sprite: Objects/Decoration/gachacapsule.rsi
+    layers:
+      - state: gacha_capsule_legendary_boring
+
+- type: entity
+  id: gachacapsuleCash
+  parent: [gachacapsuleBase, BaseItem]
+  name: gacha capsule
+  description: I wonder whats inside! the top of it is green; that means it has DUBLOONS!!
+  suffix: Filled Cash
+  components:
+  - type: SpawnItemsOnUse
+    items:
+      - id: gachacapsuleTrash
+      - id: SpaceCash
+        prob: .01
+        orGroup: GiftPool
+      - id: SpaceCash10
+        prob: .2
+        orGroup: GiftPool
+      - id: SpaceCash100
+        orGroup: GiftPool
+      - id: SpaceCash500
+        prob: .1
+        orGroup: GiftPool
+      - id: SpaceCash1000
+        prob: .01
+        orGroup: GiftPool
+      - id: SpaceCash2500
+        prob: .004
+        orGroup: GiftPool
+      - id: SpaceCash5000
+        prob: .002
+        orGroup: GiftPool
+      - id: SpaceCash10000
+        prob: .001
+        orGroup: GiftPool
+      - id: SpaceCash1000000
+        prob: .000001
+        orGroup: GiftPool
+    sound:
+      path: /Audio/Effects/pop.ogg
+  - type: Sprite
+    sprite: Objects/Decoration/gachacapsule.rsi
+    layers:
+      - state: gacha_capsule_legendary_money
+
+- type: entity
+  id: gachacapsuleTrash
+  categories: [ HideSpawnMenu ]
+  parent: BaseItem
+  name: Opened gacha capsule
+  description: garbage
+  components:
+  - type: Sprite
+    sprite: Objects/Decoration/gachacapsule.rsi
+    layers:
+      - state: openedgachacapsule
+  - type: Tag
+    tags:
+    - Trash
+  - type: SpaceGarbage
+
+- type: entity
+  id: luckycubesuperlucky
+  parent: [gachacapsuleBase, BaseItem]
+  name: Lucky cube
+  description: strange...
+  suffix: Filled, Ultra lucky
+  components:
+  - type: SpawnItemsOnUse
+    items:
+      - id: WeaponDislippler
+      - id: ClothingNeckCloakCentcom
+      - id: ClothingHeadHatCentcomcap
+      - id: CentcommStimpack
+      - id: MeleeDebugGib
+        orGroup: GiftPool
+      - id: WeaponDisablerAdvanced
+        orGroup: GiftPool
+      - id: HeadOfSecurityWeaponUndetermined
+        orGroup: GiftPool
+      - id: WeaponPistolCentcommAgent
+        orGroup: GiftPool
+      - id: ERTSecurityUndeterminedWeapon
+        orGroup: GiftPool
+      - id: CrateSyndicateUndetermined
+        orGroup: GiftPool
+      - id: BriefcaseCentcomm
+        orGroup: GiftPool
+      - id: ClothingOuterDavidsJacketValidFilled
+        orGroup: GiftPool
+      - id: WeaponPulseCarbineAdvanced
+        orGroup: GiftPool
+      - id: AdminHypo
+        orGroup: GiftPool
+      - id: CrateSyndicateStarterKit
+        orGroup: GiftPool
+      - id: Throngler
+        orGroup: GiftPool
+      - id: WeaponTetherGunAdmin
+        orGroup: GiftPool
+      - id: WeaponMinigun
+        orGroup: GiftPool
+      - id: ShiftImplanter
+        orGroup: GiftPool
+      - id: DeathsquadRemote
+        orGroup: GiftPool
+        prob: .5
+      - id: SantaClaus
+        orGroup: GiftPool
+      - id: CrateSyndicateSuperSurplusBundle
+        orGroup: GiftPool
+    sound:
+      path: /Audio/Effects/pop.ogg
+  - type: Sprite
+    sprite: Objects/Decoration/gachacapsule.rsi
+    layers:
+      - state: luckyblock
+
+- type: entity
+  id: luckycuberegular
+  parent: [gachacapsuleBase, BaseItem]
+  name: Lucky cube
+  description: strange...
+  suffix: Filled, Regular luck
+  components:
+  - type: SpawnItemsOnUse
+    items:
+      - id: ClothingHeadHatCatEarsValid
+      - id: ClothingNeckCloakAdmin
+      - id: CentcommStimpack
+      - id: MeleeDebugGib
+        orGroup: GiftPool
+      - id: WeaponDisablerAdvanced
+        orGroup: GiftPool
+      - id: HeadOfSecurityWeaponUndetermined
+        orGroup: GiftPool
+      - id: WeaponPistolCentcommAgent
+        orGroup: GiftPool
+      - id: ERTSecurityUndeterminedWeapon
+        orGroup: GiftPool
+      - id: CrateSyndicateUndetermined
+        orGroup: GiftPool
+      - id: BriefcaseCentcomm
+        orGroup: GiftPool
+      - id: ClothingOuterDavidsJacketValidFilled
+        orGroup: GiftPool
+      - id: WeaponPulseCarbineAdvanced
+        orGroup: GiftPool
+      - id: WeaponTaserSuper
+        orGroup: GiftPool
+      - id: OrganMagicSlaughterHeart
+        orGroup: GiftPool
+      - id: LoneOpsUplink350TC
+        orGroup: GiftPool
+      - id: MobGlockroach
+        orGroup: GiftPool
+      - id: WeaponTetherGunAdmin
+        orGroup: GiftPool
+      - id: WeaponMinigun
+        orGroup: GiftPool
+      - id: ShiftImplanter
+        orGroup: GiftPool
+      - id: CloakingDevice
+        orGroup: GiftPool
+      - id: DeathsquadRemote
+        orGroup: GiftPool
+        prob: .1
+      - id: Singularity
+        orgroup: GiftPool
+        prob: .0005
+    sound:
+      path: /Audio/Effects/pop.ogg
+  - type: Sprite
+    sprite: Objects/Decoration/gachacapsule.rsi
+    layers:
+      - state: luckyblock
+
+- type: entity
+  id: luckycubeunlucky
+  parent: [gachacapsuleBase, BaseItem]
+  name: Lucky cube
+  description: strange...
+  suffix: Filled, Unlucky
+  components:
+  - type: SpawnItemsOnUse
+    items:
+      - id: WeaponDislippler
+      - id: MeleeDebugGib
+        orGroup: GiftPool
+      - id: WeaponDisablerAdvanced
+        orGroup: GiftPool
+      - id: HeadOfSecurityWeaponUndetermined
+        orGroup: GiftPool
+      - id: SpawnDeathsquad
+        orGroup: GiftPool
+      - id: ERTSecurityUndeterminedWeapon
+        orGroup: GiftPool
+      - id: CrateSyndicateUndetermined
+        orGroup: GiftPool
+      - id: BriefcaseCentcomm
+        orGroup: GiftPool
+      - id: MobGlockroach
+        orGroup: GiftPool
+    sound:
+      path: /Audio/Effects/pop.ogg
+  - type: Sprite
+    sprite: Objects/Decoration/gachacapsule.rsi
+    layers:
+      - state: luckyblock
+
+- type: entity
+  id: GachaMachine
+  parent: BaseMachinePowered
+  name: gacha machine
+  description: Who doesn't love gambling?
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Structures/Machines/slotmachines/claw_machine.rsi
+    layers:
+    - state: gachamachine
+  - type: WiresPanel
+  - type: WiresVisuals
+  - type: Wires
+    layoutId: SlotMachine
+    boardName: wires-board-name-slot-machine
+  - type: Appearance
+  - type: UserInterface
+    interfaces:
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface
+  - type: StationAiWhitelist
+  - type: AmbientOnPowered
+  - type: AmbientSound
+    volume: -9
+    range: 3
+    enabled: false
+    sound:
+      path: /Audio/Ambience/Objects/vending_machine_hum.ogg
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalGlassBreak
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Electrified
+    enabled: false
+    usesApcPower: true
+  - type: PointLight
+    enabled: false
+    castShadows: false
+    radius: 2
+    energy: 1.5
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+  - type: LitOnPowered
+  - type: ApcPowerReceiver
+    powerLoad: 200
+  - type: Repairable
+    doAfterDelay: 8
+  - type: Anchorable
+  - type: TypingIndicator
+    proto: robot
+  - type: Speech
+    speechVerb: Robotic
+    speechSounds: Vending
+  - type: SentienceTarget
+    flavorKind: station-event-random-sentience-flavor-mechanical
+    weight: 0.125
+  - type: StaticPrice
+    price: 100
+  - type: CollectiveMind
+    defaultChannel: Binary
+    channels:
+    - Binary
+  - type: Vocalizer
+    minVocalizeInterval: 8m
+    maxVocalizeInterval: 10m
+    hideChat: true
+  - type: VocalizerRequiresPower
+  - type: DatasetVocalizer
+    dataset: GachaMachineAds
+  - type: LanguageSpeaker # Einstein Engines - Languages
+  - type: LanguageKnowledge # Einstein Engines - Languages
+    speaks:
+    - TauCetiBasic
+    - RobotTalk
+    understands:
+    - TauCetiBasic
+    - RobotTalk
+  - type: ContainerContainer
+    containers:
+      money: !type:ContainerSlot
+        showEnts: false
+        occludes: true
+        ent: null
+  - type: ItemSlots
+    slots:
+      money:
+        name: spesos
+        whitelist:
+          components:
+          - Cash
+  - type: GachaMachine
+    spinCost: 1000
+    rewards:
+    - RandomGachaSpawner
+
+- type: entity
+  parent: BaseFlatpack
+  id: GachaMachineFlatpack
+  name: gacha machine flatpack
+  description: A flatpack used for constructing a gacha machine.
+  components:
+  - type: Flatpack
+    entity: GachaMachine
+
+- type: entity
+  id: handheldgachamachine
+  parent: [gachacapsuleBase, BaseItem]
+  name: Handheld gacha machine
+  description: Made with blue space technology!
+  suffix: 1, dont worry about why theres two
+  components:
+  - type: SpawnItemsOnUse
+    uses: 1000
+    items:
+      - id: SpawnPodGachacapsulelegendaryunsafe
+        orGroup: GiftPool
+      - id: SpawnPodGachacapsulelegendarycash
+        orGroup: GiftPool
+      - id: SpawnPodGachacapsulelegendarysafe
+        orGroup: GiftPool
+      - id: SpawnPodGachacapsulelegendaryinsane
+        orGroup: GiftPool
+  - type: ContainerContainer # horror
+    containers:
+      money: !type:ContainerSlot
+        showEnts: false
+        occludes: true
+        ent: null
+  - type: ItemSlots
+    slots:
+      money:
+        name: spesos
+        whitelist:
+          components:
+          - Cash
+    sound:
+      path: /Audio/Effects/pop.ogg
+  - type: Sprite
+    sprite: Objects/Decoration/gachacapsule.rsi
+    layers:
+      - state: handheldgachamachine
+
+- type: entity
+  id: handheldgachamachine2
+  parent: [gachacapsuleBase, BaseItem]
+  name: Hand-held Gacha Machine
+  description: Made with blue space technology!
+  suffix: 2, theres two because it makes it actually work
+  components:
+  - type: SpawnItemsOnUse
+    items:
+      - id: handheldgachamachine
+      # - id: SpawnPodGachacapsulelegendaryunsafe
+      #   orGroup: GiftPool
+      # - id: SpawnPodGachacapsulelegendarycash
+      #   orGroup: GiftPool
+      # - id: SpawnPodGachacapsulelegendarysafe
+      #   orGroup: GiftPool
+      # - id: SpawnPodGachacapsulelegendaryinsane
+      #   orGroup: GiftPool
+  - type: ContainerContainer # horror
+    containers:
+      money: !type:ContainerSlot
+        showEnts: false
+        occludes: true
+        ent: null
+  - type: ItemSlots
+    slots:
+      money:
+        name: spesos
+        whitelist:
+          components:
+          - Cash
+    sound:
+      path: /Audio/Effects/pop.ogg
+  - type: Sprite
+    sprite: Objects/Decoration/gachacapsule.rsi
+    layers:
+      - state: handheldgachamachine
+
+- type: entity
+  id: SpawnPodGachacapsulelegendaryinsane
+  categories: [ HideSpawnMenu ]
+  name: SpawnPodGachacapsulelegendaryinsane
+  parent: SpawnSupplyEmpty
+  components:
+  - type: SpawnOnDespawn
+    prototype: gachacapsuleInsane
+
+- type: entity
+  id: SpawnPodGachacapsulelegendarysafe
+  categories: [ HideSpawnMenu ]
+  name: SpawnPodGachacapsulelegendarysafe
+  parent: SpawnSupplyEmpty
+  components:
+  - type: SpawnOnDespawn
+    prototype: gachacapsuleSafe
+
+- type: entity
+  id: SpawnPodGachacapsulelegendaryunsafe
+  categories: [ HideSpawnMenu ]
+  name: SpawnPodGachacapsulelegendaryunsafe
+  parent: SpawnSupplyEmpty
+  components:
+  - type: SpawnOnDespawn
+    prototype: gachacapsuleUnsafe
+
+- type: entity
+  id: SpawnPodGachacapsulelegendarycash
+  categories: [ HideSpawnMenu ]
+  name: SpawnPodGachacapsulelegendarycash
+  parent: SpawnSupplyEmpty
+  components:
+  - type: SpawnOnDespawn
+    prototype: gachacapsuleCash
+
+- type: entityTable
+  id: RandomGachaTable
+  table: !type:GroupSelector
+    children:
+    - id: gachacapsuleInsane
+      weight: .2
+    - id: gachacapsuleUnsafe
+      weight: .4
+    - id: gachacapsuleSafe
+    #- id: gachacapsuleCash
+
+- type: entity
+  id: RandomGachaSpawner
+  name: random gacha spawner
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - sprite: Objects/Decoration/gachacapsule.rsi
+      state: gacha_capsule_legendary_insane
+  - type: EntityTableSpawner
+    #chance: 1
+    table: !type:NestedSelector
+      tableId: RandomGachaTable
+    offset: 0.15 

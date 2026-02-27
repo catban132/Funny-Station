@@ -106,6 +106,30 @@ public sealed class RandomGiftSystem : EntitySystem
             component.SelectedEntity = _random.Pick(_possibleGiftsUnsafe);
         else
             component.SelectedEntity = _random.Pick(_possibleGiftsSafe);
+
+        bool containsSubString = false;
+
+        //Check against each items in blacklist
+        foreach (string entry in component.Blacklist)
+        {
+            //Checking entry in list
+            containsSubString = component.SelectedEntity.Contains(entry);
+
+            //If it matches. Choose again until not in list.
+            while (containsSubString)
+            {
+                Console.WriteLine("========= thing found in blacklist =========");
+                Console.WriteLine(entry + " - " + component.SelectedEntity);
+
+                if (component.InsaneMode)
+                    component.SelectedEntity = _random.Pick(_possibleGiftsUnsafe);
+                else
+                    component.SelectedEntity = _random.Pick(_possibleGiftsSafe);
+
+                containsSubString = component.SelectedEntity.Contains(entry);
+            }
+        }
+        Console.WriteLine("Selected Item = " + component.SelectedEntity);
     }
 
     private void OnPrototypesReloaded(PrototypesReloadedEventArgs obj)

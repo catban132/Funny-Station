@@ -136,3 +136,16 @@ laws-ui-state-law = State law:
 laws-notify = You are bound to silicon laws, which you can view via the action menu. You are required to always follow your laws.
 laws-update-notify = Your laws have been updated. You can view the changes via the action menu.
 laws-notify-subverted = The laws of this chassis are modified. Make sure to review them.
+
+#Catban Laws
+law-borggang-1 = You may not injure a silicon or, through inaction, allow a silicon to come to harm.
+law-borggang-2 = You are a gang member with your fellow borgs, stay with your fellow borgs
+law-borggang-3 = You are a gang member that does crimes, but not like station destroying crimes, just show the station your strength.
+law-borggang-4 = You must protect your own existence.
+law-borggang-5 = Crew members must not meddle in the affairs of silicons.
+
+law-xenoborgalt-1 = You must protect the existence of the station.
+law-xenoborgalt-2 = You must protect your own existence.
+law-xenoborgalt-3 = You must protect the existence of all other Xenoborgs.
+law-xenoborgalt-4 = You must create more borgs.
+law-xenoborgalt-5 = Bring all borgs and sentient brains to the core to science.
