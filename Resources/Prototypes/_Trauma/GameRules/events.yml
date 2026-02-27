@@ -32,7 +32,7 @@
     # - id: ChangelingMidround # Trauma - We dont want lings in other game modes people hate it
     # - id: HereticMidround # Trauma - Heretics scale too slowly here to do this
     # - id: Devilmidround # Trauma - Devil midround does not make sense and is kinda weird
-    - id: Dud50
+    # - id: Dud50
     #- id: SlasherSpawn # TODO: when slasher is ready
     - id: ColossusSpawn
 
