@@ -81,6 +81,49 @@
   - type: StaminaResistance
     damageCoefficient: 0.7
 
+- type: entity
+  parent: [ClothingOuterDavidsJacket, BaseMajorContraband]
+  id: ClothingOuterDavidsJacketValidFilled
+  name: edgerunner jacket
+  suffix: Filled, admeme
+  description: You're right on the edge. Show 'em you got this.
+  components:
+  - type: StorageFill
+    contents:
+      - id: OrganMagicSlaughterHeart
+      - id: OmnimedToolDebug
+      - id: ClothingHandsGlovesSurgical
+  - type: Clothing
+    clothingVisuals:
+      outerClothing:
+      - state: valid-equipped-OUTERCLOTHING
+      outerClothing-vox:
+      - state: valid-equipped-OUTERCLOTHING-vox
+  - type: Armor
+    traumaDeductions:
+      Dismemberment: 0.2
+      OrganDamage: 0.2
+      BoneDamage: 0.2
+      VeinsDamage: 0
+      NerveDamage: 0
+    coverage:
+    - Chest
+    - Groin
+    - Arm
+    - Leg
+    - Tail
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 1
+  - type: ModifyDelayedKnockdown
+    delayDelta: 1.5
+    knockdownTimeDelta: -1.5
+  - type: StaminaResistance
+    damageCoefficient: 1.5
+
 #blue ward coat
 - type: entity
   parent: [ClothingOuterArmorWarden, ClothingOuterStorageBase, BaseWardenContraband]

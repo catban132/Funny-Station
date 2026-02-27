@@ -71,3 +71,45 @@
   equipment:
     head: ClothingHeadHelmetHardsuitDeathsquad
     neck: ClothingNeckBronzeheart
+
+- type: entity
+  parent: LavalandCrateNecropolis
+  id: CrateDeathsquad
+  name: Deathsquad Supply Crate
+  description: A crate full of supplies for a new deathsquad recruit.
+  components:
+  - type: StorageFill
+    contents:
+      #- id: ClothingUniformJumpsuitDeathSquad
+      - id: ClothingBackpackDeathSquad
+      - id: ClothingMaskGasDeathSquad
+      - id: ClothingEyesGlassesDeathsquad # Goobstation
+      - id: ExecutiveIDCard # Executive Access!
+      - id: ClothingHeadsetDeathsquad # Goobstation
+      - id: ClothingHandsGlovesDeathsquad # Rip and TEAR
+      - id: ClothingOuterHardsuitDeathsquad
+      - id: ClothingShoesBootsMagDeathsquad # These boots are cooler.
+      - id: DeathsquadPDA # New PDA!
+      - id: PhoronSabre # Goobstation
+      - id: WeaponRevolverMateba # Goobstation
+      - id: ClothingBeltDeathsquadWebbingFilled # Centcomm Doesn't use syndicate tech.
+      - id: SpeedLoaderMatebaAP
+      - id: SpeedLoaderMatebaAP # Goobstation - 7 rounds
+      - id: ToolDebug # Spanish Army Knife - TODO Replace
+      - id: WelderExperimental
+      - id: BlueShieldShieldEvilFilled # Goobstation
+      - id: DeterrentCaseFilled
+      - id: WeaponPulseRifle
+
+- type: entity
+  id: DeathsquadRemote
+  name: Deathsquad Supply Remote
+  description: A small remote utilizing bluespace technology to drop in a rate full of advanced weaponry.
+  parent: [ BaseItem, BaseCommandContraband ]
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Objects/Specific/Security/hosundetermined.rsi
+    state: icon
+  - type: SpawnItemsOnUse
+    items:
+    - id: SpawnPodDeathsquadcrate

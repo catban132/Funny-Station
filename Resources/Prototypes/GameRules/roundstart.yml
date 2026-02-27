@@ -420,7 +420,7 @@
   parent: BaseGameRule
   components:
   - type: GameRule
-    minPlayers: 20
+    minPlayers: 100 # Catban was 20
     delay:
       min: 600
       max: 900
@@ -552,7 +552,7 @@
   parent: BaseGameRule                  # we can remerge this with the other schedulers, but it will silently fail due to that limitation without a separate scheduler to balance atm.
   components:
   - type: BasicStationEventScheduler
-    minimumTimeUntilFirstEvent: 2700 # 45 mins #shows up like half way through shift.
+    minimumTimeUntilFirstEvent: 2000 # 45 mins #shows up like half way through shift. #Catban - was 2700
     minMaxEventTiming:
       min: 1200 # 20 mins
       max: 7200 # 120 mins # you probably arent getting a second visitor shuttle in one round, but it is possible.
@@ -564,10 +564,10 @@
   parent: BaseGameRule
   components:
   - type: BasicStationEventScheduler
-    minimumTimeUntilFirstEvent: 1200 # 20 mins
+    minimumTimeUntilFirstEvent: 100 # Catcab - was 1200 (20 mins)
     minMaxEventTiming:
       min: 600 # 10 mins
-      max: 1800 # 30 mins
+      max: 3400 # Was 1800 (30 mins)
     scheduledGameRules: !type:NestedSelector
       tableId: UnknownShuttlesFriendlyTable
 

@@ -1,0 +1,181 @@
+- type: entity
+  id: GangCrateCombatKitPills
+  parent: CrateSuspicious
+  name: Suspicious crate
+  description: A suspicious crate... it looks like it has combat medical supplies in it.
+  components: 
+  - type: StorageFill
+    contents:
+      - id: MedkitCombatBlueFilled
+
+- type: entity
+  id: GangCrateBreacherKit
+  parent: CrateSuspicious
+  name: Suspicious crate
+  description: A suspicious crate... it looks like it has combat medical supplies in it.
+  components:
+  - type: StorageFill
+    contents:
+      - id: WelderIndustrial
+      - id: JawsOfLife
+      - id: ClothingEyesGlassesMeson
+      - id: ToolboxMechanicalFilledAllTools
+
+- type: entity
+  id: GangCrateCombatKit
+  parent: CrateSuspicious
+  name: Suspicious crate
+  description: A suspicious crate... it looks like it has combat medical supplies in it.
+  components:
+  - type: StorageFill
+    contents:
+      - id: MedkitCombatFilled
+        amount: 2
+
+- type: entity
+  id: SpawnPodGangJankTank
+  categories: [ HideSpawnMenu ]
+  name: SpawnPodGangJankTank
+  parent: SpawnSupplyEmpty
+  components:
+  - type: SpawnOnDespawn
+    prototype: SyringeStimulants
+
+- type: entity
+  id: SpawnPodGangMedicalCombat
+  categories: [ HideSpawnMenu ]
+  name: SpawnPodGangMedicalCombat
+  parent: SpawnSupplyEmpty
+  components:
+  - type: SpawnOnDespawn
+    prototype: GangCrateCombatKit
+
+- type: entity
+  id: SpawnPodGangMedicalCombatPills
+  categories: [ HideSpawnMenu ]
+  name: SpawnPodGangMedicalCombatPills
+  parent: SpawnSupplyEmpty
+  components:
+  - type: SpawnOnDespawn
+    prototype: GangCrateCombatKitPills
+
+- type: entity
+  parent: BaseHandheldInstrument
+  id: GANGPhone
+  name: Flip Phone
+  description: This thing is so old! How is this even here?
+  components:
+  - type: Sprite
+    sprite: Objects/Fun/Instruments/otherinstruments.rsi
+    state: red_phone
+  # Goobstation edit start
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/_Goobstation/Items/handling/phone_pickup.ogg
+      params:
+        volume: -2
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/_Goobstation/Items/handling/phone_drop.ogg
+      params:
+        volume: -2
+  # Goobstation edit end
+  - type: EmitSoundOnLand
+    sound:
+       path: /Audio/Items/ring.ogg
+  - type: Instrument
+    program: 124
+  - type: Item
+    size: Small
+  - type: Prayable
+    sentMessage: prayer-popup-notify-centcom-sent
+    notificationPrefix: prayer-chat-notify-centcom
+    verb: prayer-verbs-call
+    verbImage: null
+    notificationSound: # Goobstation - Admin Notifications
+      path: /Audio/_Goobstation/Misc/phone_ring.ogg
+
+- type: reagent
+  id: JankTankReagent
+  parent: BaseDrink
+  group: Unknown
+  name: reagent-name-JantTank
+  desc: reagent-desc-JankTank
+  physicalDesc: reagent-physical-desc-JankTank
+  flavor: eldritch
+  color: "#1f8016"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:ModifyBloodLevel
+        amount: 2
+        conditions:
+        - !type:HasComponentCondition
+          components:
+            - Heretic
+          guidebookComponentName: reagent-comp-condition-heretic-or-ghoul
+      - !type:HealthChange
+        damage:
+          groups:
+            Burn: -3
+            Toxin: -3
+            Airloss: -3
+            Brute: -3
+            Genetic: -3
+            Metaphysical: -5
+        conditions:
+        - !type:HasComponentCondition
+          components:
+            - Heretic
+          guidebookComponentName: reagent-comp-condition-heretic-or-ghoul
+      - !type:ModifyBleedAmount
+        amount: -1
+        conditions:
+        - !type:HasComponentCondition
+          components:
+            - Heretic
+          guidebookComponentName: reagent-comp-condition-heretic-or-ghoul
+      - !type:ChemCleanBloodstream
+        cleanseRate: 3
+        conditions:
+        - !type:HasComponentCondition
+          components:
+            - Heretic
+          guidebookComponentName: reagent-comp-condition-heretic-or-ghoul
+      - !type:GenericStatusEffect
+        key: SeeingRainbows
+        time: 50.0
+        type: Remove
+        conditions:
+        - !type:HasComponentCondition
+          components:
+            - Heretic
+          guidebookComponentName: reagent-comp-condition-heretic-or-ghoul
+      - !type:TakeStaminaDamage
+        amount: -10
+        immediate: true
+        conditions:
+        - !type:HasComponentCondition
+          components:
+            - Heretic
+          guidebookComponentName: reagent-comp-condition-heretic-or-ghoul
+    Poison:
+      effects:
+      - !type:Electrocute
+        conditions:
+        - !type:HasComponentCondition
+          components:
+            - Heretic
+          guidebookComponentName: reagent-comp-condition-heretic-or-ghoul
+          invert: true
+        probability: 0.5
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 5
+        conditions:
+        - !type:HasComponentCondition
+          components:
+            - Heretic
+          guidebookComponentName: reagent-comp-condition-heretic-or-ghoul
+          invert: true

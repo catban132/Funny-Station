@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made by catban",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "gacha_capsule_legendary_insane"
+    },
+    {
+      "name": "gacha_capsule_legendary_unsafe"
+    },
+    {
+      "name": "gacha_capsule_legendary_boring"
+    },
+    {
+      "name": "luckyblock"
+    },
+    {
+      "name": "handheldgachamachine"
+    },
+    {
+      "name": "gacha_capsule_legendary_money"
+    },
+    {
+      "name": "openedgachacapsule"
+    }
+  ]
+}

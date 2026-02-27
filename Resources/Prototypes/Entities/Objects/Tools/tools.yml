@@ -677,3 +677,155 @@
   - type: Construction
     graph: WoodenRollingPin
     node: rollingpin
+
+#Catban Added
+- type: entity
+  name: Syndicate omnitool
+  parent: [BaseItem, BaseSyndicateContraband]
+  id: SyndieOmnitool
+  description: An evil omnitool
+  components:
+  - type: Clothing
+    quickEquip: false
+    slots:
+      - Belt
+  - type: MeleeWeapon
+    damage:
+      types:
+        Slash: 18
+  - type: Sprite
+    sprite: Objects/Tools/omnitool.rsi
+    state: omnitool-screwing
+  - type: Item
+    sprite: Objects/Tools/omnitool.rsi
+    size: Small
+  - type: Tag
+    tags:
+    - Multitool
+  - type: Prying
+    enabled: false
+  - type: UseDelay # Goobstation - For insta prying
+    delay: 0 # Goobstation - no switch CD
+  - type: Tool
+    qualities:
+      - Screwing
+    speedModifier: 1.7 # Kept for future adjustments. Currently 1.2x for balance
+    useSound: /Audio/Items/drill_use.ogg
+  - type: ToolTileCompatible
+  - type: MultipleTool
+    statusShowBehavior: true
+    entries:
+      - behavior: Screwing
+        sprite:
+          sprite: Objects/Tools/omnitool.rsi
+          state: SyndicateOmnitool_screwdriver
+        useSound:
+          path: /Audio/Items/drill_use.ogg
+        changeSound:
+          path: /Audio/Items/change_drill.ogg
+      - behavior: Prying
+        sprite:
+          sprite: Objects/Tools/omnitool.rsi
+          state: SyndicateOmnitool_crowbar
+        useSound:
+          path: /Audio/Items/jaws_pry.ogg
+        changeSound:
+          path: /Audio/Items/change_drill.ogg
+      - behavior: Anchoring
+        sprite:
+          sprite: Objects/Tools/omnitool.rsi
+          state: SyndicateOmnitool_wrench
+        useSound:
+          path: /Audio/Items/ratchet.ogg
+        changeSound:
+          path: /Audio/Items/change_drill.ogg
+      - behavior: Cutting
+        sprite:
+          sprite: Objects/Tools/omnitool.rsi
+          state: SyndicateOmnitool_wirecutter
+        useSound:
+          path: /Audio/Items/jaws_cut.ogg
+        changeSound:
+          path: /Audio/Items/change_drill.ogg
+      - behavior: Pulsing
+        sprite:
+          sprite: Objects/Tools/omnitool.rsi
+          state: SyndicateOmnitool_multitool
+        changeSound:
+          path: /Audio/Items/change_drill.ogg
+
+
+- type: entity
+  name: NanoTrasen omnitool
+  parent: BaseItem
+  id: NTOmnitool
+  description: An omnitool for deathsquad members
+  components:
+  - type: Clothing
+    quickEquip: false
+    slots:
+      - Belt
+  - type: MeleeWeapon
+    damage:
+      types:
+        Slash: 10
+  - type: Sprite
+    sprite: Objects/Tools/omnitool.rsi
+    state: omnitool-screwing
+  - type: Item
+    sprite: Objects/Tools/omnitool.rsi
+    size: Normal
+  - type: Tag
+    tags:
+    - Multitool
+  - type: Prying
+    enabled: false
+  - type: UseDelay # Goobstation - For insta prying
+    delay: 0 # Goobstation - no switch CD
+  - type: Tool
+    qualities:
+      - Screwing
+    speedModifier: 1.7 # Kept for future adjustments. Currently 1.2x for balance
+    useSound: /Audio/Items/drill_use.ogg
+  - type: ToolTileCompatible
+  - type: MultipleTool
+    statusShowBehavior: true
+    entries:
+      - behavior: Screwing
+        sprite:
+          sprite: Objects/Tools/omnitool.rsi
+          state: SyndicateOmnitool_screwdriver
+        useSound:
+          path: /Audio/Items/drill_use.ogg
+        changeSound:
+          path: /Audio/Items/change_drill.ogg
+      - behavior: Prying
+        sprite:
+          sprite: Objects/Tools/omnitool.rsi
+          state: SyndicateOmnitool_crowbar
+        useSound:
+          path: /Audio/Items/jaws_pry.ogg
+        changeSound:
+          path: /Audio/Items/change_drill.ogg
+      - behavior: Anchoring
+        sprite:
+          sprite: Objects/Tools/omnitool.rsi
+          state: SyndicateOmnitool_wrench
+        useSound:
+          path: /Audio/Items/ratchet.ogg
+        changeSound:
+          path: /Audio/Items/change_drill.ogg
+      - behavior: Cutting
+        sprite:
+          sprite: Objects/Tools/omnitool.rsi
+          state: SyndicateOmnitool_wirecutter
+        useSound:
+          path: /Audio/Items/jaws_cut.ogg
+        changeSound:
+          path: /Audio/Items/change_drill.ogg
+      - behavior: Pulsing
+        sprite:
+          sprite: Objects/Tools/omnitool.rsi
+          state: SyndicateOmnitool_multitool
+        changeSound:
+          path: /Audio/Items/change_drill.ogg

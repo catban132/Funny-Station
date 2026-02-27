@@ -1,0 +1,129 @@
+- type: listing
+  id: GangmedicalcombatListing
+  name: Combat Medical Kit
+  description: A crate containing medical supplies used for combat
+  productEntity: GangCrateCombatKit
+  icon:
+    sprite: Objects/Specific/Medical/firstaidkits.rsi
+    state: blackkit
+  cost:
+    GangPoints: 5 
+  categories:
+  - GANGMisc
+  restockTime: 10
+  resetRestockOnPurchase: true
+  restockAfterPurchase: 600
+
+- type: listing
+  id: GangListingBreacherKit
+  name: Breacher Kit
+  description: A crate containing tools used too break into places.
+  productEntity: GangCrateBreacherKit
+  icon:
+    sprite: Objects/Tools/jaws_of_life.rsi
+    state: jaws_pry
+  cost:
+    GangPoints: 5 
+  categories:
+  - GANGTools
+  restockTime: 10
+  resetRestockOnPurchase: true
+  restockAfterPurchase: 600
+
+- type: listing
+  id: GangmedicalcombatPillsListing
+  name: Combat Medical Kit
+  description: A crate containing medical supplies used for combat
+  productEntity: GangCrateCombatKitPills
+  icon:
+    sprite: Objects/Specific/Medical/firstaidkits.rsi
+    state: blackkit
+  cost:
+    GangPoints: 5 
+  categories:
+  - GANGMisc
+  restockTime: 10
+  resetRestockOnPurchase: true
+  restockAfterPurchase: 600
+
+- type: listing
+  id: GangListingEnergyCutlass
+  name: Energy Cutlass
+  description: An energy Cutlass, perfect for annihilating your enemies!
+  productEntity: EnergyCutlass
+  icon:
+    sprite: Objects/Weapons/Melee/e_cutlass.rsi
+    state: e_cutlass_blade
+    color: "#e95151"
+    shader: unshaded
+  cost:
+    GangPoints: 5 
+  categories:
+  - GANGWeapons
+  restockTime: 10
+  resetRestockOnPurchase: true
+  restockAfterPurchase: 600
+
+- type: listing
+  id: GangListingMakeshiftlaserpistol
+  name: Makeshift Laser Pistol
+  description: A Laser pistol, kinda good for killing people
+  productEntity: WeaponMakeshiftLaser
+  icon:
+    sprite: _Goobstation/Mobs/Bingle/cargo-bingle.rsi
+    state: icon
+  cost:
+    GangPoints: 5 
+  categories:
+  - GANGWeapons
+  restockTime: 10
+  resetRestockOnPurchase: true
+  restockAfterPurchase: 600
+
+- type: listing
+  id: GangListingEmag
+  name: Emag
+  description: An Emag, useful for many things.
+  productEntity: Emag
+  icon:
+    sprite: _Goobstation/Mobs/Bingle/cargo-bingle.rsi
+    state: icon
+  cost:
+    GangPoints: 5 
+  categories:
+  - GANGTools
+  restockTime: 10
+  resetRestockOnPurchase: false
+  restockAfterPurchase: 600
+
+- type: listing
+  id: GangListingDoubleEnergySword
+  name: Double-Bladed Energy Sword
+  description: A double-bladed energy sword, what more is there to say?
+  productEntity: EnergySwordDouble
+  icon:
+    sprite: _Goobstation/Mobs/Bingle/cargo-bingle.rsi
+    state: icon
+  cost:
+    GangPoints: 5 
+  categories:
+  - GANGWeapons
+  restockTime: 10
+  resetRestockOnPurchase: true
+  restockAfterPurchase: 600
+
+- type: listing
+  id: GangListingJankTank
+  name: JankTank syringe
+  description: A JankTank syringe, helps up dead gang members.
+  productEntity: SpawnPodGangJankTank
+  icon:
+    sprite: _Goobstation/Mobs/Bingle/cargo-bingle.rsi
+    state: icon
+  cost:
+    GangPoints: 5 
+  categories:
+  - GANGTools
+  restockTime: 10
+  resetRestockOnPurchase: true
+  restockAfterPurchase: 600

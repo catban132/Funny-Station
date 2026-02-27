@@ -48,9 +48,17 @@
   - type: RandomMetadata
     nameSegments: [ NamesBorg ]
   - type: StartIonStormed
-    ionStormAmount: 2
+    ionStormAmount: 3
   - type: SiliconLawProvider
     laws: OverlordLawset
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Common
+    - Syndicate
+  - type: ActiveRadio
+    channels:
+    - Syndicate
+    - Common
 
 - type: entity
   id: PlayerBorgDerelictSyndicateAssaultGhostRole

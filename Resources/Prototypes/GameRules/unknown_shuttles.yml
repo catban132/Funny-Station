@@ -22,23 +22,23 @@
   id: UnknownShuttlesFriendlyTable
   table: !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
     children:
-    - id: UnknownShuttleCargoLost
-    - id: UnknownShuttleTravelingCuisine
-    - id: UnknownShuttleDisasterEvacPod
+#    - id: UnknownShuttleCargoLost
+#    - id: UnknownShuttleTravelingCuisine
+#    - id: UnknownShuttleDisasterEvacPod
     - id: UnknownShuttleHonki
-    - id: UnknownShuttleFrontierProspector  #Goobstation - Salvage shuttle event
-    - id: UnknownShuttleNTQuark
-    - id: UnknownShuttleCruiser
-    - id: UnknownShuttleCryptid
-    - id: UnknownShuttleEternal
-    - id: UnknownShuttleFlatline
-    - id: UnknownShuttleGym
-    - id: UnknownShuttleNTIncorporation
-    - id: UnknownShuttleJoe
-    - id: UnknownShuttleLambordeere
-    - id: UnknownShuttleMeatZone
-    - id: UnknownShuttleMicroshuttle
-    - id: UnknownShuttleSpacebus
+#    - id: UnknownShuttleFrontierProspector  #Goobstation - Salvage shuttle event
+#    - id: UnknownShuttleNTQuark
+#    - id: UnknownShuttleCruiser
+#    - id: UnknownShuttleCryptid
+#    - id: UnknownShuttleEternal
+#   - id: UnknownShuttleFlatline
+#    - id: UnknownShuttleGym
+#    - id: UnknownShuttleNTIncorporation
+#    - id: UnknownShuttleJoe
+#    - id: UnknownShuttleLambordeere
+#    - id: UnknownShuttleMeatZone
+#    - id: UnknownShuttleMicroshuttle
+#    - id: UnknownShuttleSpacebus
     - id: UnknownShuttleAlienTourist # Goobstation
 
 - type: entityTable

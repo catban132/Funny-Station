@@ -58,6 +58,14 @@
       Unsexed: UnisexSiliconSyndicate
   - type: SpeechSynthesis # Corvax-Frontier-Barks
     voice: BorgSyndie
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Common
+    - Syndicate
+  - type: ActiveRadio
+    channels:
+    - Syndicate
+    - Common
 
 - type: entity
   id: BorgChassisUrist

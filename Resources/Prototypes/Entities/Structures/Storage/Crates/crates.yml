@@ -981,3 +981,29 @@
   - type: StealthOnMove
     passiveVisibilityRate: -0.10
     movementVisibilityRate: 0.10
+
+#Catban Added
+- type: entity
+  parent: CrateGenericSteel
+  id: CrateSuspicious
+  name: Suspicious Crate
+  components:
+  - type: Icon
+    sprite: Structures/Storage/Crates/generic.rsi
+  - type: Sprite
+    sprite: Structures/Storage/Crates/generic.rsi
+  - type: Reflect
+    reflects:
+    - Energy
+    reflectProb: 0.2
+    spread: 90
+  - type: Paintable
+    group: CrateSteel
+  - type: RadiationBlockingContainer
+    # Goobstation Start
+    # resistance: 2.5
+    decay: 2.5
+    # Goobstation End
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 125
