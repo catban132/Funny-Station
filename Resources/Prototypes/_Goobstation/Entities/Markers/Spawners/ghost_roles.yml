@@ -43,12 +43,6 @@
     - !type:RoleTimeRequirement
       role: JobBorg
       time: 3600 #1 hour
-  - type: Sprite
-    sprite: Markers/jobs.rsi
-    layers:
-    - state: green
-    - sprite: Mobs/Silicon/chassis.rsi
-      state: synd_sec
 
 - type: entity
   categories: [ HideSpawnMenu, Spawner ]

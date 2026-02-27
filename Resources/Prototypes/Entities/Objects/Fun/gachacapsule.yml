@@ -7,7 +7,7 @@
   abstract: true
   components:
   - type: Sprite
-    sprite: Resources/Textures/_Goobstation/Structures/Machines/slotmachines/gachamachine.rsi
+    sprite: Objects/Fun/gachacapsule.rsi
     layers:
       - state: gacha_capsule_legendary_unsafe
 
@@ -28,7 +28,7 @@
       - Ghost
       - Santa
   - type: Sprite
-    sprite: Resources/Textures/_Goobstation/Structures/Machines/slotmachines/gachamachine.rsi
+    sprite: Objects/Fun/gachacapsule.rsi
     layers:
       - state: gacha_capsule_legendary_unsafe
 
@@ -58,7 +58,7 @@
       - Ghost
       - Santa
   - type: Sprite
-    sprite: Resources/Textures/_Goobstation/Structures/Machines/slotmachines/gachamachine.rsi
+    sprite: Objects/Fun/gachacapsule.rsi
     layers:
       - state: gacha_capsule_legendary_insane
 
@@ -407,7 +407,7 @@
     sound:
       path: /Audio/Effects/pop.ogg
   - type: Sprite
-    sprite: Resources/Textures/_Goobstation/Structures/Machines/slotmachines/gachamachine.rsi
+    sprite: Objects/Fun/gachacapsule.rsi
     layers:
       - state: gacha_capsule_legendary_boring
 
@@ -450,7 +450,7 @@
     sound:
       path: /Audio/Effects/pop.ogg
   - type: Sprite
-    sprite: Resources/Textures/_Goobstation/Structures/Machines/slotmachines/gachamachine.rsi
+    sprite: Objects/Fun/gachacapsule.rsi
     layers:
       - state: gacha_capsule_legendary_money
 
@@ -462,7 +462,7 @@
   description: garbage
   components:
   - type: Sprite
-    sprite: Resources/Textures/_Goobstation/Structures/Machines/slotmachines/gachamachine.rsi
+    sprite: Objects/Fun/gachacapsule.rsi
     layers:
       - state: openedgachacapsule
   - type: Tag
@@ -523,7 +523,7 @@
     sound:
       path: /Audio/Effects/pop.ogg
   - type: Sprite
-    sprite: Resources/Textures/_Goobstation/Structures/Machines/slotmachines/gachamachine.rsi
+    sprite: Objects/Fun/gachacapsule.rsi
     layers:
       - state: luckyblock
 
@@ -582,7 +582,7 @@
     sound:
       path: /Audio/Effects/pop.ogg
   - type: Sprite
-    sprite: Resources/Textures/_Goobstation/Structures/Machines/slotmachines/gachamachine.rsi
+    sprite: Objects/Fun/gachacapsule.rsi
     layers:
       - state: luckyblock
 
@@ -615,7 +615,7 @@
     sound:
       path: /Audio/Effects/pop.ogg
   - type: Sprite
-    sprite: Resources/Textures/_Goobstation/Structures/Machines/slotmachines/gachamachine.rsi
+    sprite: Objects/Fun/gachacapsule.rsi
     layers:
       - state: luckyblock
 
@@ -764,7 +764,7 @@
     sound:
       path: /Audio/Effects/pop.ogg
   - type: Sprite
-    sprite: Resources/Textures/_Goobstation/Structures/Machines/slotmachines/gachamachine.rsi
+    sprite: Objects/Fun/gachacapsule.rsi
     layers:
       - state: handheldgachamachine
 
@@ -802,7 +802,7 @@
     sound:
       path: /Audio/Effects/pop.ogg
   - type: Sprite
-    sprite: Resources/Textures/_Goobstation/Structures/Machines/slotmachines/gachamachine.rsi
+    sprite: Objects/Fun/gachacapsule.rsi
     layers:
       - state: handheldgachamachine
 
@@ -860,7 +860,7 @@
   components:
   - type: Sprite
     layers:
-    - sprite: Resources/Textures/_Goobstation/Structures/Machines/slotmachines/gachamachine.rsi
+    - sprite: Objects/Fun/gachacapsule.rsi
       state: gacha_capsule_legendary_insane
   - type: EntityTableSpawner
     #chance: 1

@@ -105,15 +105,18 @@
   flavor: eldritch
   color: "#1f8016"
   metabolisms:
-    Medicine:
+    Bloodstream:
+      conditions:
+      - !type:WhitelistCondition
+        checkMind: true
+        whitelist:
+          components:
+          - Heretic
+          - Ghoul
+        guidebookText: entity-condition-guidebook-heretic-or-ghoul
       effects:
       - !type:ModifyBloodLevel
         amount: 2
-        conditions:
-        - !type:HasComponentCondition
-          components:
-            - Heretic
-          guidebookComponentName: reagent-comp-condition-heretic-or-ghoul
       - !type:HealthChange
         damage:
           groups:
@@ -123,59 +126,38 @@
             Brute: -3
             Genetic: -3
             Metaphysical: -5
-        conditions:
-        - !type:HasComponentCondition
-          components:
-            - Heretic
-          guidebookComponentName: reagent-comp-condition-heretic-or-ghoul
-      - !type:ModifyBleedAmount
+      - !type:ModifyBleed
         amount: -1
-        conditions:
-        - !type:HasComponentCondition
-          components:
-            - Heretic
-          guidebookComponentName: reagent-comp-condition-heretic-or-ghoul
-      - !type:ChemCleanBloodstream
+      - !type:CleanBloodstream
+        excluded: EldritchEssence # Trauma - Exclude from chempurge
         cleanseRate: 3
-        conditions:
-        - !type:HasComponentCondition
-          components:
-            - Heretic
-          guidebookComponentName: reagent-comp-condition-heretic-or-ghoul
-      - !type:GenericStatusEffect
-        key: SeeingRainbows
-        time: 50.0
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectSeeingRainbow
+        time: 50
         type: Remove
-        conditions:
-        - !type:HasComponentCondition
-          components:
-            - Heretic
-          guidebookComponentName: reagent-comp-condition-heretic-or-ghoul
       - !type:TakeStaminaDamage
         amount: -10
         immediate: true
-        conditions:
-        - !type:HasComponentCondition
-          components:
-            - Heretic
-          guidebookComponentName: reagent-comp-condition-heretic-or-ghoul
-    Poison:
-      effects:
+
       - !type:Electrocute
-        conditions:
-        - !type:HasComponentCondition
-          components:
-            - Heretic
-          guidebookComponentName: reagent-comp-condition-heretic-or-ghoul
-          invert: true
         probability: 0.5
+        conditions:
+        - !type:WhitelistCondition
+          blacklist:
+            components:
+            - Heretic
+            - Ghoul
+          guidebookText: entity-condition-guidebook-not-heretic-or-ghoul
       - !type:HealthChange
+        conditions:
+        - !type:WhitelistCondition
+          blacklist:
+            components:
+            - Heretic
+            - Ghoul
+          guidebookText: entity-condition-guidebook-not-heretic-or-ghoul
         damage:
           types:
             Poison: 5
-        conditions:
-        - !type:HasComponentCondition
-          components:
-            - Heretic
-          guidebookComponentName: reagent-comp-condition-heretic-or-ghoul
-          invert: true
+  tileReactions:
+  - !type:ChangeTileReaction # Rusts tile
