@@ -30,7 +30,7 @@
   id: FloorSteel
   parent: BaseStationTile
   name: tiles-steel-floor
-  sprite: /Textures/_Trauma/Tiles/steel.png # Trauma
+  sprite: /Textures/Tiles/steel.png
   variants: 4
   placementVariants:
   - 1.0
@@ -43,7 +43,7 @@
   id: FloorSteelCheckerLight
   parent: BaseStationTile
   name: tiles-steel-floor-checker-light
-  sprite: /Textures/_Trauma/Tiles/cafeteria.png # Trauma
+  sprite: /Textures/Tiles/cafeteria.png
   variants: 4
   placementVariants:
   - 1.0
@@ -56,7 +56,7 @@
   id: FloorSteelCheckerDark
   parent: BaseStationTile
   name: tiles-steel-floor-checker-dark
-  sprite: /Textures/_Trauma/Tiles/checker_dark.png # Trauma
+  sprite: /Textures/Tiles/checker_dark.png
   variants: 4
   placementVariants:
   - 1.0
@@ -69,7 +69,7 @@
   id: FloorSteelMini
   parent: BaseStationTile
   name: tiles-steel-floor-mini
-  sprite: /Textures/_Trauma/Tiles/steel_mini.png # Trauma
+  sprite: /Textures/Tiles/steel_mini.png
   variants: 4
   placementVariants:
   - 1.0
@@ -82,7 +82,7 @@
   id: FloorSteelPavement
   parent: BaseStationTile
   name: tiles-steel-floor-pavement
-  sprite: /Textures/_Trauma/Tiles/steel_pavement.png # Trauma
+  sprite: /Textures/Tiles/steel_pavement.png
   variants: 4
   placementVariants:
   - 1.0
@@ -95,7 +95,7 @@
   id: FloorSteelDiagonal
   parent: BaseStationTile
   name: tiles-steel-floor-diagonal
-  sprite: /Textures/_Trauma/Tiles/steel_diagonal.png # Trauma
+  sprite: /Textures/Tiles/steel_diagonal.png # Trauma
   variants: 4
   placementVariants:
   - 1.0
@@ -108,14 +108,14 @@
   id: FloorSteelOffset
   parent: BaseStationTile
   name: tiles-steel-floor-offset
-  sprite: /Textures/_Trauma/Tiles/steel_offset.png # Trauma
+  sprite: /Textures/Tiles/steel_offset.png # Trauma
   itemDrop: FloorTileItemSteelOffset
 
 - type: tile
   id: FloorSteelMono
   parent: BaseStationTile
   name: tiles-steel-floor-mono
-  sprite: /Textures/_Trauma/Tiles/steel_mono.png # Trauma
+  sprite: /Textures/Tiles/steel_mono.png # Trauma
   variants: 4
   placementVariants:
   - 1.0
@@ -128,7 +128,7 @@
   id: FloorSteelPavementVertical
   parent: BaseStationTile
   name: tiles-steel-floor-pavement-vertical
-  sprite: /Textures/_Trauma/Tiles/steel_pavement_vertical.png # Trauma
+  sprite: /Textures/Tiles/steel_pavement_vertical.png # Trauma
   variants: 4
   placementVariants:
   - 1.0
@@ -141,7 +141,7 @@
   id: FloorSteelHerringbone
   parent: BaseStationTile
   name: tiles-steel-floor-herringbone
-  sprite: /Textures/_Trauma/Tiles/steel_herringbone.png # Trauma
+  sprite: /Textures/Tiles/steel_herringbone.png # Trauma
   variants: 4
   placementVariants:
   - 1.0
@@ -217,7 +217,7 @@
   id: FloorWhite
   parent: BaseStationTile
   name: tiles-white-floor
-  sprite: /Textures/_Trauma/Tiles/white.png # Trauma
+  sprite: /Textures/Tiles/white.png
   variants: 4
   placementVariants:
   - 1.0
@@ -233,7 +233,7 @@
   id: FloorWhiteMini
   parent: BaseStationTile
   name: tiles-white-floor-mini
-  sprite: /Textures/_Trauma/Tiles/white_mini.png # Trauma
+  sprite: /Textures/Tiles/white_mini.png
   variants: 4
   placementVariants:
   - 1.0
@@ -249,7 +249,7 @@
   id: FloorWhitePavement
   parent: BaseStationTile
   name: tiles-white-floor-pavement
-  sprite: /Textures/_Trauma/Tiles/white_pavement.png # Trauma
+  sprite: /Textures/Tiles/white_pavement.png
   variants: 4
   placementVariants:
   - 1.0
@@ -265,7 +265,7 @@
   id: FloorWhiteDiagonal
   parent: BaseStationTile
   name: tiles-white-floor-diagonal
-  sprite: /Textures/_Trauma/Tiles/white_diagonal.png # Trauma
+  sprite: /Textures/Tiles/white_diagonal.png
   variants: 4
   placementVariants:
   - 1.0
@@ -281,7 +281,7 @@
   id: FloorWhiteOffset
   parent: BaseStationTile
   name: tiles-white-floor-offset
-  sprite: /Textures/_Trauma/Tiles/white_offset.png # Trauma
+  sprite: /Textures/Tiles/white_offset.png
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemWhiteOffset
@@ -291,7 +291,7 @@
   id: FloorWhiteMono
   parent: BaseStationTile
   name: tiles-white-floor-mono
-  sprite: /Textures/_Trauma/Tiles/white_mono.png # Trauma
+  sprite: /Textures/Tiles/white_mono.png
   variants: 4
   placementVariants:
   - 1.0
@@ -371,7 +371,7 @@
   id: FloorDark
   parent: BaseStationTile
   name: tiles-dark-floor
-  sprite: /Textures/_Trauma/Tiles/dark.png # Trauma
+  sprite: /Textures/Tiles/dark.png
   variants: 4
   placementVariants:
   - 1.0
@@ -386,7 +386,7 @@
   id: FloorDarkMini
   parent: BaseStationTile
   name: tiles-dark-floor-mini
-  sprite: /Textures/_Trauma/Tiles/dark_mini.png # Trauma
+  sprite: /Textures/Tiles/dark_mini.png
   variants: 4
   placementVariants:
   - 1.0
@@ -402,7 +402,7 @@
   id: FloorDarkPavement
   parent: BaseStationTile
   name: tiles-dark-floor-pavement
-  sprite: /Textures/_Trauma/Tiles/dark_pavement.png # Trauma
+  sprite: /Textures/Tiles/dark_pavement.png
   variants: 4
   placementVariants:
   - 1.0
@@ -418,7 +418,7 @@
   id: FloorDarkDiagonal
   parent: BaseStationTile
   name: tiles-dark-floor-diagonal
-  sprite: /Textures/_Trauma/Tiles/dark_diagonal.png # Trauma
+  sprite: /Textures/Tiles/dark_diagonal.png
   variants: 4
   placementVariants:
   - 1.0
@@ -524,7 +524,7 @@
   id: FloorTechMaint
   parent: BaseStationTile
   name: tiles-techmaint-floor
-  sprite: /Textures/_Trauma/Tiles/tech_maint.png # Trauma
+  sprite: /Textures/Tiles/tech_maint.png
   footstepSounds:
     collection: FootstepHull
   itemDrop: FloorTileItemTechmaint
@@ -534,7 +534,7 @@
   id: FloorTechMaintDark
   parent: BaseStationTile
   name: tiles-techmaint-floor-dark
-  sprite: /Textures/_Trauma/Tiles/tech_maint_dark.png # Trauma
+  sprite: /Textures/Tiles/tech_maint_dark.png
   footstepSounds:
     collection: FootstepHull
   itemDrop: FloorTileItemTechmaintDark
@@ -544,7 +544,7 @@
   id: FloorReinforced
   parent: BaseStationTile
   name: tiles-reinforced-floor
-  sprite: /Textures/_Trauma/Tiles/reinforced.png # Trauma
+  sprite: /Textures/Tiles/reinforced.png
   footstepSounds:
     collection: FootstepHull
   itemDrop: PartRodMetal1
@@ -719,7 +719,7 @@
   id: FloorMime
   parent: BaseStationTile
   name: tiles-mime-floor
-  sprite: /Textures/_Trauma/Tiles/mime.png # Trauma
+  sprite: /Textures/Tiles/mime.png
   itemDrop: FloorTileItemMime
   tileRipResistance: 50 # Goob
 
@@ -1577,7 +1577,7 @@
   id: FloorTechMaint2
   parent: BaseStationTile
   name: tiles-techmaint2-floor
-  sprite: /Textures/_Trauma/Tiles/steel_maint.png # Trauma
+  sprite: /Textures/Tiles/steel_maint.png # Trauma
   footstepSounds:
     collection: FootstepHull
   itemDrop: FloorTileItemSteelMaint

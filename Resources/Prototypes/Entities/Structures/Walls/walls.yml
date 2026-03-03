@@ -643,9 +643,9 @@
   name: reinforced wall
   components:
   - type: Sprite
-    sprite: _Trauma/Structures/Walls/solid.rsi # Trauma
+    sprite: Structures/Walls/solid.rsi # Trauma
   - type: Icon
-    sprite: _Trauma/Structures/Walls/solid.rsi # Trauma
+    sprite: Structures/Walls/solid.rsi # Trauma
     state: rgeneric
   - type: Construction
     graph: Girder
@@ -1083,13 +1083,13 @@
   name: solid wall
   components:
   - type: Sprite
-    sprite: _Trauma/Structures/Walls/solid.rsi # Trauma
+    sprite: Structures/Walls/solid.rsi
   - type: WallReplacementMarker
   - type: Construction
     graph: Girder
     node: wall
   - type: Icon
-    sprite: _Trauma/Structures/Walls/solid.rsi # Trauma
+    sprite: Structures/Walls/solid.rsi
   - type: RCDDeconstructable
     cost: 6
     delay: 8
