@@ -495,13 +495,16 @@
     slots:
     - HEAD
     quickEquip: false
+  #So it can be placed under doors?
+  - type: VentCrawler
 #<Trauma>
-  - type: Perishable
-    rotAfter: 900 # won't someone please think of the clowns
-    molsPerSecondPerUnitMass: 0
-  - type: RotInto
-    entity: FoodRot
-    stage: 1
+#<Funny-Station> Removing rot. Long live clowns
+#  - type: Perishable
+#    rotAfter: 900 # won't someone please think of the clowns
+#    molsPerSecondPerUnitMass: 0
+#  - type: RotInto
+#    entity: FoodRot
+#    stage: 1
 #</Trauma>
 
 - type: entity

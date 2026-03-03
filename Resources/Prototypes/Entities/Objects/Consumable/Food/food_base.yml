@@ -43,12 +43,13 @@
   components:
   - type: SpaceGarbage
 #<Trauma>
-  - type: Perishable
-    rotAfter: 600
-    molsPerSecondPerUnitMass: 0
-  - type: RotInto
-    entity: FoodRot
-    stage: 1
+#<Funny-Station> Removing Rot from food
+#  - type: Perishable
+#    rotAfter: 600
+#    molsPerSecondPerUnitMass: 0
+#  - type: RotInto
+#    entity: FoodRot
+#    stage: 1
 #</Trauma>
 
 # This base type is used to cover all of the "obvious" things that should be doable to open-package food.
