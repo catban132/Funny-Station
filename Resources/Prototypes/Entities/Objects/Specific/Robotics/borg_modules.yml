@@ -1340,10 +1340,10 @@
       - state: syndicate
       - state: icon-syndicate
     - type: ItemBorgModule
-      moduleId: Operative
-      items:
-      - EnergyDaggerLoud
-      - MedicalBeamGunSyndicate
+      #moduleId: Operative
+      hands:
+      - item: EnergyDaggerLoud
+      - item: MedicalBeamGunSyndicate
     - type: BorgModuleIcon
       icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-esword-module }
 
@@ -1723,10 +1723,10 @@
     - state: xenoborg_stealth
     - state: icon-xenoborg-hypo
   - type: ItemBorgModule
-    moduleId: XenoborgHypo&Chameleon
-    items:
-    - NocturineHypo
-    - ChameleonProjector
+    #moduleId: XenoborgHypo&Chameleon
+    hands:
+    - item: NocturineHypo
+    - item: ChameleonProjector
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-hypo-module }
 
