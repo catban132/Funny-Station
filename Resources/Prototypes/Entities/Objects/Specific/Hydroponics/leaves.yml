@@ -232,7 +232,7 @@
   description: "Dried omega cannabis leaves, this is gonna make the best blunt EVER."
   components:
   - type: Stack
-    stackType: LeavesCannabisRainbowDried
+    stackType: LeavesCannabisOmegaDried
     count: 1
   - type: SolutionContainerManager
     solutions:
