@@ -88,6 +88,8 @@ stack-ground-rainbow-cannabis = ground rainbow cannabis
 stack-dried-tobacco-leaves = dried tobacco leaves
 stack-dried-cannabis-leaves = dried cannabis leaves
 stack-dried-rainbow-cannabis-leaves = dried rainbow cannabis leaves
+stack-dried-omega-cannabis-leaves = dried omega cannabis leaves
+stack-ground-omega-cannabis-leaves = ground omega cannabis
 
 stack-cigarette-filter = cigarette {$amount ->
     [1] filter
