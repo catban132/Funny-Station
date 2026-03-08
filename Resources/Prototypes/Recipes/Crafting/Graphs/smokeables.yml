@@ -111,6 +111,20 @@
       entity: GroundCannabisRainbow
 
 - type: constructionGraph
+  id: smokeableGroundCannabisOmega
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: groundOmega
+          steps:
+            - material: LeavesCannabisOmegaDried
+              amount: 2
+              doAfter: 5
+    - node: groundOmega
+      entity: GroundCannabisOmega
+
+- type: constructionGraph
   id: smokeableGroundTobacco
   start: start
   graph:

@@ -230,6 +230,36 @@
 
 - type: entity
   parent: SeedBase
+  name: packet of bonsai tree seeds
+  id: BonsaiTreeSeeds
+  components:
+    - type: Seed
+      seedId: bonsaitree
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/towercap.rsi
+
+- type: entity
+  parent: SeedBase
+  name: packet of money tree seeds
+  id: MoneyTreeSeeds
+  components:
+    - type: Seed
+      seedId: moneytree
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/towercap.rsi
+
+- type: entity
+  parent: SeedBase
+  name: packet of steel tree seeds
+  id: SteelTreeSeeds
+  components:
+    - type: Seed
+      seedId: steeltree
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/towercap.rsi
+
+- type: entity
+  parent: SeedBase
   name: packet of steel cap spores
   id: SteelcapSeeds
   components:
@@ -368,6 +398,17 @@
   components:
     - type: Seed
       seedId: rainbowCannabis
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/rainbow_cannabis.rsi
+
+- type: entity
+  parent: SeedBase
+  name: packet of omega cannabis seeds
+  description: "These seeds grow into omega weed. will get you very high and very dead."
+  id: OmegaCannabisSeeds
+  components:
+    - type: Seed
+      seedId: OmegaCannabis
     - type: Sprite
       sprite: Objects/Specific/Hydroponics/rainbow_cannabis.rsi
 

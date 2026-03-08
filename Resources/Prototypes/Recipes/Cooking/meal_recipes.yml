@@ -2149,6 +2149,15 @@
     LeavesCannabisRainbow: 1
 
 - type: microwaveMealRecipe
+  id: RecipeDriedCannabisOmega
+  name: dried omega cannabis leaves recipe
+  result: LeavesCannabisOmegaDried
+  time: 10
+  group: Medicinal
+  solids:
+    LeavesCannabisOmega: 1
+
+- type: microwaveMealRecipe
   id: RecipeTrashBakedBananaPeel
   name: baked banana peel recipe
   result: TrashBakedBananaPeel

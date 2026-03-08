@@ -222,3 +222,10 @@
       - id: DeathNettle
         amount: !type:RangeNumberSelector
           range: 1, 5
+      - id: FoodRealCapfruit
+        amount: !type:RangeNumberSelector
+          range: 1, 4
+      - id: FoodGatfruit
+        amount: !type:RangeNumberSelector
+          range: 1, 5
+      

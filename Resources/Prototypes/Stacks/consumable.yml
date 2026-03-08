@@ -93,3 +93,17 @@
   name: stack-dried-rainbow-cannabis-leaves
   icon: { sprite: /Textures/Objects/Specific/Hydroponics/rainbow_cannabis.rsi, state: dried }
   spawn: LeavesCannabisRainbowDried
+
+- type: stack
+  parent: BaseVerySmallStack
+  id: LeavesCannabisOmegaDried
+  name: dried omega cannabis leaves
+  icon: { sprite: /Textures/Objects/Specific/Hydroponics/rainbow_cannabis.rsi, state: dried }
+  spawn: LeavesCannabisOmegaDried
+
+- type: stack
+  parent: BaseVerySmallStack
+  id: GroundCannabisOmega
+  name: omega cannabis leaves
+  icon: { sprite: /Textures/Objects/Specific/Hydroponics/rainbow_cannabis.rsi, state: powderpile_rainbow }
+  spawn: GroundCannabisOmega

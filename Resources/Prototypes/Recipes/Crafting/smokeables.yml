@@ -79,3 +79,11 @@
   category: construction-category-misc
 #    color: brown
   objectType: Item
+
+- type: construction
+  id: smokeableGroundCannabisOmega
+  graph: smokeableGroundCannabisOmega
+  startNode: start
+  targetNode: groundOmega
+  category: construction-category-misc
+  objectType: Item

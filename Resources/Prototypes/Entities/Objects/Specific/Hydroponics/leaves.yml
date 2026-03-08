@@ -190,6 +190,105 @@
           Quantity: 0.6
 
 - type: entity
+  name: omega cannabis leaves
+  parent: LeavesCannabis
+  id: LeavesCannabisOmega
+  description: "Is it supposed to be glowing like that...?"
+  components:
+  - type: Sprite
+    layers:
+    - sprite: Objects/Specific/Hydroponics/rainbow_cannabis.rsi
+      state: produce
+      shader: unshaded
+  - type: Produce
+    seedId: OmegaCannabis
+  # disabled because 50 morbillion point lights still break the lighting engine
+  #- type: PointLight
+  #  radius: 1.5
+  #  energy: 2
+  #- type: RgbLightController
+  #  cycleRate: 0.6
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: SpaceDrugs
+          Quantity: 3
+        - ReagentId: Lipolicide
+          Quantity: 3
+        - ReagentId: MindbreakerToxin
+          Quantity: 2
+        - ReagentId: Happiness
+          Quantity: 2
+#       - ReagentId: ColorfulReagent
+#         Quantity: 1
+        - ReagentId: Psicodine
+          Quantity: 0.6
+
+- type: entity
+  name: dried omega cannabis leaves
+  parent: LeavesCannabisDried
+  id: LeavesCannabisOmegaDried
+  description: "Dried omega cannabis leaves, this is gonna make the best blunt EVER."
+  components:
+  - type: Stack
+    stackType: LeavesCannabisRainbowDried
+    count: 1
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 8.5 #fuck you saveload test fail
+        reagents:
+        - ReagentId: SpaceDrugs
+          Quantity: 2.4
+        - ReagentId: Lipolicide
+          Quantity: 2.4
+        - ReagentId: MindbreakerToxin
+          Quantity: 1.6
+        - ReagentId: Happiness
+          Quantity: 1.6
+#       - ReagentId: ColorfulReagent
+#         Quantity: 0.8
+        - ReagentId: Psicodine
+          Quantity: 0.48
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/rainbow_cannabis.rsi
+    state: dried
+
+- type: entity
+  name: ground omega cannabis
+  parent: GroundCannabis
+  id: GroundCannabisOmega
+  description: "You're gonna have the time of your life if you smoke this."
+  components:
+  - type: Stack
+    stackType: GroundCannabisOmega
+    count: 1
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: SpaceDrugs
+          Quantity: 4
+        - ReagentId: Lipolicide
+          Quantity: 4
+        - ReagentId: MindbreakerToxin
+          Quantity: 2.66
+        - ReagentId: Happiness
+          Quantity: 2.66
+#       - ReagentId: ColorfulReagent
+#         Quantity: 1.33
+        - ReagentId: Psicodine
+          Quantity: 0.8
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/rainbow_cannabis.rsi
+    state: powderpile_rainbow
+    color: white
+  - type: Construction
+    graph: smokeableGroundCannabisOmega
+    node: groundOmega
+
+- type: entity
   name: dried rainbow cannabis leaves
   parent: LeavesCannabisDried
   id: LeavesCannabisRainbowDried

@@ -185,7 +185,7 @@
   id: FloorPlastic
   parent: BaseStationTile
   name: tiles-plastic-floor
-  sprite: /Textures/_Trauma/Tiles/plastic.png # Trauma
+  sprite: /Textures/Tiles/plastic.png # Trauma
   variants: 4
   placementVariants:
   - 1.0
@@ -307,7 +307,7 @@
   id: FloorWhitePavementVertical
   parent: BaseStationTile
   name: tiles-white-floor-pavement-vertical
-  sprite: /Textures/_Trauma/Tiles/white_pavement_vertical.png # Trauma
+  sprite: /Textures/Tiles/white_pavement_vertical.png # Trauma
   variants: 4
   placementVariants:
   - 1.0
@@ -444,7 +444,7 @@
   id: FloorDarkMono
   parent: BaseStationTile
   name: tiles-dark-floor-mono
-  sprite: /Textures/_Trauma/Tiles/dark_mono.png # Trauma
+  sprite: /Textures/Tiles/dark_mono.png # Trauma
   variants: 4
   placementVariants:
   - 1.0
@@ -460,7 +460,7 @@
   id: FloorDarkPavementVertical
   parent: BaseStationTile
   name: tiles-dark-floor-pavement-vertical
-  sprite: /Textures/_Trauma/Tiles/dark_pavement_vertical.png # Trauma
+  sprite: /Textures/Tiles/dark_pavement_vertical.png # Trauma
   variants: 4
   placementVariants:
   - 1.0
@@ -476,7 +476,7 @@
   id: FloorDarkHerringbone
   parent: BaseStationTile
   name: tiles-dark-floor-herringbone
-  sprite: /Textures/_Trauma/Tiles/dark_herringbone.png # Trauma
+  sprite: /Textures/Tiles/dark_herringbone.png # Trauma
   variants: 4
   placementVariants:
   - 1.0
@@ -492,7 +492,7 @@
   id: FloorDarkDiagonalMini
   parent: BaseStationTile
   name: tiles-dark-floor-diagonal-mini
-  sprite: /Textures/_Trauma/Tiles/dark_diagonal_mini.png # Trauma
+  sprite: /Textures/Tiles/dark_diagonal_mini.png # Trauma
   variants: 4
   placementVariants:
   - 1.0
@@ -508,7 +508,7 @@
   id: FloorDarkPlastic
   parent: BaseStationTile
   name: tiles-plastic-dark-floor
-  sprite: /Textures/_Trauma/Tiles/dark_plastic.png # Trauma
+  sprite: /Textures/Tiles/dark_plastic.png # Trauma
   variants: 4
   placementVariants:
   - 1.0
@@ -697,7 +697,7 @@
   id: FloorBar
   parent: BaseStationTile
   name: tiles-bar-floor
-  sprite: /Textures/_Trauma/Tiles/bar.png # Trauma
+  sprite: /Textures/Tiles/bar.png # Trauma
   variants: 4
   placementVariants:
   - 1.0
