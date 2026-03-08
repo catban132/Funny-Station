@@ -220,9 +220,21 @@
           Quantity: 2
         - ReagentId: Happiness
           Quantity: 2
-#       - ReagentId: ColorfulReagent
-#         Quantity: 1
         - ReagentId: Psicodine
+          Quantity: 0.6
+        - ReagentId: Cryptobiolin
+          Quantity: 0.6
+        - ReagentId: Desoxyephedrine
+          Quantity: 0.6
+        - ReagentId: Fentanyl
+          Quantity: 0.6
+        - ReagentId: BacchusBlessing
+          Quantity: 0.6
+        - ReagentId: DeathInTheAfternoon
+          Quantity: 0.6
+        - ReagentId: Singulo
+          Quantity: 0.6
+        - ReagentId: Cryptobiolin
           Quantity: 0.6
 
 - type: entity

@@ -1157,7 +1157,7 @@
   maturation: 8
   production: 12
   yield: 2
-  potency: 20
+  potency: 30
   growthStages: 3
   waterConsumption: 0.40
   idealLight: 9
@@ -1173,16 +1173,35 @@
       PotencyDivisor: 10
     MindbreakerToxin:
       Min: 1
+      Max: 10
+      PotencyDivisor: 20
+    Cryptobiolin:
+      Min: 1
+      Max: 15
+      PotencyDivisor: 20
+    Desoxyephedrine:
+      Min: 1
+      Max: 10
+      PotencyDivisor: 20
+    Fentanyl:
+      Min: 0.5
       Max: 5
       PotencyDivisor: 20
+    BacchusBlessing:
+      Min: 1
+      Max: 5
+      PotencyDivisor: 20
+    DeathInTheAfternoon:
+      Min: 5
+      Max: 10
+      PotencyDivisor: 20
+    Singulo:
+      Min: 1
+      Max: 5
+      PotencyDivisor: 10
     Happiness:
       Min: 1
       Max: 5
-#     PotencyDivisor: 20
-#   ColorfulReagent:
-#     Min: 0
-#     Max: 5
-#     PotencyDivisor: 20
     Psicodine:
       Min: 0
       Max: 5

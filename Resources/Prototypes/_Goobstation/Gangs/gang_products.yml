@@ -99,9 +99,9 @@
   id: JankTankReagent
   parent: BaseDrink
   group: Unknown
-  name: reagent-name-JantTank
-  desc: reagent-desc-JankTank
-  physicalDesc: reagent-physical-desc-JankTank
+  name: Janktank Serum
+  desc: Helps up dead gang members, i wonder how it works.
+  physicalDesc: uhhhh
   flavor: eldritch
   color: "#1f8016"
   metabolisms:
@@ -138,7 +138,6 @@
       - !type:TakeStaminaDamage
         amount: -10
         immediate: true
-
       - !type:Electrocute
         probability: 0.5
         conditions:
