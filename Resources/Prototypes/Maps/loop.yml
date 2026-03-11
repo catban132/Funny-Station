@@ -94,8 +94,7 @@
   id: Loop
   mapName: 'Loop Station'
   mapPath: /Maps/_Trauma/loop.yml # Trauma
-  minPlayers: 35
-  maxPlayers: 70
+  minPlayers: 0
   stations:
     Loop:
       stationProto: StandardNanotrasenStation

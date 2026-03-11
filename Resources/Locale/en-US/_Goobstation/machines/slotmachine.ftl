@@ -29,3 +29,4 @@ advertisement-gachamachine-4 = Ignore rehab, they just don't want you to see you
 advertisement-gachamachine-5 = One more game, then you can quit!
 advertisement-gachamachine-6 = Step right up and give me a spin!
 advertisement-gachamachine-7 = You can only lose if you stop!
+advertisement-gachamachine-8 = PLEASE HELP ME I'M STUCK IN THIS MACHINE!!

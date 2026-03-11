@@ -42,7 +42,7 @@
   id: Leonid
   mapName: 'Leonid Station'
   mapPath: /Maps/_Trauma/leonid.yml # Trauma
-  minPlayers: 50
+  minPlayers: 0
   stations:
     Leonid:
       stationProto: StandardNanotrasenStation

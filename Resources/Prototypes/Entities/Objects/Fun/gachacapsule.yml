@@ -738,11 +738,11 @@
   id: handheldgachamachine
   parent: [gachacapsuleBase, BaseItem]
   name: Handheld gacha machine
-  description: Made with blue space technology!
-  suffix: 1, dont worry about why theres two
+  description: Made with bluespace technology!
+  suffix: Kinda Admeme
   components:
   - type: SpawnItemsOnUse
-    uses: 1000
+    uses: 10000
     items:
       - id: SpawnPodGachacapsulelegendaryunsafe
         orGroup: GiftPool
@@ -752,44 +752,6 @@
         orGroup: GiftPool
       - id: SpawnPodGachacapsulelegendaryinsane
         orGroup: GiftPool
-  - type: ContainerContainer # horror
-    containers:
-      money: !type:ContainerSlot
-        showEnts: false
-        occludes: true
-        ent: null
-  - type: ItemSlots
-    slots:
-      money:
-        name: spesos
-        whitelist:
-          components:
-          - Cash
-    sound:
-      path: /Audio/Effects/pop.ogg
-  - type: Sprite
-    sprite: Objects/Fun/gachacapsule.rsi
-    layers:
-      - state: handheldgachamachine
-
-- type: entity
-  id: handheldgachamachine2
-  parent: [gachacapsuleBase, BaseItem]
-  name: Hand-held Gacha Machine
-  description: Made with blue space technology!
-  suffix: 2, theres two because it makes it actually work
-  components:
-  - type: SpawnItemsOnUse
-    items:
-      - id: handheldgachamachine
-      # - id: SpawnPodGachacapsulelegendaryunsafe
-      #   orGroup: GiftPool
-      # - id: SpawnPodGachacapsulelegendarycash
-      #   orGroup: GiftPool
-      # - id: SpawnPodGachacapsulelegendarysafe
-      #   orGroup: GiftPool
-      # - id: SpawnPodGachacapsulelegendaryinsane
-      #   orGroup: GiftPool
   - type: ContainerContainer # horror
     containers:
       money: !type:ContainerSlot

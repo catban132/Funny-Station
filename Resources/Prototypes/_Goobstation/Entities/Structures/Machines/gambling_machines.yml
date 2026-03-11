@@ -376,38 +376,54 @@
   - type: ClawMachine # EVIL LOOT!!!
     rewards:
     - PlushieMoth
+    - PlushieHampter
     - PlushieHuman
     - PlushiePenguin
-    - PlushieXeve
-    - PlushieDurk
-    - PlushieMnwaar
-    - PlushieLouie
     - FoamWonderprod
     - PlushieBingle
     - PlushieBongle
     - PlushieBinglePony
     - PlushieAbductor
-    - PlushieJvne
-    - PlushieFern
-    - PlushieNigel
-    - PlushieBrizby
-    - PlushieBoggle
-    - PlushieLehmin
-    - PlushieWachtel
-    - PlushieLeguia
-    - PlushiePasha
+    - PlushieRainbowLizard
+    - PlushieLizardJobAtmospherictechnician
+    - PlushieLizardJobBartender
+    - PlushieLizardJobBotanist
+    - PlushieLizardJobBoxer
+    - PlushieLizardJobCaptain
+    - PlushieLizardJobCargotechnician
+    - PlushieLizardJobChaplain
+    - PlushieLizardJobChef
+    - PlushieLizardJobChemist
+    - PlushieLizardJobChiefengineer
+    - PlushieLizardJobChiefmedicalofficer
+    - PlushieLizardJobClown
+    - PlushieLizardJobDetective
+    - PlushieLizardJobHeadofpersonnel
+    - PlushieLizardJobHeadofsecurity
+    - PlushieLizardJobJanitor
+    - PlushieLizardJobLawyer
+    - PlushieLizardJobLibrarian
+    - PlushieLizardJobMedicaldoctor
+    - PlushieLizardJobMedicalintern
+    - PlushieLizardJobMime
+    - PlushieLizardJobMusician
+    - PlushieLizardJobParamedic
+    - PlushieLizardJobPassenger
+    - PlushieLizardJobPsychologist
+    - PlushieLizardJobQuartermaster
+    - PlushieLizardJobReporter
+    - PlushieLizardJobResearchassistant
+    - PlushieLizardJobResearchdirector
+    - PlushieLizardJobSalvagespecialist
+    - PlushieLizardJobScientist
+    - PlushieLizardJobSecuritycadet
+    - PlushieLizardJobSecurityofficer
+    - PlushieLizardJobServiceworker
+    - PlushieLizardJobStationengineer
+    - PlushieLizardJobTechnicalassistant
+    - PlushieLizardJobZookeeper
+    - PlushieGhostRevenant
     evilRewards:
-    - EvilPlushieXeve
-    - EvilPlushieBoggle
-    - EvilPlushieBrizby
-    - EvilPlushieNigel
-    - EvilPlushieFern
-    - EvilPlushieJvne
-    - EvilPlushieMnwaar
-    - EvilPlushieDurk
-    - EvilPlushieLouie
-    - EvilPlushieWachtel
-    - EvilPlushieLeguia
-    - EvilPlushiePasha
-    - EvilPlushieTwofish
+    - PlushieLizardJobMultiweh
+    - PlushieCosmicCult
   - type: DoAfter
